@@ -1,0 +1,1456 @@
+Dependencies for Project 'ProjectTemplate', Target 'FLASH': (DO NOT MODIFY !)
+CompilerVersion: 6240000::V6.24::ARMCLANG
+F (..\..\..\APP\hrpwm_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/hrpwm_app.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\variables_define_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/variables_define_app.o -MMD)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\adc_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/adc_app.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\gpio_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/gpio_app.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\cmp_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/cmp_app.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\dac_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/dac_app.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\user_vofa.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/user_vofa.o -MMD)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+F (..\..\..\APP\pid_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/pid_app.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\protection_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/protection_app.o -MMD)
+I (..\..\..\APP\Protection_App.h)(0x68CA23EA)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\include_app.h)(0x68CA23EA)()
+F (..\..\..\APP\variables_define_app.h)(0x68CA23EA)()
+F (..\..\..\APP\iwdg_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/iwdg_app.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+F (..\..\..\APP\llc_app.lib)(0x68CA23EA)()
+F (..\..\User\Src\main.c)(0x68CA23EC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/main.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\User\Src\tae32g58xx_it.c)(0x68CA23EC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_it.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_it.h)(0x68CA23EC)
+F (..\..\User\Src\tae32g58xx_ll_msp.c)(0x68CA23EC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_msp.o -MMD)
+I (..\..\User\Inc\main.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\APP\include_app.h)(0x68CA23EA)
+I (..\..\..\APP\adc_app.h)(0x68CA23EA)
+I (..\..\..\APP\hrpwm_app.h)(0x68CA23EA)
+I (..\..\..\APP\variables_define_app.h)(0x68CA23EA)
+I (..\..\..\APP\gpio_app.h)(0x68CA23EA)
+I (..\..\..\APP\llc_app.h)(0x68CA23EA)
+I (..\..\..\APP\protection_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
+I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
+I (..\..\..\APP\pid_app.h)(0x68CA23EA)
+I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_cortex.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_cortex.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_rcu.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_rcu.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_gpio.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_gpio.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_uart.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_uart.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_sysctrl.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_sysctrl.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_dma.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_dma.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_eflash.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_eflash.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_tmr.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_tmr.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_iir.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_iir.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_cordic.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_cordic.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_qei.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_qei.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_iwdg.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_iwdg.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_wwdg.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_wwdg.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_i2c.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_i2c.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_spi.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_spi.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_can.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_can.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_usb.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_usb.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_xif.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_xif.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_adc.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_adc.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_dac.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_dac.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_cmp.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_cmp.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_pdm.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_pdm.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Driver\Src\tae32g58xx_ll_hrpwm.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/tae32g58xx_ll_hrpwm.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
+I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
+I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
+F (..\..\..\Drivers\TAE32G58xx_Device\Src\startup_tae32g58xx.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/startup_tae32g58xx.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+F (..\..\..\Drivers\TAE32G58xx_Device\Src\system_tae32g58xx.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/system_tae32g58xx.o -MMD)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+F (..\..\..\Utilities\dbg\user_debug.c)(0x68CA23E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/user_debug.o -MMD)
+I (..\..\..\Utilities\dbg\user_debug.h)(0x68CA23E8)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x68CA23EA)
+I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_rcu.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_def.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\tae32g58xx.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\myChip.h)(0x68CA23EA)
+I (C:\Users\YU\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include\core_cm4.h)(0x69A46104)
+I (..\..\..\Drivers\TAE32G58xx_Device\Inc\system_myChip.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_sysctrl.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb_com.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cortex.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dma.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_eflash.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_tmr.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_qei.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iir.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cordic.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_iwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_wwdg.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_gpio.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_uart.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_i2c.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_spi.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_can.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_usb.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_xif.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_adc.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_dac.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_cmp.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_hrpwm.h)(0x68CA23EA)
+I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h)(0x68CA23EA)
