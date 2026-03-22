@@ -104,9 +104,9 @@
 #define LLC_START_UP_FREQ			(150.0)//kHz
 #define LLC_START_UP_CNT			((int32_t)(HRPWM_FINAL_FREQ/LLC_START_UP_FREQ))//register value
 
-#define LLC_SR_DT_ON                (50.0)//输入值就是死区时间 ns
-#define LLC_SR_DT_OFF               (100.0)//输入值就是死区时间 ns
-#define LLC_SR_MAX_TIME				(4000.0)//输入值就是死区时间 ns
+#define LLC_SR_DT_ON                (50.0)//ns
+#define LLC_SR_DT_OFF               (100.0)//ns
+#define LLC_SR_MAX_TIME				(4000.0)// ns
 #define LLC_SR_DEADTIME_ON          (LLC_SR_DT_ON)
 #define LLC_SR_DEADTIME_COUNT_ON    ((uint32_t)(LLC_SR_DEADTIME_ON/HRPWM_ONE_STEP_TIME))//register value
 #define LLC_SR_DEADTIME_OFF         (LLC_SR_DT_OFF)

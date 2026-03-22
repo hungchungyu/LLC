@@ -71,11 +71,13 @@ void NVIC_initial(void);
 
 int main(void)
 {
-    SystemClock_Config();
-    LL_Init();
+	SystemClock_Config();
+	LL_Init();
 	NVIC_initial();
 	gpio_init_app();
+	
 	llc_factors_initial();
+	
 	VOFA_Init(VOFA_UART2);
 	
 	feedback_data.c[0] = *(uint32_t *)0x00020000;
@@ -97,7 +99,11 @@ int main(void)
 	}
 	
 	hrpwm_app_inital();
+	
 	adc_all_init(); 
+	
+	
+	
 	cmpss_initial_app();
 	hrpwm_app_start();
 	//iwdg_init();
@@ -139,17 +145,18 @@ static void SystemClock_Config(void)
     sysclk_cfg.sysclk_freq = 200000000UL;
     sysclk_cfg.pll0clk_src = PLLCLK_SRC_HSI;
     sysclk_cfg.pll0clk_src_freq = HSI_VALUE;
+	
     sysclk_cfg.apb0_clk_div = RCU_CLK_DIV_2;
-	
-	
     sysclk_cfg.apb1_clk_div = RCU_CLK_DIV_2;
     sysclk_cfg.ahb_clk_div  = RCU_CLK_DIV_1;
+
     ret = LL_RCU_SysclkInit(RCU, &sysclk_cfg);
-    if (ret == LL_OK){
+    if (ret == LL_OK)
+			{
         SystemCoreClockUpdate(sysclk_cfg.sysclk_freq);
-		LL_RCU_ADC_ClkCfg(RCU_CLK_SRC_PLL0, RCU_CLK_DIV_4);
+				LL_RCU_ADC_ClkCfg(RCU_CLK_SRC_PLL0, RCU_CLK_DIV_4);
         LL_RCU_HRPWM_ClkCfg(RCU_CLK_SRC_PLL0, RCU_CLK_DIV_1);
-    }
+			}
 }
 
 #ifdef USE_FULL_ASSERT

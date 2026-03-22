@@ -47,12 +47,15 @@ void dc_voltage_slope_calc(void);
     memset((void *)&user_adc_reg_ch_cfg,  0x00, sizeof(user_adc_reg_ch_cfg));
     memset((void *)&user_adc_dma_cfg,     0x00, sizeof(user_adc_dma_cfg));
     memset((void *)&user_adc_cal_cfg,     0x00, sizeof(user_adc_cal_cfg));
+	 
 //User ADC Init
-	 /*选择内部2.9V为ADC参考基准*/
+	 /*2.9V*/
 	__LL_SYSCTRL_SpRegWrite_Unlock(SYSCTRL);				
-	__LL_SYSCTRL_VREFBUFOutputVol_Set(SYSCTRL,0);
-	__LL_SYSCTRL_VREFBUF_En(SYSCTRL);
+		__LL_SYSCTRL_VREFBUFOutputVol_Set(SYSCTRL,0);
+		__LL_SYSCTRL_VREFBUF_En(SYSCTRL);
 	__LL_SYSCTRL_SpRegWrite_Lock(SYSCTRL);
+	 
+	 
     user_adc_init.overrun_mode   = ADC_OVERRUN_DATA_OVERWRITTEN;
     user_adc_init.dual_mode      = ADC_DUAL_MODE_INDEPEND;
 
@@ -60,7 +63,7 @@ void dc_voltage_slope_calc(void);
     user_adc_init.over_samp_cfg.trig_en   = false;
     user_adc_init.over_samp_cfg.ratio     = ADC_OVER_SAMP_RATIO_8;
     user_adc_init.over_samp_cfg.shift     = ADC_OVER_SAMP_SHIFT_RIGHT_3;
-    user_adc_init.over_samp_cfg.norm_mode = ADC_NORM_OVER_SAMP_CONTINUE;
+    user_adc_init.over_samp_cfg.norm_mode = ADC_NORM_OVER_SAMP_CONTINUE; // Not one time , continue
     user_adc_init.over_samp_cfg.reg_en    = true;
     user_adc_init.over_samp_cfg.inj_en    = false;
     //user_adc_init.over_samp_cfg.inj_mode  = ADC_OVER_SAMP_MODE_NORMAL;
@@ -82,7 +85,7 @@ void dc_voltage_slope_calc(void);
     user_adc_reg_ch_cfg.ch          = TEMPERATURE_SAMPLE_CHN2;
     user_adc_reg_ch_cfg.done_int_en = false;
     user_adc_reg_ch_cfg.input_mode  = ADC_INPUT_MODE_SINGLE_END;
-	user_adc_reg_ch_cfg.samp_time   = ADC_SAMP_TIME_14_CYCLES;
+		user_adc_reg_ch_cfg.samp_time   = ADC_SAMP_TIME_14_CYCLES;
     LL_ADC_REG_ChCfg(ADC0, &user_adc_reg_ch_cfg);
 
 
@@ -103,6 +106,11 @@ void dc_voltage_slope_calc(void);
     user_adc_cal_cfg.offset   = 0;
     user_adc_cal_cfg.gain     = 8192;
     LL_ADC_Cal_Cfg(ADC0, &user_adc_cal_cfg);
+		
+		
+		
+		
+		
 		
 		//ADC0_IN4
   	user_adc_reg_ch_cfg.seq_num     = ADC_REG_SEQ_NUM_2;

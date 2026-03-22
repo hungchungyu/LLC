@@ -68,7 +68,7 @@ extern "C" {
   *        (when HSI is used as system clock source, directly or through the PLL).
   */
 #define HSI_VALUE                       (__LL_SYSCTRL_RC8M_Real_Get(SYSCTRL) == 0xffffffUL ? 8000000U : __LL_SYSCTRL_RC8M_Real_Get(SYSCTRL))
-
+#define HSE_VALUE               				(8000000U)
 /**
   * @brief Internal Low Speed oscillator (LSI) value.
   *        Defines the value of the Internal Low Speed oscillator in Hz.

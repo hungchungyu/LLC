@@ -35,7 +35,7 @@
 */
 void gpio_init_app(void)
 {
-    GPIO_InitTypeDef    GPIO_Init = {0};       //PC3”√”⁄≤‚ ‘
+    GPIO_InitTypeDef    GPIO_Init = {0};       
 	
 	/*****************input gpio******************/
 	GPIO_Init.Alternate = GPIO_AF0_INPUT;
