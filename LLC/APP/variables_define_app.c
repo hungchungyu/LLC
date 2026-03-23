@@ -64,7 +64,7 @@ void llc_factors_initial(void)
 	llc.lagphase_balance_loop.upper_limit = 1.0f;
 	llc.vout_target   = VOUT_SET_POINT;
 	
-	/*************************控制环路参数初始化*************************/
+	/*************************controller parameter initial*************************/
 	llc.iir_vloop.A[0]  = LLC_IIR_A0 ;
 	llc.iir_vloop.A[1]  = LLC_IIR_A1 ;
 	llc.iir_vloop.A[2]  = LLC_IIR_A2 ;
@@ -76,7 +76,7 @@ void llc_factors_initial(void)
 	llc.iir_vloop.B[2]  = LLC_IIR_B2 ;
 	llc.iir_vloop.B[3]  = LLC_IIR_B3 ;
 	llc.iir_vloop.B[4]  = LLC_IIR_B4 ;
-	/********************超前相位控制环路参数初始化**********************/
+	/********************phase lead controller inital**********************/
 	llc.peak_filter_100.A[0]  = 1.0;
 	llc.peak_filter_100.A[1]  = 1.99872651954061675f;
 	llc.peak_filter_100.A[2]  = -0.998765973469715407f;

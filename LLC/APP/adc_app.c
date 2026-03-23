@@ -384,7 +384,7 @@ void LL_ADC_MspInit(ADC_TypeDef *Instance)
         //ADC1 Pinmux Config: PA4->ADC1_IN16 PA6->ADC1_IN3 PC4->ADC1_IN5
         ADC_GPIO_Init.Pin = GPIO_PIN_4;
         LL_GPIO_Init(GPIOC, &ADC_GPIO_Init);
-		ADC_GPIO_Init.Pin = GPIO_PIN_4| GPIO_PIN_6;
+				ADC_GPIO_Init.Pin = GPIO_PIN_4| GPIO_PIN_6;
         LL_GPIO_Init(GPIOA, &ADC_GPIO_Init);
 
         //ADC1 Bus Clock Enable and Soft Reset Release

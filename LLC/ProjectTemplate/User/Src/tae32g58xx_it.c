@@ -190,7 +190,7 @@ void HRPWM_MST_IRQHandler(void)
   * @param  None
   * @retval None
   */
-void ADC1_SAMP_IRQHandler(void)
+void ADC1_SAMP_IRQHandler(void)		// Not used?
 {
 #ifdef LL_ADC_MODULE_ENABLED
     LL_ADC_Samp_IRQHandler(ADC1);

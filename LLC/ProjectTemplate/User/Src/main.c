@@ -73,12 +73,12 @@ int main(void)
 {
 	SystemClock_Config();
 	LL_Init();
-	NVIC_initial();
+	NVIC_initial();				// Nested vectored interrupt controller
 	gpio_init_app();
 	
 	llc_factors_initial();
 	
-	VOFA_Init(VOFA_UART2);
+	// VOFA_Init(VOFA_UART2);
 	
 	feedback_data.c[0] = *(uint32_t *)0x00020000;
 	feedback_data.c[1] = *(uint32_t *)0x00020004;
@@ -107,13 +107,19 @@ int main(void)
 	cmpss_initial_app();
 	hrpwm_app_start();
 	//iwdg_init();
+	
+	
 #if	PWM_TEST_FLAG
 	llc.state = State_on;
 	hrpwm_llc_output();
 	hrpwm_sr_output();
 #endif	
+	
+	
 	adc_converter_start();
 	__LL_HRPWM_Mst_CmpA_INT_En(HRPWM);
+	
+	
     while (1) {
     }
 }
@@ -127,6 +133,7 @@ void cmpss_initial_app(void)
 void NVIC_initial(void)
 {
 	LL_NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_3);
+	
 	LL_NVIC_SetPriority(HRPWM_COM_IRQn,0,0);
 	LL_NVIC_SetPriority(ADC1_NORM_IRQn,2,1);
 	LL_NVIC_SetPriority(HRPWM_MST_IRQn,1,0);

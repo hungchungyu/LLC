@@ -184,14 +184,14 @@ void hrpwm_app_config(HRPWM_TypeDef *Instance)
     user_hrpwm_slv_output_cfg.Aout_set_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPC;
     user_hrpwm_slv_output_cfg.Aout_clr_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPD;
     user_hrpwm_slv_output_cfg.Aout_pol         		= HRPWM_SLV_OUT_POL_ACT_HITH;
-    user_hrpwm_slv_output_cfg.Aout_idle_lvl    		= HRPWM_SLV_OUT_IDLE_LVL_INVLD;
-    user_hrpwm_slv_output_cfg.Aout_flt_lvl     		= HRPWM_SLV_OUT_FAULT_LVL_INVLD;
+    user_hrpwm_slv_output_cfg.Aout_idle_lvl    		= HRPWM_SLV_OUT_IDLE_LVL_INVLD; 	
+    user_hrpwm_slv_output_cfg.Aout_flt_lvl     		= HRPWM_SLV_OUT_FAULT_LVL_INVLD;	// Actions following FLT0, 3, and 6
 
     user_hrpwm_slv_output_cfg.Bout_set_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPA;
     user_hrpwm_slv_output_cfg.Bout_clr_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPB;
     user_hrpwm_slv_output_cfg.Bout_pol         		= HRPWM_SLV_OUT_POL_ACT_HITH;
     user_hrpwm_slv_output_cfg.Bout_idle_lvl    		= HRPWM_SLV_OUT_IDLE_LVL_INVLD;
-    user_hrpwm_slv_output_cfg.Bout_flt_lvl     		= HRPWM_SLV_OUT_FAULT_LVL_INVLD;
+    user_hrpwm_slv_output_cfg.Bout_flt_lvl     		= HRPWM_SLV_OUT_FAULT_LVL_INVLD;	// Actions following FLT0, 3, and 6
 #if PWM_TEST_FLAG
 	user_hrpwm_slv_output_cfg.flt_en[0]             = true;
 	user_hrpwm_slv_output_cfg.flt_en[3]             = true;
@@ -199,15 +199,15 @@ void hrpwm_app_config(HRPWM_TypeDef *Instance)
 	
 	user_hrpwm_slv_output_cfg.flt_en[7]             = false;
 #else
-	user_hrpwm_slv_output_cfg.flt_en[0]             = true;
+	user_hrpwm_slv_output_cfg.flt_en[0]             = true;		// __LL_HRPWM_Slv_Flt0_En()
 	user_hrpwm_slv_output_cfg.flt_en[3]             = true;
 	user_hrpwm_slv_output_cfg.flt_en[6]             = true;
 	user_hrpwm_slv_output_cfg.flt_en[7]             = false;
 #endif
-    LL_HRPWM_Slv_OutputCfg(Instance, LLC_PHASE1_PWM5, &user_hrpwm_slv_output_cfg);
+    LL_HRPWM_Slv_OutputCfg(Instance, LLC_PHASE1_PWM5, &user_hrpwm_slv_output_cfg);	// PWM5 will be affected by FLT0,3,6
 	
 	user_hrpwm_slv_output_cfg.Aout_clr_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPD|HRPWM_SLV_OUT_CTRL_EVT_MST_PWM_CMPB;
-	LL_HRPWM_Slv_OutputCfg(Instance, LLC_PHASE2_PWM4, &user_hrpwm_slv_output_cfg);
+	LL_HRPWM_Slv_OutputCfg(Instance, LLC_PHASE2_PWM4, &user_hrpwm_slv_output_cfg);		// PWM4 will be affected by FLT0,3,6
 	
 	
 	user_hrpwm_slv_output_cfg.Aout_set_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPA;
