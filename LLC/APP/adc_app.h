@@ -26,6 +26,16 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include <stdio.h>
 #include "tae32g58xx_ll.h"
+
+
+/*************ADC0*****************/
+#define VOUT_SAMPLE_CHN7    					ADC_CH_7	
+#define RSENSE1_SAMPLE_CHN3						ADC_CH_8
+#define VP_SAMPLE_CHN1								ADC_CH_1
+#define VN_SAMPLE_CHN2								ADC_CH_2
+
+
+
 /*************ADC0*****************/
 #define TEMPERATURE_SAMPLE_CHN2    		ADC_CH_2	
 #define CURRENTR_SHARE_SAMPLE_CHN3		ADC_CH_3

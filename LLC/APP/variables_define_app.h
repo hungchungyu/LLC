@@ -6,8 +6,52 @@
 #endif
 /*============================ Include =======================================*/
 #include "main.h"
+
+
+#define	LLC_PHASE1_PWM0       			(HRPWM_SLV_PWM_0)			// PA8, PA9
+#define LLC_PHASE1_SR_PWM4       		(HRPWM_SLV_PWM_4)			// PC8, PC9
+
+#define	LLC_PHASE2_PWM2       			(HRPWM_SLV_PWM_2)			// PB12, PB13
+#define LLC_PHASE2_SR_PWM5       		(HRPWM_SLV_PWM_5)			// PC6, PC7
+
+
+#define HRPWM_BASIC_FREQ    		(float)200000			// 200000KHZ = 200MHz
+#define HRPWM_DIV_X         		(float)16
+#define HRPWM_FINAL_FREQ    		(float)HRPWM_BASIC_FREQ * HRPWM_DIV_X
+#define HRPWM_ONE_STEP_TIME			((float)(1000000/(HRPWM_BASIC_FREQ*HRPWM_DIV_X)))  	// 0.3125ns
+																																										
+#define LLC_SW_FREQ_MAX				(200.0)//kHz
+#define LLC_SW_PERIOD_MIN			((uint32_t)(HRPWM_FINAL_FREQ/LLC_SW_FREQ_MAX))//register value
+#define LLC_SW_FREQ_MIN				(100.0)//kHz
+
+#define LLC_DEADTIME					(float)(150)//ns
+#define LLC_DEADTIME_COUNT		((int32_t)(LLC_DEADTIME/HRPWM_ONE_STEP_TIME))//register value : 480
+
+#define LLC_SAMPLE_FREQ             50	//khz
+#define LLC_SAMPLE_PERIOD           ((int32_t)(HRPWM_FINAL_FREQ/LLC_SAMPLE_FREQ))-1//register value 
+
+#define USER_ADC_TRIG_PWM1				(HRPWM_SLV_PWM_1)
+
+typedef struct 
+{
+    int32_t period;
+    int32_t compa;
+    int32_t compb;
+    int32_t compc;
+    int32_t compd;
+}TW_HRPWM_TypeDef; 
+
+extern volatile TW_HRPWM_TypeDef phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
+
+
+
+
+
+
+
+
 /*============================ Defines (Constant) ============================*/
-#define PWM_TEST_FLAG						0//PWM 测试开关
+#define PWM_TEST_FLAG						1//PWM 测试开关
 #define HRPWM_LLC_OUTPUT_EN 				1//使能LLC输出
 #define USE_SWITCH_ENABLE_LLC				1//使能物理开关
 #define CURRENT_BALANCE_EN					1//均流功能使能开关
@@ -28,18 +72,38 @@
 #define	LLC_PHASE2_PWM4 	     		(HRPWM_SLV_PWM_4)
 #define LLC_PHASE1_SR_PWM3       		(HRPWM_SLV_PWM_3)
 #define LLC_PHASE2_SR_PWM2				(HRPWM_SLV_PWM_2)
-#define USER_ADC_TRIG_PWM0				(HRPWM_SLV_PWM_0)
+
 /*******PWM start BIT********/
 #define HRPWM_MASTER_START_BIT     		BIT(16)
-#define HRPWM_PWM0_START_BIT     		BIT(17)
+#define HRPWM_PWM0_START_BIT     			BIT(17)
 #define HRPWM_PWM1_START_BIT        	BIT(18)
-#define LLC_PHASE2_SR_PWM2_START_BIT	BIT(19)
-#define LLC_PHASE1_SR_PWM3_START_BIT	BIT(20)
-#define LLC_PHASE2_PWM4_START_BIT		BIT(21)
-#define LLC_PHASE1_PWM5_START_BIT		BIT(22)
+#define HRPWM_PWM2_START_BIT     			BIT(19)
+#define HRPWM_PWM3_START_BIT        	BIT(20)
+#define HRPWM_PWM4_START_BIT        	BIT(21)
+#define HRPWM_PWM5_START_BIT        	BIT(22)
+#define HRPWM_PWM6_START_BIT        	BIT(23)
 #define HRPWM_PWM7_START_BIT        	BIT(24)
+
+
 /*******PWM OEN BIT********/
-#define HRPWM_PWM1_OEN_A_BIT			BIT(2)
+#define HRPWM_PWM0_OEN_A_BIT					BIT(0)
+#define HRPWM_PWM0_OEN_B_BIT      		BIT(1)
+#define HRPWM_PWM1_OEN_A_BIT					BIT(2)
+#define HRPWM_PWM1_OEN_B_BIT      		BIT(3)
+#define HRPWM_PWM2_OEN_A_BIT					BIT(4)
+#define HRPWM_PWM2_OEN_B_BIT      		BIT(5)
+#define HRPWM_PWM3_OEN_A_BIT					BIT(6)
+#define HRPWM_PWM3_OEN_B_BIT      		BIT(7)
+#define HRPWM_PWM4_OEN_A_BIT					BIT(8)
+#define HRPWM_PWM4_OEN_B_BIT      		BIT(9)
+#define HRPWM_PWM5_OEN_A_BIT					BIT(10)
+#define HRPWM_PWM5_OEN_B_BIT      		BIT(11)
+#define HRPWM_PWM6_OEN_A_BIT					BIT(12)
+#define HRPWM_PWM6_OEN_B_BIT      		BIT(13)
+#define HRPWM_PWM7_OEN_A_BIT					BIT(14)
+#define HRPWM_PWM7_OEN_B_BIT      		BIT(15)
+
+
 #define LLC_PHASE2_SR_PWM2_OEN_A_BIT	BIT(4)
 #define LLC_PHASE2_SR_PWM2_OEN_B_BIT	BIT(5)
 #define LLC_PHASE1_SR_PWM3_OEN_A_BIT	BIT(6)
@@ -85,21 +149,11 @@
 #define ADC_FULL_NUM				(float)8192.0
 /*====================current set=======================*/
 
-#define HRPWM_BASIC_FREQ    		(float)200000			//KHZ
-#define HRPWM_DIV_X         		(float)16
-#define HRPWM_FINAL_FREQ    		(float)HRPWM_BASIC_FREQ * HRPWM_DIV_X
-#define HRPWM_ONE_STEP_TIME			((float)(1000000/(HRPWM_BASIC_FREQ*HRPWM_DIV_X)))  //ns
-	
-#define LLC_SW_FREQ_MAX				(200.0)//kHz
-#define LLC_SW_PERIOD_MIN			((uint32_t)(HRPWM_FINAL_FREQ/LLC_SW_FREQ_MAX))//register value
-#define LLC_SW_FREQ_MIN				(60.0)//kHz
 
 #define LLC_SW_PERIOD_MAX			((uint32_t)(HRPWM_FINAL_FREQ/LLC_SW_FREQ_MIN))//register value
 #define LLC_MODE_SWITCH				((float)(LLC_SW_FREQ_MIN/LLC_SW_FREQ_MAX))
 
-#define LLC_DEADTIME				(float)(150)//ns
-#define LLC_DEADTIME_COUNT			((int32_t)(LLC_DEADTIME/HRPWM_ONE_STEP_TIME))//register value
-#define LLC_MINTIME_COUNT           50
+
 
 #define LLC_START_UP_FREQ			(150.0)//kHz
 #define LLC_START_UP_CNT			((int32_t)(HRPWM_FINAL_FREQ/LLC_START_UP_FREQ))//register value
@@ -119,8 +173,7 @@
 #define LLC_OK_EN_CURRENT			(20.0f)
 #define LLC_OK_DIS_CURRENT			(15.0f)
 
-#define LLC_SAMPLE_FREQ             100	//khz
-#define LLC_SAMPLE_PERIOD           ((int32_t)(HRPWM_FINAL_FREQ/LLC_SAMPLE_FREQ))-1//register value 
+
 
 #define ADC_IRQ_ONE_CYCLE_TIME		(1.0/(LLC_SAMPLE_FREQ*1000))//s
 #define LLC_OPP2_TIME				0.2//(s)
@@ -351,14 +404,7 @@ typedef enum
 	
 }TW_LLC_TypeDef;
 
-typedef struct 
-{
-    int32_t period;
-    int32_t compa;
-    int32_t compb;
-    int32_t compc;
-    int32_t compd;
-}TW_HRPWM_TypeDef; 
+
 
 
 typedef union

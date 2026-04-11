@@ -72,55 +72,36 @@ void NVIC_initial(void);
 int main(void)
 {
 	SystemClock_Config();
+	
+	
 	LL_Init();
 	NVIC_initial();				// Nested vectored interrupt controller
 	gpio_init_app();
 	
-	llc_factors_initial();
-	
-	// VOFA_Init(VOFA_UART2);
-	
-	feedback_data.c[0] = *(uint32_t *)0x00020000;
-	feedback_data.c[1] = *(uint32_t *)0x00020004;
-	
-	if(feedback_data.f[0]>=1.5f || feedback_data.f[0]<=0.5f)
-	{
-		feedback_data.f[0]=1.0f;
-	}
-	llc.OCP_adjust_num = (uint32_t)(IOUT_SC_DAC0_VALUE*feedback_data.f[0]);
-	if(llc.OCP_adjust_num>4095)
-	{
-		llc.OCP_adjust_num  = 4095;
-	}
-	
-	if(feedback_data.f[1]>=1.5f || feedback_data.f[1]<=0.5f)
-	{
-		feedback_data.f[1]=1.0f;
-	}
-	
 	hrpwm_app_inital();
 	
 	adc_all_init(); 
-	
-	
-	
-	cmpss_initial_app();
 	hrpwm_app_start();
+	
+	
+	//cmpss_initial_app();
 	//iwdg_init();
 	
 	
 #if	PWM_TEST_FLAG
 	llc.state = State_on;
 	hrpwm_llc_output();
-	hrpwm_sr_output();
+	//hrpwm_sr_output();
 #endif	
 	
 	
 	adc_converter_start();
-	__LL_HRPWM_Mst_CmpA_INT_En(HRPWM);
+	//__LL_HRPWM_Mst_CmpA_INT_En(HRPWM);
 	
 	
-    while (1) {
+    while (1) 
+			{
+				
     }
 }
 void cmpss_initial_app(void)
@@ -134,9 +115,9 @@ void NVIC_initial(void)
 {
 	LL_NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_3);
 	
-	LL_NVIC_SetPriority(HRPWM_COM_IRQn,0,0);
+	//LL_NVIC_SetPriority(HRPWM_COM_IRQn,0,0);
 	LL_NVIC_SetPriority(ADC1_NORM_IRQn,2,1);
-	LL_NVIC_SetPriority(HRPWM_MST_IRQn,1,0);
+	//LL_NVIC_SetPriority(HRPWM_MST_IRQn,1,0);
 }
 /**
   * @brief  SYSCLK Config
@@ -147,11 +128,13 @@ static void SystemClock_Config(void)
 {
     LL_StatusETypeDef ret;
     RCU_SysclkUserCfgTypeDef sysclk_cfg;
+	
+	
     //SYSCLK Clock Config
     sysclk_cfg.sysclk_src  = SYSCLK_SRC_PLL0DivClk;
-    sysclk_cfg.sysclk_freq = 200000000UL;
+    sysclk_cfg.sysclk_freq = 200000000UL;				// 200M Hz
     sysclk_cfg.pll0clk_src = PLLCLK_SRC_HSI;
-    sysclk_cfg.pll0clk_src_freq = HSI_VALUE;
+    sysclk_cfg.pll0clk_src_freq = HSI_VALUE;		// Internal 8M Hz 
 	
     sysclk_cfg.apb0_clk_div = RCU_CLK_DIV_2;
     sysclk_cfg.apb1_clk_div = RCU_CLK_DIV_2;
@@ -161,8 +144,8 @@ static void SystemClock_Config(void)
     if (ret == LL_OK)
 			{
         SystemCoreClockUpdate(sysclk_cfg.sysclk_freq);
-				LL_RCU_ADC_ClkCfg(RCU_CLK_SRC_PLL0, RCU_CLK_DIV_4);
-        LL_RCU_HRPWM_ClkCfg(RCU_CLK_SRC_PLL0, RCU_CLK_DIV_1);
+				LL_RCU_ADC_ClkCfg(RCU_CLK_SRC_PLL0, RCU_CLK_DIV_4);		// ADC CLK 50M Hz (Max:60M Hz)
+        LL_RCU_HRPWM_ClkCfg(RCU_CLK_SRC_PLL0, RCU_CLK_DIV_1);	// HRPWM CLK 200M Hz
 			}
 }
 

@@ -17,6 +17,17 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "variables_define_app.h"
+
+
+volatile TW_HRPWM_TypeDef phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
+
+
+
+
+
+
+
+
 /*============================ Defines (Constant) ============================*/
 
 TW_LLC_TypeDef llc;

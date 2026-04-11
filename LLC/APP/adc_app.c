@@ -36,7 +36,7 @@ void dc_voltage_slope_calc(void);
 //
  void adc0_initial_app(ADC_TypeDef *Instance)
  {
-	ADC_InitTypeDef       user_adc_init;
+		ADC_InitTypeDef       user_adc_init;
     ADC_REG_ComCfgTypeDef user_adc_reg_com_cfg;
     ADC_REG_ChCfgTypeDef  user_adc_reg_ch_cfg;
     ADC_DMA_CfgTypeDef    user_adc_dma_cfg;
@@ -48,12 +48,12 @@ void dc_voltage_slope_calc(void);
     memset((void *)&user_adc_dma_cfg,     0x00, sizeof(user_adc_dma_cfg));
     memset((void *)&user_adc_cal_cfg,     0x00, sizeof(user_adc_cal_cfg));
 	 
-//User ADC Init
-	 /*2.9V*/
-	__LL_SYSCTRL_SpRegWrite_Unlock(SYSCTRL);				
+		//User ADC Init
+		/*2.9V*/
+		__LL_SYSCTRL_SpRegWrite_Unlock(SYSCTRL);				
 		__LL_SYSCTRL_VREFBUFOutputVol_Set(SYSCTRL,0);
 		__LL_SYSCTRL_VREFBUF_En(SYSCTRL);
-	__LL_SYSCTRL_SpRegWrite_Lock(SYSCTRL);
+		__LL_SYSCTRL_SpRegWrite_Lock(SYSCTRL);
 	 
 	 
     user_adc_init.overrun_mode   = ADC_OVERRUN_DATA_OVERWRITTEN;
@@ -66,9 +66,8 @@ void dc_voltage_slope_calc(void);
     user_adc_init.over_samp_cfg.norm_mode = ADC_NORM_OVER_SAMP_CONTINUE; // Not one time , continue
     user_adc_init.over_samp_cfg.reg_en    = true;
     user_adc_init.over_samp_cfg.inj_en    = false;
-    //user_adc_init.over_samp_cfg.inj_mode  = ADC_OVER_SAMP_MODE_NORMAL;
+
     LL_ADC_Init(ADC0, &user_adc_init);
-    LL_ADC_Init(ADC1, &user_adc_init);
 
 
     /*****************************************ADC0*****************************************/
@@ -79,91 +78,41 @@ void dc_voltage_slope_calc(void);
     user_adc_reg_com_cfg.trig_evt    = ADC_SEQ_TRIG_EVT_HRPWM_ADCTRG0;
     LL_ADC_REG_ComCfg(ADC0, &user_adc_reg_com_cfg);
 
-		//ADC0_IN2
+		//ADC0_IN7
     //User ADC Regular Channel Config
     user_adc_reg_ch_cfg.seq_num     = ADC_REG_SEQ_NUM_1;
-    user_adc_reg_ch_cfg.ch          = TEMPERATURE_SAMPLE_CHN2;
+    user_adc_reg_ch_cfg.ch          = VOUT_SAMPLE_CHN7;
     user_adc_reg_ch_cfg.done_int_en = false;
     user_adc_reg_ch_cfg.input_mode  = ADC_INPUT_MODE_SINGLE_END;
 		user_adc_reg_ch_cfg.samp_time   = ADC_SAMP_TIME_14_CYCLES;
     LL_ADC_REG_ChCfg(ADC0, &user_adc_reg_ch_cfg);
 
-
-    //User ADC DMA Config
-    user_adc_dma_cfg.ch          = TEMPERATURE_SAMPLE_CHN2;
-    user_adc_dma_cfg.circ_en     = true;
-    user_adc_dma_cfg.half_int_en = false;
-    user_adc_dma_cfg.cplt_int_en = false;
-    user_adc_dma_cfg.addr        = (uint32_t)&temperature_samp;
-    user_adc_dma_cfg.len         = sizeof(temperature_samp);
-    LL_ADC_DMA_Cfg(ADC0, &user_adc_dma_cfg);
-
-
-    //User ADC Calibration Config
-    user_adc_cal_cfg.ch       = TEMPERATURE_SAMPLE_CHN2;
-    user_adc_cal_cfg.coef_grp = ADC_CAL_COEF_GRP_0;
-    user_adc_cal_cfg.sat_dis  = false;
-    user_adc_cal_cfg.offset   = 0;
-    user_adc_cal_cfg.gain     = 8192;
-    LL_ADC_Cal_Cfg(ADC0, &user_adc_cal_cfg);
-		
-		
-		
-		
-		
-		
-		//ADC0_IN4
-  	user_adc_reg_ch_cfg.seq_num     = ADC_REG_SEQ_NUM_2;
-    user_adc_reg_ch_cfg.ch          = CURRENTR_SHARE_SAMPLE_CHN3;
+		//ADC0_IN8
+    //User ADC Regular Channel Config
+    user_adc_reg_ch_cfg.seq_num     = ADC_REG_SEQ_NUM_1;
+    user_adc_reg_ch_cfg.ch          = RSENSE1_SAMPLE_CHN3;
     user_adc_reg_ch_cfg.done_int_en = false;
     user_adc_reg_ch_cfg.input_mode  = ADC_INPUT_MODE_SINGLE_END;
+		user_adc_reg_ch_cfg.samp_time   = ADC_SAMP_TIME_14_CYCLES;
     LL_ADC_REG_ChCfg(ADC0, &user_adc_reg_ch_cfg);
 
-
-    //User ADC DMA Config
-    user_adc_dma_cfg.ch          = CURRENTR_SHARE_SAMPLE_CHN3;
-    user_adc_dma_cfg.circ_en     = true;
-    user_adc_dma_cfg.half_int_en = false;
-    user_adc_dma_cfg.cplt_int_en = false;
-    user_adc_dma_cfg.addr        = (uint32_t)&current_share_samp;
-    user_adc_dma_cfg.len         = sizeof(current_share_samp);
-    LL_ADC_DMA_Cfg(ADC0, &user_adc_dma_cfg);
-
-
-    //User ADC Calibration Config
-    user_adc_cal_cfg.ch       = CURRENTR_SHARE_SAMPLE_CHN3;
-    user_adc_cal_cfg.coef_grp = ADC_CAL_COEF_GRP_0;
-    user_adc_cal_cfg.sat_dis  = false;
-    user_adc_cal_cfg.offset   = 0;
-    user_adc_cal_cfg.gain     = 8192;
-    LL_ADC_Cal_Cfg(ADC0, &user_adc_cal_cfg);
-	
-	  //User ADC Regular Channel Config
-    user_adc_reg_ch_cfg.seq_num     = ADC_REG_SEQ_NUM_3;
-    user_adc_reg_ch_cfg.ch          = CURRENT_OUTPUT_SAMPLE_CHN15;
+		//ADC0_IN1
+    //User ADC Regular Channel Config
+    user_adc_reg_ch_cfg.seq_num     = ADC_REG_SEQ_NUM_1;
+    user_adc_reg_ch_cfg.ch          = VP_SAMPLE_CHN1;
     user_adc_reg_ch_cfg.done_int_en = false;
     user_adc_reg_ch_cfg.input_mode  = ADC_INPUT_MODE_SINGLE_END;
-
+		user_adc_reg_ch_cfg.samp_time   = ADC_SAMP_TIME_14_CYCLES;
     LL_ADC_REG_ChCfg(ADC0, &user_adc_reg_ch_cfg);
 
-
-    //User ADC DMA Config
-    user_adc_dma_cfg.ch          = CURRENT_OUTPUT_SAMPLE_CHN15;
-    user_adc_dma_cfg.circ_en     = true;
-    user_adc_dma_cfg.half_int_en = false;
-    user_adc_dma_cfg.cplt_int_en = false;
-    user_adc_dma_cfg.addr        = (uint32_t)&llc_current_samp; 
-    user_adc_dma_cfg.len         = sizeof(llc_current_samp);
-    LL_ADC_DMA_Cfg(ADC0, &user_adc_dma_cfg);
-
-
-    //User ADC Calibration Config
-    user_adc_cal_cfg.ch       = CURRENT_OUTPUT_SAMPLE_CHN15;
-    user_adc_cal_cfg.coef_grp = ADC_CAL_COEF_GRP_1;
-    user_adc_cal_cfg.sat_dis  = false;
-    user_adc_cal_cfg.offset   = 0;
-    user_adc_cal_cfg.gain     = 8192;
-    LL_ADC_Cal_Cfg(ADC0, &user_adc_cal_cfg);
+		//ADC0_IN2
+    //User ADC Regular Channel Config
+    user_adc_reg_ch_cfg.seq_num     = ADC_REG_SEQ_NUM_1;
+    user_adc_reg_ch_cfg.ch          = VN_SAMPLE_CHN2;
+    user_adc_reg_ch_cfg.done_int_en = false;
+    user_adc_reg_ch_cfg.input_mode  = ADC_INPUT_MODE_SINGLE_END;
+		user_adc_reg_ch_cfg.samp_time   = ADC_SAMP_TIME_14_CYCLES;
+    LL_ADC_REG_ChCfg(ADC0, &user_adc_reg_ch_cfg);
 
 	
 /*****************************************ADC0*****************************************/
@@ -293,13 +242,12 @@ void dc_voltage_slope_calc(void);
  void adc_all_init(void)
  {
 	 adc0_initial_app(ADC0);
-	 adc1_initial_app(ADC1);
  }
  void adc_converter_start(void)
  {
 	__LL_ADC_REG_Conv_Start(ADC0);
 	__LL_ADC_REG_Conv_Start(ADC1);
-	__LL_ADC_REG_SeqEnd_INT_En(ADC1);
+	__LL_ADC_REG_SeqEnd_INT_En(ADC0);
  }
 __SECTION(RAMCODE)
 void get_adc_data(void)
@@ -321,7 +269,7 @@ int32_t tx_cnt;
 __SECTION(RAMCODE)
  void LL_ADC_Norm_REG_SeqEndCallback(ADC_TypeDef *Instance)            //ADC常规序列转换完毕中断
 { 
- 	GPIOA->BSR = GPIO_PIN_10;
+ 	//GPIOA->BSR = GPIO_PIN_10;
 	get_adc_data();
 	llc_handle();
 	llc_ok_s_func();    
@@ -344,7 +292,7 @@ __SECTION(RAMCODE)
 		vofa_tx(DMA_CHANNEL_0);
 		tx_cnt = 0;
 	}
-	GPIOA->BSR = GPIO_PIN_10<<16;
+	//GPIOA->BSR = GPIO_PIN_10<<16;
 }
 
 /**
@@ -368,24 +316,24 @@ void LL_ADC_MspInit(ADC_TypeDef *Instance)
     ADC_GPIO_Init.Pull      = GPIO_NOPULL;
     ADC_GPIO_Init.Speed     = GPIO_SPEED_FREQ_LOW;
     ADC_GPIO_Init.Alternate = GPIO_AF15_ADC;
-    if (Instance == ADC0) {
-        //ADC0 Pinmux Config: PA1->ADC0_IN1  PA3->ADC0_IN4 PB0->ADC0_IN15 
-        ADC_GPIO_Init.Pin = GPIO_PIN_1 | GPIO_PIN_2;
+	
+		if (Instance == ADC0) 
+		{
+        //ADC0 Pinmux Config: 
+        ADC_GPIO_Init.Pin = GPIO_PIN_0 | GPIO_PIN_1;
         LL_GPIO_Init(GPIOA, &ADC_GPIO_Init);
-        ADC_GPIO_Init.Pin = GPIO_PIN_0;	
-        LL_GPIO_Init(GPIOB, &ADC_GPIO_Init);
+			
+        ADC_GPIO_Init.Pin = GPIO_PIN_1 | GPIO_PIN_2;	
+        LL_GPIO_Init(GPIOC, &ADC_GPIO_Init);
 
         //ADC0 Bus Clock Enable and Soft Reset Release
         LL_RCU_ADC0_ClkEnRstRelease();
  
         //NVIC ADC0 Interrupt Enable
-		LL_NVIC_EnableIRQ(ADC0_NORM_IRQn);
-    } else if (Instance == ADC1) {
-        //ADC1 Pinmux Config: PA4->ADC1_IN16 PA6->ADC1_IN3 PC4->ADC1_IN5
-        ADC_GPIO_Init.Pin = GPIO_PIN_4;
-        LL_GPIO_Init(GPIOC, &ADC_GPIO_Init);
-				ADC_GPIO_Init.Pin = GPIO_PIN_4| GPIO_PIN_6;
-        LL_GPIO_Init(GPIOA, &ADC_GPIO_Init);
+				LL_NVIC_EnableIRQ(ADC0_NORM_IRQn);
+    } 
+		else if (Instance == ADC1) 
+		{
 
         //ADC1 Bus Clock Enable and Soft Reset Release
         LL_RCU_ADC1_ClkEnRstRelease();
@@ -394,6 +342,7 @@ void LL_ADC_MspInit(ADC_TypeDef *Instance)
        LL_NVIC_EnableIRQ(ADC1_NORM_IRQn);
 
     }
+
 }
 
  /*===================end of adc_app.c===========================*/
