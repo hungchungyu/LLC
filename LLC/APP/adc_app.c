@@ -18,6 +18,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "include_app.h"
+#include "tae32g58xx_ll_gpio.h"
+
+
 /** @addtogroup Template_Project
   * @{
   */
@@ -270,9 +273,11 @@ __SECTION(RAMCODE)
  void LL_ADC_Norm_REG_SeqEndCallback(ADC_TypeDef *Instance)            //ADC常规序列转换完毕中断
 { 
  	//GPIOA->BSR = GPIO_PIN_10;
-	get_adc_data();
-	llc_handle();
-	llc_ok_s_func();    
+
+	
+	//get_adc_data();
+	//llc_handle();
+	//llc_ok_s_func();    
 	if(tx_cnt++==2){
 		IWDG->KEYR = 0xAAAA;//独立看门狗喂狗
 //		tx_vofa_data.f[0] = llc.vout_raw;

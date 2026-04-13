@@ -471,6 +471,7 @@ __WEAK void LL_SYSTICK_Callback(void)
     /* NOTE : This function Should not be modified, when the callback is needed,
               the LL_SYSTICK_Callback could be implemented in the user file
      */
+		LL_GPIO_TogglePin(GPIOA, GPIO_PIN_11);
 }
 /**
   * @}

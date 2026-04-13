@@ -13,6 +13,7 @@
 ".\flash\objects\main.o"
 ".\flash\objects\tae32g58xx_it.o"
 ".\flash\objects\tae32g58xx_ll_msp.o"
+".\flash\objects\utils.o"
 ".\flash\objects\tae32g58xx_ll.o"
 ".\flash\objects\tae32g58xx_ll_cortex.o"
 ".\flash\objects\tae32g58xx_ll_rcu.o"

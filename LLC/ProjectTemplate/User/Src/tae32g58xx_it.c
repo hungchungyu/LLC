@@ -23,7 +23,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "tae32g58xx_it.h"
-
+#include "utils.h"
 
 /** @addtogroup TAE32G58xx_Examples
   * @{
@@ -140,21 +140,25 @@ void PendSV_Handler(void)
 }
 /********************************************APP IRQHandler****************************************/
 __SECTION(RAMCODE)
-void ADC1_NORM_IRQHandler(void)
+void ADC0_NORM_IRQHandler(void)
 {
 	uint32_t int_en, int_pending;
+
+	//LL_GPIO_TogglePin(GPIOA, GPIO_PIN_10);
+	LL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_SET);
 	
     //ADC Normal All Interrupt Enalbe and Pending Get
-    int_en = __LL_ADC_NormAllIntEn_Get(ADC1);
-    int_pending = __LL_ADC_NormAllIntPending_Get(ADC1);
+    int_en = __LL_ADC_NormAllIntEn_Get(ADC0);
+    int_pending = __LL_ADC_NormAllIntPending_Get(ADC0);
 
 	    //Injected Sequence End Interrupt Handler
-    if ((int_en & ADC1_IER_EOSIE_Msk) && (int_pending & ADC1_ISR_EOS_Msk)) {
+    if ((int_en & ADC0_IER_EOSIE_Msk) && (int_pending & ADC0_ISR_EOS_Msk)) {
         //Clear Interrupt Pending
-        __LL_ADC_REG_SeqEndIntPnd_Clr(ADC1);
-		LL_ADC_Norm_REG_SeqEndCallback(ADC1);
+        __LL_ADC_REG_SeqEndIntPnd_Clr(ADC0);
+		//LL_ADC_Norm_REG_SeqEndCallback(ADC0);
+			open_loop();
 	}
-	
+		LL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_RESET);
 }
 
 /**

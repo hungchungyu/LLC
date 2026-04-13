@@ -469,6 +469,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\Src\tae32g58xx_ll_msp.c</FilePath>
             </File>
+            <File>
+              <FileName>utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\Src\utils.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1088,6 +1093,11 @@
               <FileName>tae32g58xx_ll_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\Src\tae32g58xx_ll_msp.c</FilePath>
+            </File>
+            <File>
+              <FileName>utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\Src\utils.c</FilePath>
             </File>
           </Files>
         </Group>

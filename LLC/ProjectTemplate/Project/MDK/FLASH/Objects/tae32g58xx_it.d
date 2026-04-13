@@ -37,4 +37,4 @@
   ..\..\..\APP\llc_app.h ..\..\..\APP\protection_app.h \
   ..\..\..\APP\dac_app.h ..\..\..\APP\cmp_app.h ..\..\..\APP\user_vofa.h \
   ..\..\..\APP\pid_app.h ..\..\..\APP\iwdg_app.h \
-  ..\..\User\Inc\tae32g58xx_it.h
+  ..\..\User\Inc\tae32g58xx_it.h ..\..\User\Inc\utils.h
