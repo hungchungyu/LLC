@@ -109,16 +109,15 @@ void hrpwm_app_config(HRPWM_TypeDef *Instance)
 		
 		
     //Slave PWMx Timer Base Config
-		user_hrpwm_tmr_base_cfg.work_mode  				= HRPWM_WORK_MODE_SINGLE;
+		user_hrpwm_tmr_base_cfg.work_mode  				= HRPWM_WORK_MODE_CONTINUE;
 		
 		user_hrpwm_tmr_base_cfg.upd_gate            	= HRPWM_SLV_UPD_GATE_BST_DMA_INDEPEND;
-		user_hrpwm_tmr_base_cfg.single_retrig_en 			= true;			// ReTrigger
+		user_hrpwm_tmr_base_cfg.single_retrig_en 			= false;			// ReTrigger
 		
 		user_hrpwm_tmr_base_cfg.resync_mode						= HRPWM_SLV_RESYNC_NEXT_RST_ROLLOVER;
-		user_hrpwm_tmr_base_cfg.cntr_rst_evt     			= HRPWM_SLV0_CNTR_RST_EVT_MST_PWM_PRD;
+		user_hrpwm_tmr_base_cfg.cntr_rst_evt     			= HRPWM_SLV0_CNTR_RST_EVT_NONE;
     LL_HRPWM_TmrBaseCfg(Instance, LLC_PHASE1_PWM0, &user_hrpwm_tmr_base_cfg);		
-
-		user_hrpwm_tmr_base_cfg.cntr_rst_evt     			= HRPWM_SLV2_CNTR_RST_EVT_MST_PWM_PRD;
+		user_hrpwm_tmr_base_cfg.cntr_rst_evt     			= HRPWM_SLV2_CNTR_RST_EVT_NONE;
     LL_HRPWM_TmrBaseCfg(Instance, LLC_PHASE2_PWM2, &user_hrpwm_tmr_base_cfg);	
 
 	

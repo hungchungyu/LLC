@@ -297,7 +297,13 @@ void updata_hrpwm()
 		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPCR = phase1_pwm0.compc;
 		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPDR = phase1_pwm0.compd;
 		HRPWM->PWM[LLC_PHASE1_PWM0].REG.PERR  = phase1_pwm0.period;
-		HRPWM->Master.MPER       = phase1_pwm0.period;
+	
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPAR = phase1_pwm0.compa;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPBR = phase1_pwm0.compb;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPCR = phase1_pwm0.compc;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPDR = phase1_pwm0.compd;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.PERR  = phase1_pwm0.period;
+		//HRPWM->Master.MPER       = phase1_pwm0.period;
 	
 	__NOP();__NOP();__NOP();__NOP();__NOP();
 	HRPWM->Common.CR0 &= ~(0x81FF);

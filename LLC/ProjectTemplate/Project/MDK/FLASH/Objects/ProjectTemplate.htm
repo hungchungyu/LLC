@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\FLASH\Objects\ProjectTemplate.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\FLASH\Objects\ProjectTemplate.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Tue Apr 14 00:07:42 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Tue Apr 14 22:32:22 2026
 <BR><P>
-<H3>Maximum Stack Usage =        376 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        368 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; hrpwm_app_inital &rArr; hrpwm_app_config &rArr; LL_HRPWM_Init &rArr; LL_HRPWM_MspInit &rArr; LL_GPIO_Init &rArr; assert_failed &rArr; __2printf
 <P>
@@ -1167,8 +1167,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ce]"></a>hrpwm_app_config</STRONG> (Thumb, 338 bytes, Stack size 152 bytes, hrpwm_app.o(.text.hrpwm_app_config))
-<BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = hrpwm_app_config &rArr; LL_HRPWM_Init &rArr; LL_HRPWM_MspInit &rArr; LL_GPIO_Init &rArr; assert_failed &rArr; __2printf
+<P><STRONG><a name="[ce]"></a>hrpwm_app_config</STRONG> (Thumb, 326 bytes, Stack size 144 bytes, hrpwm_app.o(.text.hrpwm_app_config))
+<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = hrpwm_app_config &rArr; LL_HRPWM_Init &rArr; LL_HRPWM_MspInit &rArr; LL_GPIO_Init &rArr; assert_failed &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_HRPWM_RegUpd_Frc
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_HRPWM_Comm_DLL_Start
@@ -1182,7 +1182,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[d0]"></a>hrpwm_app_inital</STRONG> (Thumb, 224 bytes, Stack size 96 bytes, hrpwm_app.o(.text.hrpwm_app_inital))
-<BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = hrpwm_app_inital &rArr; hrpwm_app_config &rArr; LL_HRPWM_Init &rArr; LL_HRPWM_MspInit &rArr; LL_GPIO_Init &rArr; assert_failed &rArr; __2printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = hrpwm_app_inital &rArr; hrpwm_app_config &rArr; LL_HRPWM_Init &rArr; LL_HRPWM_MspInit &rArr; LL_GPIO_Init &rArr; assert_failed &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_HRPWM_Comm_ADCTrigCfg
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_HRPWM_RegUpd_Frc
@@ -1209,7 +1209,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[62]"></a>main</STRONG> (Thumb, 162 bytes, Stack size 24 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 376<LI>Call Chain = main &rArr; hrpwm_app_inital &rArr; hrpwm_app_config &rArr; LL_HRPWM_Init &rArr; LL_HRPWM_MspInit &rArr; LL_GPIO_Init &rArr; assert_failed &rArr; __2printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 368<LI>Call Chain = main &rArr; hrpwm_app_inital &rArr; hrpwm_app_config &rArr; LL_HRPWM_Init &rArr; LL_HRPWM_MspInit &rArr; LL_GPIO_Init &rArr; assert_failed &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_NVIC_SetPriority
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_NVIC_SetPriorityGrouping
@@ -1227,7 +1227,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[e0]"></a>open_loop</STRONG> (Thumb, 528 bytes, Stack size 8 bytes, utils.o(.text.open_loop))
+<P><STRONG><a name="[e0]"></a>open_loop</STRONG> (Thumb, 544 bytes, Stack size 8 bytes, utils.o(.text.open_loop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = open_loop
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_NORM_IRQHandler (via Veneer)
