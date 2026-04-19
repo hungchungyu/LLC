@@ -2,249 +2,172 @@
 #include "main.h"
 #include "variables_define_app.h"
 
+
+#define LLC_MAX_PWM_SWITCHING_FREQUENCY_HZ   	((float)(200.0f * 1000.0f))   // 200kHz
+#define LLC_MIN_PWM_SWITCHING_FREQUENCY_HZ   	((float)(100.0f * 1000.0f))   // 100kHz
+
+#define LLC_PRIM_PWM_DEADBAND_NS							((float)(150.0f * 1e-9f))     // 150ns
+#define LLC_PWMSYSCLOCK_FREQ_HZ   						((float)(3.2f * 1000.0f * 1000.0f * 1000.0f))   // 3.2GHz
+
+#define LLC_PWM_DEADBAND_COUNT               ((uint32_t)((LLC_PWMSYSCLOCK_FREQ_HZ * LLC_PRIM_PWM_DEADBAND_NS) + 0.5f))
+
+#define LLC_MAX_FREQ_PERIOD_COUNT            ((uint32_t)((LLC_PWMSYSCLOCK_FREQ_HZ / LLC_MAX_PWM_SWITCHING_FREQUENCY_HZ) + 0.5f))
+#define LLC_MIN_FREQ_PERIOD_COUNT            ((uint32_t)((LLC_PWMSYSCLOCK_FREQ_HZ / LLC_MIN_PWM_SWITCHING_FREQUENCY_HZ) + 0.5f))
+
+
 digitctrl_PI P1_I_Loop;
 float open_loop_value = -500.0f;
 
-static inline void Sweep_Comp_UpDown(volatile TW_HRPWM_TypeDef* pwm)
+typedef struct
 {
-    static float compb_f = (float)LLC_DEADTIME_COUNT;
-    static int8_t dir = 1;
+    uint32_t period;
+    uint32_t compa;
+    uint32_t compb;
+    uint32_t compc;
+    uint32_t compd;
+} LLC_PWM_CmpTypeDef;
 
-    float period      = (float)(HRPWM_FINAL_FREQ / LLC_SW_FREQ_MAX);
-    float half_period = period * 0.5f;
+LLC_PWM_CmpTypeDef phase1_pwm, phase2_pwm;
 
-    if(dir > 0)
-    {
-        compb_f += 0.01f;
-        if(compb_f >= half_period)
-        {
-            compb_f = half_period;
-            dir = -1;
-        }
-    }
-    else
-    {
-        compb_f -= 0.01f;
-        if(compb_f <= (float)LLC_DEADTIME_COUNT)
-        {
-            compb_f = (float)LLC_DEADTIME_COUNT;
-            dir = 1;
-        }
-    }
-
-    pwm->compb = (int32_t)(compb_f + 0.5f);  
-		pwm->compd = pwm->compb + ((int32_t)(half_period + 0.5f));
+/* Clamp value within range */
+static inline float ClampFloat(float x, float min, float max)
+{
+    if (x < min) return min;
+    if (x > max) return max;
+    return x;
 }
 
-static inline float SlewRateLimit(float cmd, float target)
-{	
-    float delta = target - cmd;
-    float rise_step = 100.0f;
-    float drop_step = 100.0f;
-
-    if(delta > rise_step)
-    {
-        cmd += rise_step;
-    }
-    else if(delta < -drop_step)
-    {
-        cmd -= drop_step;
-    }
-    else
-    {
-        cmd = target;
-    }
-
-    return cmd;
-}
-
-static inline void Value_To_Period(digitctrl_PI* p, volatile TW_HRPWM_TypeDef* pwm)
+static inline void CtrlToPwm(float value, LLC_PWM_CmpTypeDef *pwm_cmp)
 {
-    float value = p->Out;
-
-    if(value <= 0.0)
-    {
-			int32_t period = (int32_t)(HRPWM_FINAL_FREQ/LLC_SW_FREQ_MAX);
-			int32_t half_period = period >> 1;
-			float k = (value + 500.0f) / 500.0f;   // -500~0 -> 0%~100%(1/2PRD)
-			
-			if(value < -500.0f) value = -500.0f;
-			if(value > 0.0f)    value = 0.0f;
-			
-			pwm->period	= period - 1;
-			pwm->compa	= LLC_DEADTIME_COUNT - 1;
-			pwm->compc  = half_period + LLC_DEADTIME_COUNT - 1;
-						
-			pwm->compb = pwm->compa + (int32_t)(k * (half_period - pwm->compa));
-			pwm->compd = pwm->compb + half_period;
-			
-		}
-    else if(value >= 0.0)
-    {
-
-    }
-
-}
-
-int32_t debug_sw_freq = 0;
-int32_t debug_period  = 0;
-int32_t debug_duty  = 0;
-static inline void Sweep_Freq_UpDown_50Duty(volatile TW_HRPWM_TypeDef* pwm)
-{
-    static float sw_freq = LLC_SW_FREQ_MAX;
-    static int8_t dir = -1;   // -1: high -> low, +1: low -> high
-
+    float freq_hz;
     float period_f;
-    int32_t period;
-    int32_t half_period;
+    float duty_f;
+    float ratio;
 
-    if(dir < 0)
+    uint32_t period;
+    uint32_t half_period;
+    uint32_t duty_cnt;
+    uint32_t min_duty_cnt;
+    uint32_t max_duty_cnt;
+
+    if (pwm_cmp == 0u)
     {
-        sw_freq -= 0.001f;
-        if(sw_freq <= LLC_SW_FREQ_MIN)
+        return;
+    }
+
+    /* Clamp input command to valid range */
+    value = ClampFloat(value, -0.5f, 1.0f);
+
+    if (value <= 0.0f)
+    {
+        /* ---------------------------------------------
+         * Soft-start region
+         * value: -0.5 ~ 0
+         * freq : fixed at max frequency
+         * duty : LLC_PWM_DEADBAND_COUNT ~ max safe 50%
+         * --------------------------------------------- */
+        freq_hz = LLC_MAX_PWM_SWITCHING_FREQUENCY_HZ;
+
+        period_f = LLC_PWMSYSCLOCK_FREQ_HZ / freq_hz;
+        period   = (uint32_t)(period_f + 0.5f);
+
+        half_period  = period >> 1;
+        min_duty_cnt = LLC_PWM_DEADBAND_COUNT;
+        max_duty_cnt = half_period - 1u;
+
+        if (max_duty_cnt < min_duty_cnt)
         {
-            sw_freq = LLC_SW_FREQ_MIN;
-            dir = 1;
+            max_duty_cnt = min_duty_cnt;
+        }
+
+        /* Map:
+         * value = -0.5 -> duty = LLC_PWM_DEADBAND_COUNT
+         * value =  0.0 -> duty = max_duty_cnt
+         */
+        ratio  = (value + 0.5f) / 0.5f;
+        duty_f = (float)min_duty_cnt +
+                 ((float)(max_duty_cnt - min_duty_cnt) * ratio);
+
+        duty_cnt = (uint32_t)(duty_f + 0.5f);
+
+        if (duty_cnt < min_duty_cnt)
+        {
+            duty_cnt = min_duty_cnt;
+        }
+        if (duty_cnt > max_duty_cnt)
+        {
+            duty_cnt = max_duty_cnt;
         }
     }
     else
     {
-        sw_freq += 0.001f;
-        if(sw_freq >= LLC_SW_FREQ_MAX)
+        /* ---------------------------------------------
+         * Normal control region
+         * value: 0 ~ 1
+         * freq : max frequency -> min frequency
+         * duty : fixed at max safe 50%
+         * --------------------------------------------- */
+        freq_hz = LLC_MAX_PWM_SWITCHING_FREQUENCY_HZ -
+                  ((LLC_MAX_PWM_SWITCHING_FREQUENCY_HZ - LLC_MIN_PWM_SWITCHING_FREQUENCY_HZ) * value);
+
+        period_f = LLC_PWMSYSCLOCK_FREQ_HZ / freq_hz;
+        period   = (uint32_t)(period_f + 0.5f);
+
+        half_period  = period >> 1;
+        min_duty_cnt = LLC_PWM_DEADBAND_COUNT;
+        max_duty_cnt = half_period - 1u;
+
+        if (max_duty_cnt < min_duty_cnt)
         {
-            sw_freq = LLC_SW_FREQ_MAX;
-            dir = -1;
+            max_duty_cnt = min_duty_cnt;
         }
+
+        duty_cnt = max_duty_cnt;
     }
 
-    period_f = (float)HRPWM_FINAL_FREQ / sw_freq;
-    period   = (int32_t)(period_f + 0.5f);
-    half_period = period >> 1;
-
-    if(half_period <= LLC_DEADTIME_COUNT)
-    {
-        half_period = LLC_DEADTIME_COUNT + 1;
-        period = half_period << 1;
-    }
-
-    pwm->period = period - 1;
-
-    pwm->compa  = LLC_DEADTIME_COUNT - 1;
-    pwm->compb  = half_period - 1;
-
-    pwm->compc  = half_period + LLC_DEADTIME_COUNT - 1;
-    pwm->compd  = period - 1;
-		
-		debug_sw_freq = sw_freq;
-		debug_period  = period;
+    pwm_cmp->period = period - 1u;
+    pwm_cmp->compa  = LLC_PWM_DEADBAND_COUNT;
+    pwm_cmp->compb  = duty_cnt;
+    pwm_cmp->compc  = half_period + LLC_PWM_DEADBAND_COUNT;
+    pwm_cmp->compd  = half_period + duty_cnt;
 }
-
-static inline void Sweep_DutyMax_Then_FreqDown(volatile TW_HRPWM_TypeDef* pwm)
+static inline float LLC_SlewValue(float target)
 {
-    typedef enum
+    static float current = -0.5f;
+
+    float rise_step = 0.00001f;
+    float fall_step = 0.00001f;
+
+    target = ClampFloat(target, -0.5f, 1.0f);
+
+    if (target > current)
     {
-        SWEEP_DUTY_UP = 0,
-        SWEEP_FREQ_DOWN
-    } sweep_stage_t;
-
-    static sweep_stage_t stage = SWEEP_DUTY_UP;
-
-    static float compb_f = (float)LLC_DEADTIME_COUNT;
-    static float sw_freq = LLC_SW_FREQ_MAX;
-    static float duty_ratio = 0.0f;
-
-    float period_f;
-    float half_period_f;
-    int32_t period;
-    int32_t half_period;
-    int32_t compb_int;
-    int32_t compd_int;
-
-    period_f      = (float)HRPWM_FINAL_FREQ / sw_freq;
-    half_period_f = period_f * 0.5f;
-
-    if(stage == SWEEP_DUTY_UP)
-    {
-        compb_f += 0.01f;
-
-        if(compb_f >= (half_period_f - 1.0f))
+        current += rise_step;
+        if (current > target)
         {
-            compb_f = half_period_f - 1.0f;
-            stage = SWEEP_FREQ_DOWN;
+            current = target;
         }
-
-        compb_int = (int32_t)(compb_f + 0.5f);
-        compd_int = compb_int + (int32_t)(half_period_f + 0.5f);
-
-        pwm->compb = compb_int;
-        pwm->compd = compd_int;
-
-        duty_ratio = (compb_f - (float)LLC_DEADTIME_COUNT) /
-                     (half_period_f - (float)LLC_DEADTIME_COUNT);
-
-        if(duty_ratio < 0.0f)
-            duty_ratio = 0.0f;
-        else if(duty_ratio > 1.0f)
-            duty_ratio = 1.0f;
     }
-    else
+    else if (target < current)
     {
-        sw_freq -= 0.0001f;
-        if(sw_freq <= LLC_SW_FREQ_MIN)
+        current -= fall_step;
+        if (current < target)
         {
-            sw_freq = LLC_SW_FREQ_MIN;
+            current = target;
         }
-
-        period_f    = (float)HRPWM_FINAL_FREQ / sw_freq;
-        period      = (int32_t)(period_f + 0.5f);
-        half_period = period >> 1;
-
-        if(half_period <= LLC_DEADTIME_COUNT)
-        {
-            half_period = LLC_DEADTIME_COUNT + 1;
-            period = half_period << 1;
-        }
-
-        compb_f = (float)LLC_DEADTIME_COUNT +
-                  duty_ratio * ((float)half_period - (float)LLC_DEADTIME_COUNT);
-
-        if(compb_f < (float)LLC_DEADTIME_COUNT)
-            compb_f = (float)LLC_DEADTIME_COUNT;
-        else if(compb_f > ((float)half_period - 1.0f))
-            compb_f = (float)half_period - 1.0f;
-
-        compb_int = (int32_t)(compb_f + 0.5f);
-        compd_int = compb_int + half_period;
-
-        pwm->period = period - 1;
-        pwm->compa  = LLC_DEADTIME_COUNT - 1;
-        pwm->compb  = compb_int;
-        pwm->compc  = half_period + LLC_DEADTIME_COUNT - 1;
-        pwm->compd  = compd_int;
-
-        if(pwm->compb >= half_period)
-            pwm->compb = half_period - 1;
-
-        if(pwm->compd >= period)
-            pwm->compd = period - 1;
     }
 
-    debug_sw_freq = sw_freq;
-    debug_period  = (int32_t)(period_f + 0.5f);
-    debug_duty    = duty_ratio;
+    current = ClampFloat(current, -0.5f, 1.0f);
+
+    return current;
 }
-
 void open_loop(void)
 {
-	static int32_t i = 0;
-	
-	//SlewRateLimit(open_loop_value, 1000.0f);
-	//Value_To_Period(&P1_I_Loop, &phase1_pwm0);
-	
+	static float ctrl_value = 1.0;
+	float pwm_value = LLC_SlewValue(ctrl_value);
 
-	//Sweep_Comp_UpDown(&phase1_pwm0);
-	//Sweep_Freq_UpDown_50Duty(&phase1_pwm0);
-	Sweep_DutyMax_Then_FreqDown(&phase1_pwm0);
+	CtrlToPwm(pwm_value, &phase1_pwm);
+	CtrlToPwm(pwm_value, &phase2_pwm);
 	updata_hrpwm();
 }
 
@@ -292,19 +215,18 @@ void updata_hrpwm()
 	__NOP();__NOP();__NOP();__NOP();__NOP();
 	
 	
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPAR = phase1_pwm0.compa;
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPBR = phase1_pwm0.compb;
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPCR = phase1_pwm0.compc;
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPDR = phase1_pwm0.compd;
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.PERR  = phase1_pwm0.period;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPAR = phase1_pwm.compa;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPBR = phase1_pwm.compb;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPCR = phase1_pwm.compc;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPDR = phase1_pwm.compd;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.PERR  = phase1_pwm.period;
 	
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPAR = phase1_pwm0.compa;
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPBR = phase1_pwm0.compb;
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPCR = phase1_pwm0.compc;
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPDR = phase1_pwm0.compd;
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.PERR  = phase1_pwm0.period;
-		//HRPWM->Master.MPER       = phase1_pwm0.period;
-	
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPAR = phase2_pwm.compa;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPBR = phase2_pwm.compb;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPCR = phase2_pwm.compc;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPDR = phase2_pwm.compd;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.PERR  = phase2_pwm.period;
+
 	__NOP();__NOP();__NOP();__NOP();__NOP();
 	HRPWM->Common.CR0 &= ~(0x81FF);
 }

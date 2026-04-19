@@ -208,11 +208,10 @@ Section Cross References
     tae32g58xx_ll_msp.o(.text.LL_UART_MspDeInit) refers to tae32g58xx_ll_msp.o(.rodata.str1.1) for .L.str
     tae32g58xx_ll_msp.o(.text.LL_UART_MspDeInit) refers to main.o(.text.assert_failed) for assert_failed
     tae32g58xx_ll_msp.o(.ARM.exidx.text.LL_UART_MspDeInit) refers to tae32g58xx_ll_msp.o(.text.LL_UART_MspDeInit) for [Anonymous Symbol]
-    utils.o(.text.open_loop) refers to utils.o(.bss..L_MergedGlobals.2) for .L_MergedGlobals.2
-    utils.o(.text.open_loop) refers to utils.o(.data..L_MergedGlobals) for .L_MergedGlobals
-    utils.o(.text.open_loop) refers to variables_define_app.o(.bss.phase1_pwm0) for phase1_pwm0
+    utils.o(.text.open_loop) refers to utils.o(.data.LLC_SlewValue.current) for LLC_SlewValue.current
+    utils.o(.text.open_loop) refers to utils.o(.bss..L_MergedGlobals) for .L_MergedGlobals
     utils.o(.ARM.exidx.text.open_loop) refers to utils.o(.text.open_loop) for [Anonymous Symbol]
-    utils.o(.text.updata_hrpwm) refers to variables_define_app.o(.bss.phase1_pwm0) for phase1_pwm0
+    utils.o(.text.updata_hrpwm) refers to utils.o(.bss..L_MergedGlobals) for .L_MergedGlobals
     utils.o(.ARM.exidx.text.updata_hrpwm) refers to utils.o(.text.updata_hrpwm) for [Anonymous Symbol]
     tae32g58xx_ll.o(.text.LL_Init) refers to tae32g58xx_ll_cortex.o(.text.LL_NVIC_SetPriorityGrouping) for LL_NVIC_SetPriorityGrouping
     tae32g58xx_ll.o(.text.LL_Init) refers to tae32g58xx_ll.o(.text.LL_InitTick) for LL_InitTick
@@ -3467,7 +3466,7 @@ Removing Unused input sections from the image.
     Removing tae32g58xx_ll_msp.o(.rodata.str1.1), (35 bytes).
     Removing utils.o(.text), (0 bytes).
     Removing utils.o(.ARM.exidx.text.open_loop), (8 bytes).
-    Removing utils.o(.text.updata_hrpwm), (116 bytes).
+    Removing utils.o(.text.updata_hrpwm), (126 bytes).
     Removing utils.o(.ARM.exidx.text.updata_hrpwm), (8 bytes).
     Removing utils.o(.data.open_loop_value), (4 bytes).
     Removing utils.o(.bss.P1_I_Loop), (32 bytes).
@@ -5200,7 +5199,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing dfltul.o(.text), (24 bytes).
 
-1845 unused section(s) (total 138951 bytes) removed from the image.
+1845 unused section(s) (total 138961 bytes) removed from the image.
 
 ==============================================================================
 
@@ -5455,64 +5454,60 @@ Image Symbol Table
     [Anonymous Symbol]                       0x08003068   Section        0  hrpwm_app.o(.text.hrpwm_llc_output)
     [Anonymous Symbol]                       0x0800307c   Section        0  main.o(.text.main)
     [Anonymous Symbol]                       0x08003120   Section        0  utils.o(.text.open_loop)
-    [Anonymous Symbol]                       0x0800335c   Section        0  llc_app.o(.text.pwm_data_calc)
-    i.__0printf$8                            0x080036fc   Section        0  printf8.o(i.__0printf$8)
-    i.__scatterload_copy                     0x0800371c   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800372a   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x0800372c   Section       14  handlers.o(i.__scatterload_zeroinit)
-    _printf_core                             0x0800373d   Thumb Code   996  printf8.o(i._printf_core)
-    i._printf_core                           0x0800373c   Section        0  printf8.o(i._printf_core)
-    _printf_post_padding                     0x08003b4d   Thumb Code    36  printf8.o(i._printf_post_padding)
-    i._printf_post_padding                   0x08003b4c   Section        0  printf8.o(i._printf_post_padding)
-    _printf_pre_padding                      0x08003b71   Thumb Code    46  printf8.o(i._printf_pre_padding)
-    i._printf_pre_padding                    0x08003b70   Section        0  printf8.o(i._printf_pre_padding)
-    i.puts                                   0x08003ba0   Section        0  puts.o(i.puts)
-    ADC_Samp_ChxConvDoneCallback             0x08003bc4   Data          80  tae32g58xx_ll_adc.o(.rodata.ADC_Samp_ChxConvDoneCallback)
-    [Anonymous Symbol]                       0x08003bc4   Section        0  tae32g58xx_ll_adc.o(.rodata.ADC_Samp_ChxConvDoneCallback)
-    adc_ll_cfg_def                           0x08003c14   Data           2  tae32g58xx_ll_adc.o(.rodata.adc_ll_cfg_def)
-    [Anonymous Symbol]                       0x08003c14   Section        0  tae32g58xx_ll_adc.o(.rodata.adc_ll_cfg_def)
-    rcu_pll_cfg                              0x08003c18   Data         672  tae32g58xx_ll_rcu.o(.rodata.rcu_pll_cfg)
-    [Anonymous Symbol]                       0x08003c18   Section        0  tae32g58xx_ll_rcu.o(.rodata.rcu_pll_cfg)
-    .L.str                                   0x08003eb8   Data          62  tae32g58xx_ll_cortex.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08003eb8   Section        0  tae32g58xx_ll_cortex.o(.rodata.str1.1)
-    .L.str.5                                 0x08003ef6   Data         107  tae32g58xx_ll_rcu.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08003ef6   Section        0  tae32g58xx_ll_rcu.o(.rodata.str1.1)
-    .L.str.1                                 0x08003f61   Data          12  tae32g58xx_ll_rcu.o(.rodata.str1.1)
-    .L.str                                   0x08003f6d   Data          59  tae32g58xx_ll_rcu.o(.rodata.str1.1)
-    .L.str                                   0x08003fa8   Data          60  tae32g58xx_ll_gpio.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08003fa8   Section        0  tae32g58xx_ll_gpio.o(.rodata.str1.1)
-    .L.str.1                                 0x08003fe4   Data          12  tae32g58xx_ll_adc.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08003fe4   Section        0  tae32g58xx_ll_adc.o(.rodata.str1.1)
-    .L.str                                   0x08003ff0   Data          59  tae32g58xx_ll_adc.o(.rodata.str1.1)
-    .L.str                                   0x0800402b   Data          61  tae32g58xx_ll_hrpwm.o(.rodata.str1.1)
-    .Lstr.26                                 0x0800402b   Data          49  tae32g58xx_ll_adc.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0800402b   Section        0  tae32g58xx_ll_hrpwm.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08003384   Section        0  llc_app.o(.text.pwm_data_calc)
+    i.__0printf$8                            0x08003724   Section        0  printf8.o(i.__0printf$8)
+    i.__scatterload_copy                     0x08003744   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08003752   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08003754   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _printf_core                             0x08003765   Thumb Code   996  printf8.o(i._printf_core)
+    i._printf_core                           0x08003764   Section        0  printf8.o(i._printf_core)
+    _printf_post_padding                     0x08003b75   Thumb Code    36  printf8.o(i._printf_post_padding)
+    i._printf_post_padding                   0x08003b74   Section        0  printf8.o(i._printf_post_padding)
+    _printf_pre_padding                      0x08003b99   Thumb Code    46  printf8.o(i._printf_pre_padding)
+    i._printf_pre_padding                    0x08003b98   Section        0  printf8.o(i._printf_pre_padding)
+    i.puts                                   0x08003bc8   Section        0  puts.o(i.puts)
+    ADC_Samp_ChxConvDoneCallback             0x08003bec   Data          80  tae32g58xx_ll_adc.o(.rodata.ADC_Samp_ChxConvDoneCallback)
+    [Anonymous Symbol]                       0x08003bec   Section        0  tae32g58xx_ll_adc.o(.rodata.ADC_Samp_ChxConvDoneCallback)
+    adc_ll_cfg_def                           0x08003c3c   Data           2  tae32g58xx_ll_adc.o(.rodata.adc_ll_cfg_def)
+    [Anonymous Symbol]                       0x08003c3c   Section        0  tae32g58xx_ll_adc.o(.rodata.adc_ll_cfg_def)
+    rcu_pll_cfg                              0x08003c40   Data         672  tae32g58xx_ll_rcu.o(.rodata.rcu_pll_cfg)
+    [Anonymous Symbol]                       0x08003c40   Section        0  tae32g58xx_ll_rcu.o(.rodata.rcu_pll_cfg)
+    .L.str                                   0x08003ee0   Data          62  tae32g58xx_ll_cortex.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08003ee0   Section        0  tae32g58xx_ll_cortex.o(.rodata.str1.1)
+    .L.str.5                                 0x08003f1e   Data         107  tae32g58xx_ll_rcu.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08003f1e   Section        0  tae32g58xx_ll_rcu.o(.rodata.str1.1)
+    .L.str.1                                 0x08003f89   Data          12  tae32g58xx_ll_rcu.o(.rodata.str1.1)
+    .L.str                                   0x08003f95   Data          59  tae32g58xx_ll_rcu.o(.rodata.str1.1)
+    .L.str                                   0x08003fd0   Data          60  tae32g58xx_ll_gpio.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08003fd0   Section        0  tae32g58xx_ll_gpio.o(.rodata.str1.1)
+    .L.str.1                                 0x0800400c   Data          12  tae32g58xx_ll_adc.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0800400c   Section        0  tae32g58xx_ll_adc.o(.rodata.str1.1)
+    .L.str                                   0x08004018   Data          59  tae32g58xx_ll_adc.o(.rodata.str1.1)
+    .L.str                                   0x08004053   Data          61  tae32g58xx_ll_hrpwm.o(.rodata.str1.1)
+    .Lstr.26                                 0x08004053   Data          49  tae32g58xx_ll_adc.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08004053   Section        0  tae32g58xx_ll_hrpwm.o(.rodata.str1.1)
     [Anonymous Symbol]                       0x10000000   Section        0  hrpwm_app.o(RAMCODE)
     [Anonymous Symbol]                       0x10000364   Section        0  pid_app.o(RAMCODE)
     [Anonymous Symbol]                       0x10000588   Section        0  protection_app.o(RAMCODE)
     [Anonymous Symbol]                       0x10000a64   Section        0  tae32g58xx_it.o(RAMCODE)
     [Anonymous Symbol]                       0x10000ae0   Section        0  llc_app.o(RAMCODE)
     __arm_cp.2_13                            0x10000e40   Number         4  llc_app.o(RAMCODE)
-    .L_MergedGlobals                         0x20008000   Data           8  utils.o(.data..L_MergedGlobals)
-    Sweep_DutyMax_Then_FreqDown.compb_f      0x20008000   Data           4  utils.o(.data..L_MergedGlobals)
-    [Anonymous Symbol]                       0x20008000   Section        0  utils.o(.data..L_MergedGlobals)
-    Sweep_DutyMax_Then_FreqDown.sw_freq      0x20008004   Data           4  utils.o(.data..L_MergedGlobals)
-    .L_MergedGlobals                         0x20008008   Data           8  tae32g58xx_ll.o(.data..L_MergedGlobals)
-    [Anonymous Symbol]                       0x20008008   Section        0  tae32g58xx_ll.o(.data..L_MergedGlobals)
-    .L_MergedGlobals                         0x20008014   Data          16  hrpwm_app.o(.bss..L_MergedGlobals)
-    [Anonymous Symbol]                       0x20008014   Section        0  hrpwm_app.o(.bss..L_MergedGlobals)
-    .L_MergedGlobals                         0x20008024   Data           8  protection_app.o(.bss..L_MergedGlobals)
-    input_dcbus_voltage_check_app.count      0x20008024   Data           2  protection_app.o(.bss..L_MergedGlobals)
-    [Anonymous Symbol]                       0x20008024   Section        0  protection_app.o(.bss..L_MergedGlobals)
-    over_output_current_check_app.oc_count   0x20008028   Data           4  protection_app.o(.bss..L_MergedGlobals)
-    .L_MergedGlobals                         0x2000802c   Data          12  user_debug.o(.bss..L_MergedGlobals)
-    [Anonymous Symbol]                       0x2000802c   Section        0  user_debug.o(.bss..L_MergedGlobals)
-    .L_MergedGlobals                         0x20008038   Data           8  llc_app.o(.bss..L_MergedGlobals)
-    [Anonymous Symbol]                       0x20008038   Section        0  llc_app.o(.bss..L_MergedGlobals)
-    .L_MergedGlobals.2                       0x20008040   Data          20  utils.o(.bss..L_MergedGlobals.2)
-    Sweep_DutyMax_Then_FreqDown.stage        0x20008040   Data           1  utils.o(.bss..L_MergedGlobals.2)
-    [Anonymous Symbol]                       0x20008040   Section        0  utils.o(.bss..L_MergedGlobals.2)
-    Sweep_DutyMax_Then_FreqDown.duty_ratio   0x20008050   Data           4  utils.o(.bss..L_MergedGlobals.2)
+    .L_MergedGlobals                         0x20008000   Data           8  tae32g58xx_ll.o(.data..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20008000   Section        0  tae32g58xx_ll.o(.data..L_MergedGlobals)
+    LLC_SlewValue.current                    0x20008008   Data           4  utils.o(.data.LLC_SlewValue.current)
+    [Anonymous Symbol]                       0x20008008   Section        0  utils.o(.data.LLC_SlewValue.current)
+    .L_MergedGlobals                         0x20008010   Data          16  hrpwm_app.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20008010   Section        0  hrpwm_app.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x20008020   Data           8  protection_app.o(.bss..L_MergedGlobals)
+    input_dcbus_voltage_check_app.count      0x20008020   Data           2  protection_app.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20008020   Section        0  protection_app.o(.bss..L_MergedGlobals)
+    over_output_current_check_app.oc_count   0x20008024   Data           4  protection_app.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x20008028   Data          40  utils.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20008028   Section        0  utils.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x20008050   Data          12  user_debug.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20008050   Section        0  user_debug.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x2000805c   Data           8  llc_app.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x2000805c   Section        0  llc_app.o(.bss..L_MergedGlobals)
 
     Global Symbols
 
@@ -5785,21 +5780,21 @@ Image Symbol Table
     hrpwm_app_start                          0x08003051   Thumb Code    22  hrpwm_app.o(.text.hrpwm_app_start)
     hrpwm_llc_output                         0x08003069   Thumb Code    18  hrpwm_app.o(.text.hrpwm_llc_output)
     main                                     0x0800307d   Thumb Code   162  main.o(.text.main)
-    open_loop                                0x08003121   Thumb Code   544  utils.o(.text.open_loop)
-    pwm_data_calc                            0x0800335d   Thumb Code   888  llc_app.o(.text.pwm_data_calc)
-    Long Thumb to Thumb Veneer to LL_HRPWM_Comm_Flt0Callback 0x080036d5   Thumb Code    10  anon$$obj.o(Veneer$$Code)
-    Long Thumb to Thumb Veneer to LL_HRPWM_Comm_Flt3Callback 0x080036df   Thumb Code    10  anon$$obj.o(Veneer$$Code)
-    Long Thumb to Thumb Veneer to LL_HRPWM_Comm_Flt6Callback 0x080036e9   Thumb Code    10  anon$$obj.o(Veneer$$Code)
-    Long Thumb to Thumb Veneer to LL_HRPWM_Comm_Flt7Callback 0x080036f3   Thumb Code    10  anon$$obj.o(Veneer$$Code)
-    __0printf$8                              0x080036fd   Thumb Code    22  printf8.o(i.__0printf$8)
-    __1printf$8                              0x080036fd   Thumb Code     0  printf8.o(i.__0printf$8)
-    __2printf                                0x080036fd   Thumb Code     0  printf8.o(i.__0printf$8)
-    __scatterload_copy                       0x0800371d   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800372b   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x0800372d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    puts                                     0x08003ba1   Thumb Code    30  puts.o(i.puts)
-    Region$$Table$$Base                      0x08004068   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08004098   Number         0  anon$$obj.o(Region$$Table)
+    open_loop                                0x08003121   Thumb Code   584  utils.o(.text.open_loop)
+    pwm_data_calc                            0x08003385   Thumb Code   888  llc_app.o(.text.pwm_data_calc)
+    Long Thumb to Thumb Veneer to LL_HRPWM_Comm_Flt0Callback 0x080036fd   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Long Thumb to Thumb Veneer to LL_HRPWM_Comm_Flt3Callback 0x08003707   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Long Thumb to Thumb Veneer to LL_HRPWM_Comm_Flt6Callback 0x08003711   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Long Thumb to Thumb Veneer to LL_HRPWM_Comm_Flt7Callback 0x0800371b   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    __0printf$8                              0x08003725   Thumb Code    22  printf8.o(i.__0printf$8)
+    __1printf$8                              0x08003725   Thumb Code     0  printf8.o(i.__0printf$8)
+    __2printf                                0x08003725   Thumb Code     0  printf8.o(i.__0printf$8)
+    __scatterload_copy                       0x08003745   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08003753   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08003755   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    puts                                     0x08003bc9   Thumb Code    30  puts.o(i.puts)
+    Region$$Table$$Base                      0x08004090   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080040c0   Number         0  anon$$obj.o(Region$$Table)
     hrpwm_upmos_charge                       0x10000001   Thumb Code    18  hrpwm_app.o(RAMCODE)
     hrpwm_upmos_charge_dis                   0x10000015   Thumb Code    18  hrpwm_app.o(RAMCODE)
     LL_HRPWM_Mst_CmpACallback                0x10000029   Thumb Code   294  hrpwm_app.o(RAMCODE)
@@ -5837,32 +5832,31 @@ Image Symbol Table
     Long Thumb to Thumb Veneer to LL_HRPWM_Comm_IRQHandler 0x100013a1   Thumb Code    10  anon$$obj.o(Veneer$$Code)
     Long Thumb to Thumb Veneer to hrpwm_app_outdis 0x100013ab   Thumb Code    10  anon$$obj.o(Veneer$$Code)
     Long Thumb to Thumb Veneer to hrpwm_llc_output 0x100013b5   Thumb Code    10  anon$$obj.o(Veneer$$Code)
-    uwTickFreq                               0x20008008   Data           1  tae32g58xx_ll.o(.data..L_MergedGlobals)
-    uwTickPrio                               0x2000800c   Data           4  tae32g58xx_ll.o(.data..L_MergedGlobals)
-    SystemCoreClock                          0x20008010   Data           4  system_tae32g58xx.o(.data.SystemCoreClock)
-    TEST_COMPA                               0x20008014   Data           4  hrpwm_app.o(.bss..L_MergedGlobals)
-    TEST_COMPB                               0x20008018   Data           4  hrpwm_app.o(.bss..L_MergedGlobals)
-    TEST_COMPC                               0x2000801c   Data           4  hrpwm_app.o(.bss..L_MergedGlobals)
-    TEST_COMPD                               0x20008020   Data           4  hrpwm_app.o(.bss..L_MergedGlobals)
-    user_dbg_ifc                             0x2000802c   Data           1  user_debug.o(.bss..L_MergedGlobals)
-    user_dbg_uart_ins                        0x20008030   Data           4  user_debug.o(.bss..L_MergedGlobals)
-    ITM_RxBuffer                             0x20008034   Data           4  user_debug.o(.bss..L_MergedGlobals)
-    period                                   0x20008038   Data           4  llc_app.o(.bss..L_MergedGlobals)
-    duty                                     0x2000803c   Data           4  llc_app.o(.bss..L_MergedGlobals)
-    debug_sw_freq                            0x20008044   Data           4  utils.o(.bss..L_MergedGlobals.2)
-    debug_period                             0x20008048   Data           4  utils.o(.bss..L_MergedGlobals.2)
-    debug_duty                               0x2000804c   Data           4  utils.o(.bss..L_MergedGlobals.2)
-    __stdout                                 0x20008054   Data          84  user_debug.o(.bss.__stdout)
-    extCfgEnMask                             0x200080a8   Data          32  tae32g58xx_ll.o(.bss.extCfgEnMask)
-    llc                                      0x200080c8   Data         980  variables_define_app.o(.bss.llc)
-    mpwm                                     0x2000849c   Data          20  variables_define_app.o(.bss.mpwm)
-    phase1_pwm0                              0x200084b0   Data          20  variables_define_app.o(.bss.phase1_pwm0)
-    phase1_pwm5                              0x200084c4   Data          20  variables_define_app.o(.bss.phase1_pwm5)
-    phase1_sr_pwm3                           0x200084d8   Data          20  variables_define_app.o(.bss.phase1_sr_pwm3)
-    phase2_pwm2                              0x200084ec   Data          20  variables_define_app.o(.bss.phase2_pwm2)
-    phase2_pwm4                              0x20008500   Data          20  variables_define_app.o(.bss.phase2_pwm4)
-    phase2_sr_pwm2                           0x20008514   Data          20  variables_define_app.o(.bss.phase2_sr_pwm2)
-    uwTick                                   0x20008528   Data           4  tae32g58xx_ll.o(.bss.uwTick)
+    uwTickFreq                               0x20008000   Data           1  tae32g58xx_ll.o(.data..L_MergedGlobals)
+    uwTickPrio                               0x20008004   Data           4  tae32g58xx_ll.o(.data..L_MergedGlobals)
+    SystemCoreClock                          0x2000800c   Data           4  system_tae32g58xx.o(.data.SystemCoreClock)
+    TEST_COMPA                               0x20008010   Data           4  hrpwm_app.o(.bss..L_MergedGlobals)
+    TEST_COMPB                               0x20008014   Data           4  hrpwm_app.o(.bss..L_MergedGlobals)
+    TEST_COMPC                               0x20008018   Data           4  hrpwm_app.o(.bss..L_MergedGlobals)
+    TEST_COMPD                               0x2000801c   Data           4  hrpwm_app.o(.bss..L_MergedGlobals)
+    phase1_pwm                               0x20008028   Data          20  utils.o(.bss..L_MergedGlobals)
+    phase2_pwm                               0x2000803c   Data          20  utils.o(.bss..L_MergedGlobals)
+    user_dbg_ifc                             0x20008050   Data           1  user_debug.o(.bss..L_MergedGlobals)
+    user_dbg_uart_ins                        0x20008054   Data           4  user_debug.o(.bss..L_MergedGlobals)
+    ITM_RxBuffer                             0x20008058   Data           4  user_debug.o(.bss..L_MergedGlobals)
+    period                                   0x2000805c   Data           4  llc_app.o(.bss..L_MergedGlobals)
+    duty                                     0x20008060   Data           4  llc_app.o(.bss..L_MergedGlobals)
+    __stdout                                 0x20008064   Data          84  user_debug.o(.bss.__stdout)
+    extCfgEnMask                             0x200080b8   Data          32  tae32g58xx_ll.o(.bss.extCfgEnMask)
+    llc                                      0x200080d8   Data         980  variables_define_app.o(.bss.llc)
+    mpwm                                     0x200084ac   Data          20  variables_define_app.o(.bss.mpwm)
+    phase1_pwm0                              0x200084c0   Data          20  variables_define_app.o(.bss.phase1_pwm0)
+    phase1_pwm5                              0x200084d4   Data          20  variables_define_app.o(.bss.phase1_pwm5)
+    phase1_sr_pwm3                           0x200084e8   Data          20  variables_define_app.o(.bss.phase1_sr_pwm3)
+    phase2_pwm2                              0x200084fc   Data          20  variables_define_app.o(.bss.phase2_pwm2)
+    phase2_pwm4                              0x20008510   Data          20  variables_define_app.o(.bss.phase2_pwm4)
+    phase2_sr_pwm2                           0x20008524   Data          20  variables_define_app.o(.bss.phase2_sr_pwm2)
+    uwTick                                   0x20008538   Data           4  tae32g58xx_ll.o(.bss.uwTick)
     Image$$ARM_LIB_STACK$$ZI$$Limit          0x20010000   Number         0  anon$$obj.o ABSOLUTE
 
 
@@ -5873,9 +5867,9 @@ Memory Map of the image
 
   Image Entry point : 0x080001a1
 
-  Load Region LR_ROM (Base: 0x08000000, Size: 0x0000546c, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_ROM (Base: 0x08000000, Size: 0x00005490, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_ROM (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00004098, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_ROM (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000040c0, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -6074,87 +6068,87 @@ Memory Map of the image
     0x0800307a   0x0800307a   0x00000002   PAD
     0x0800307c   0x0800307c   0x000000a2   Code   RO          172    .text.main          main.o
     0x0800311e   0x0800311e   0x00000002   PAD
-    0x08003120   0x08003120   0x0000023c   Code   RO          236    .text.open_loop     utils.o
-    0x0800335c   0x0800335c   0x00000378   Code   RO         2251    .text.pwm_data_calc  llc_app.lib(llc_app.o)
-    0x080036d4   0x080036d4   0x0000000a   Ven    RO         2629    Veneer$$Code        anon$$obj.o
-    0x080036de   0x080036de   0x0000000a   Ven    RO         2630    Veneer$$Code        anon$$obj.o
-    0x080036e8   0x080036e8   0x0000000a   Ven    RO         2631    Veneer$$Code        anon$$obj.o
-    0x080036f2   0x080036f2   0x0000000a   Ven    RO         2632    Veneer$$Code        anon$$obj.o
-    0x080036fc   0x080036fc   0x00000020   Code   RO         2488    i.__0printf$8       mc_w.l(printf8.o)
-    0x0800371c   0x0800371c   0x0000000e   Code   RO         2623    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800372a   0x0800372a   0x00000002   Code   RO         2624    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0800372c   0x0800372c   0x0000000e   Code   RO         2625    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800373a   0x0800373a   0x00000002   PAD
-    0x0800373c   0x0800373c   0x00000410   Code   RO         2495    i._printf_core      mc_w.l(printf8.o)
-    0x08003b4c   0x08003b4c   0x00000024   Code   RO         2496    i._printf_post_padding  mc_w.l(printf8.o)
-    0x08003b70   0x08003b70   0x0000002e   Code   RO         2497    i._printf_pre_padding  mc_w.l(printf8.o)
-    0x08003b9e   0x08003b9e   0x00000002   PAD
-    0x08003ba0   0x08003ba0   0x00000024   Code   RO         2271    i.puts              mc_w.l(puts.o)
-    0x08003bc4   0x08003bc4   0x00000050   Data   RO         1893    .rodata.ADC_Samp_ChxConvDoneCallback  tae32g58xx_ll_adc.o
-    0x08003c14   0x08003c14   0x00000002   Data   RO         1892    .rodata.adc_ll_cfg_def  tae32g58xx_ll_adc.o
-    0x08003c16   0x08003c16   0x00000002   PAD
-    0x08003c18   0x08003c18   0x000002a0   Data   RO          620    .rodata.rcu_pll_cfg  tae32g58xx_ll_rcu.o
-    0x08003eb8   0x08003eb8   0x0000003e   Data   RO          338    .rodata.str1.1      tae32g58xx_ll_cortex.o
-    0x08003ef6   0x08003ef6   0x000000b2   Data   RO          619    .rodata.str1.1      tae32g58xx_ll_rcu.o
-    0x08003fa8   0x08003fa8   0x0000003c   Data   RO          649    .rodata.str1.1      tae32g58xx_ll_gpio.o
-    0x08003fe4   0x08003fe4   0x00000047   Data   RO         1891    .rodata.str1.1      tae32g58xx_ll_adc.o
-    0x0800402b   0x0800402b   0x0000003d   Data   RO         2179    .rodata.str1.1      tae32g58xx_ll_hrpwm.o
-    0x08004068   0x08004068   0x00000030   Data   RO         2622    Region$$Table       anon$$obj.o
+    0x08003120   0x08003120   0x00000264   Code   RO          236    .text.open_loop     utils.o
+    0x08003384   0x08003384   0x00000378   Code   RO         2251    .text.pwm_data_calc  llc_app.lib(llc_app.o)
+    0x080036fc   0x080036fc   0x0000000a   Ven    RO         2629    Veneer$$Code        anon$$obj.o
+    0x08003706   0x08003706   0x0000000a   Ven    RO         2630    Veneer$$Code        anon$$obj.o
+    0x08003710   0x08003710   0x0000000a   Ven    RO         2631    Veneer$$Code        anon$$obj.o
+    0x0800371a   0x0800371a   0x0000000a   Ven    RO         2632    Veneer$$Code        anon$$obj.o
+    0x08003724   0x08003724   0x00000020   Code   RO         2488    i.__0printf$8       mc_w.l(printf8.o)
+    0x08003744   0x08003744   0x0000000e   Code   RO         2623    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08003752   0x08003752   0x00000002   Code   RO         2624    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08003754   0x08003754   0x0000000e   Code   RO         2625    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08003762   0x08003762   0x00000002   PAD
+    0x08003764   0x08003764   0x00000410   Code   RO         2495    i._printf_core      mc_w.l(printf8.o)
+    0x08003b74   0x08003b74   0x00000024   Code   RO         2496    i._printf_post_padding  mc_w.l(printf8.o)
+    0x08003b98   0x08003b98   0x0000002e   Code   RO         2497    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x08003bc6   0x08003bc6   0x00000002   PAD
+    0x08003bc8   0x08003bc8   0x00000024   Code   RO         2271    i.puts              mc_w.l(puts.o)
+    0x08003bec   0x08003bec   0x00000050   Data   RO         1893    .rodata.ADC_Samp_ChxConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08003c3c   0x08003c3c   0x00000002   Data   RO         1892    .rodata.adc_ll_cfg_def  tae32g58xx_ll_adc.o
+    0x08003c3e   0x08003c3e   0x00000002   PAD
+    0x08003c40   0x08003c40   0x000002a0   Data   RO          620    .rodata.rcu_pll_cfg  tae32g58xx_ll_rcu.o
+    0x08003ee0   0x08003ee0   0x0000003e   Data   RO          338    .rodata.str1.1      tae32g58xx_ll_cortex.o
+    0x08003f1e   0x08003f1e   0x000000b2   Data   RO          619    .rodata.str1.1      tae32g58xx_ll_rcu.o
+    0x08003fd0   0x08003fd0   0x0000003c   Data   RO          649    .rodata.str1.1      tae32g58xx_ll_gpio.o
+    0x0800400c   0x0800400c   0x00000047   Data   RO         1891    .rodata.str1.1      tae32g58xx_ll_adc.o
+    0x08004053   0x08004053   0x0000003d   Data   RO         2179    .rodata.str1.1      tae32g58xx_ll_hrpwm.o
+    0x08004090   0x08004090   0x00000030   Data   RO         2622    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_CODE (Exec base: 0x10000000, Load base: 0x08004098, Size: 0x000013c0, Max: 0x00008000, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x10000000   0x08004098   0x00000362   Code   RO           23    RAMCODE             hrpwm_app.o
-    0x10000362   0x080043fa   0x00000002   PAD
-    0x10000364   0x080043fc   0x00000222   Code   RO          145    RAMCODE             pid_app.o
-    0x10000586   0x0800461e   0x00000002   PAD
-    0x10000588   0x08004620   0x000004dc   Code   RO          154    RAMCODE             protection_app.o
-    0x10000a64   0x08004afc   0x0000007c   Code   RO          205    RAMCODE             tae32g58xx_it.o
-    0x10000ae0   0x08004b78   0x00000898   Code   RO         2249    RAMCODE             llc_app.lib(llc_app.o)
-    0x10001378   0x08005410   0x0000000a   Ven    RO         2633    Veneer$$Code        anon$$obj.o
-    0x10001382   0x0800541a   0x0000000a   Ven    RO         2634    Veneer$$Code        anon$$obj.o
-    0x1000138c   0x08005424   0x0000000a   Ven    RO         2635    Veneer$$Code        anon$$obj.o
-    0x10001396   0x0800542e   0x0000000a   Ven    RO         2636    Veneer$$Code        anon$$obj.o
-    0x100013a0   0x08005438   0x0000000a   Ven    RO         2637    Veneer$$Code        anon$$obj.o
-    0x100013aa   0x08005442   0x0000000a   Ven    RO         2638    Veneer$$Code        anon$$obj.o
-    0x100013b4   0x0800544c   0x0000000a   Ven    RO         2639    Veneer$$Code        anon$$obj.o
-
-
-    Execution Region RW_RAMA (Exec base: 0x20008000, Load base: 0x08005458, Size: 0x0000052c, Max: 0x00007c00, ABSOLUTE)
+    Execution Region RW_CODE (Exec base: 0x10000000, Load base: 0x080040c0, Size: 0x000013c0, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20008000   0x08005458   0x00000008   Data   RW          242    .data..L_MergedGlobals  utils.o
-    0x20008008   0x08005460   0x00000008   Data   RW          297    .data..L_MergedGlobals  tae32g58xx_ll.o
-    0x20008010   0x08005468   0x00000004   Data   RW         2206    .data.SystemCoreClock  system_tae32g58xx.o
-    0x20008014        -       0x00000010   Zero   RW           27    .bss..L_MergedGlobals  hrpwm_app.o
-    0x20008024        -       0x00000008   Zero   RW          156    .bss..L_MergedGlobals  protection_app.o
-    0x2000802c        -       0x0000000c   Zero   RW         2236    .bss..L_MergedGlobals  user_debug.o
-    0x20008038        -       0x00000008   Zero   RW         2255    .bss..L_MergedGlobals  llc_app.lib(llc_app.o)
-    0x20008040        -       0x00000014   Zero   RW          243    .bss..L_MergedGlobals.2  utils.o
-    0x20008054        -       0x00000054   Zero   RW         2234    .bss.__stdout       user_debug.o
-    0x200080a8        -       0x00000020   Zero   RW          294    .bss.extCfgEnMask   tae32g58xx_ll.o
-    0x200080c8        -       0x000003d4   Zero   RW           38    .bss.llc            variables_define_app.o
-    0x2000849c        -       0x00000014   Zero   RW           51    .bss.mpwm           variables_define_app.o
-    0x200084b0        -       0x00000014   Zero   RW           39    .bss.phase1_pwm0    variables_define_app.o
-    0x200084c4        -       0x00000014   Zero   RW           57    .bss.phase1_pwm5    variables_define_app.o
-    0x200084d8        -       0x00000014   Zero   RW           55    .bss.phase1_sr_pwm3  variables_define_app.o
-    0x200084ec        -       0x00000014   Zero   RW           41    .bss.phase2_pwm2    variables_define_app.o
-    0x20008500        -       0x00000014   Zero   RW           56    .bss.phase2_pwm4    variables_define_app.o
-    0x20008514        -       0x00000014   Zero   RW           54    .bss.phase2_sr_pwm2  variables_define_app.o
-    0x20008528        -       0x00000004   Zero   RW          295    .bss.uwTick         tae32g58xx_ll.o
+    0x10000000   0x080040c0   0x00000362   Code   RO           23    RAMCODE             hrpwm_app.o
+    0x10000362   0x08004422   0x00000002   PAD
+    0x10000364   0x08004424   0x00000222   Code   RO          145    RAMCODE             pid_app.o
+    0x10000586   0x08004646   0x00000002   PAD
+    0x10000588   0x08004648   0x000004dc   Code   RO          154    RAMCODE             protection_app.o
+    0x10000a64   0x08004b24   0x0000007c   Code   RO          205    RAMCODE             tae32g58xx_it.o
+    0x10000ae0   0x08004ba0   0x00000898   Code   RO         2249    RAMCODE             llc_app.lib(llc_app.o)
+    0x10001378   0x08005438   0x0000000a   Ven    RO         2633    Veneer$$Code        anon$$obj.o
+    0x10001382   0x08005442   0x0000000a   Ven    RO         2634    Veneer$$Code        anon$$obj.o
+    0x1000138c   0x0800544c   0x0000000a   Ven    RO         2635    Veneer$$Code        anon$$obj.o
+    0x10001396   0x08005456   0x0000000a   Ven    RO         2636    Veneer$$Code        anon$$obj.o
+    0x100013a0   0x08005460   0x0000000a   Ven    RO         2637    Veneer$$Code        anon$$obj.o
+    0x100013aa   0x0800546a   0x0000000a   Ven    RO         2638    Veneer$$Code        anon$$obj.o
+    0x100013b4   0x08005474   0x0000000a   Ven    RO         2639    Veneer$$Code        anon$$obj.o
 
 
-    Execution Region ARM_LIB_STACK (Exec base: 0x2000fc00, Load base: 0x0800546c, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
+    Execution Region RW_RAMA (Exec base: 0x20008000, Load base: 0x08005480, Size: 0x0000053c, Max: 0x00007c00, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20008000   0x08005480   0x00000008   Data   RW          297    .data..L_MergedGlobals  tae32g58xx_ll.o
+    0x20008008   0x08005488   0x00000004   Data   RW          242    .data.LLC_SlewValue.current  utils.o
+    0x2000800c   0x0800548c   0x00000004   Data   RW         2206    .data.SystemCoreClock  system_tae32g58xx.o
+    0x20008010        -       0x00000010   Zero   RW           27    .bss..L_MergedGlobals  hrpwm_app.o
+    0x20008020        -       0x00000008   Zero   RW          156    .bss..L_MergedGlobals  protection_app.o
+    0x20008028        -       0x00000028   Zero   RW          243    .bss..L_MergedGlobals  utils.o
+    0x20008050        -       0x0000000c   Zero   RW         2236    .bss..L_MergedGlobals  user_debug.o
+    0x2000805c        -       0x00000008   Zero   RW         2255    .bss..L_MergedGlobals  llc_app.lib(llc_app.o)
+    0x20008064        -       0x00000054   Zero   RW         2234    .bss.__stdout       user_debug.o
+    0x200080b8        -       0x00000020   Zero   RW          294    .bss.extCfgEnMask   tae32g58xx_ll.o
+    0x200080d8        -       0x000003d4   Zero   RW           38    .bss.llc            variables_define_app.o
+    0x200084ac        -       0x00000014   Zero   RW           51    .bss.mpwm           variables_define_app.o
+    0x200084c0        -       0x00000014   Zero   RW           39    .bss.phase1_pwm0    variables_define_app.o
+    0x200084d4        -       0x00000014   Zero   RW           57    .bss.phase1_pwm5    variables_define_app.o
+    0x200084e8        -       0x00000014   Zero   RW           55    .bss.phase1_sr_pwm3  variables_define_app.o
+    0x200084fc        -       0x00000014   Zero   RW           41    .bss.phase2_pwm2    variables_define_app.o
+    0x20008510        -       0x00000014   Zero   RW           56    .bss.phase2_pwm4    variables_define_app.o
+    0x20008524        -       0x00000014   Zero   RW           54    .bss.phase2_sr_pwm2  variables_define_app.o
+    0x20008538        -       0x00000004   Zero   RW          295    .bss.uwTick         tae32g58xx_ll.o
+
+
+    Execution Region ARM_LIB_STACK (Exec base: 0x2000fc00, Load base: 0x08005490, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x2000fc00        -       0x00000400   Zero   RW            1    ARM_LIB_STACK.bss   anon$$obj.o
 
 
-    Execution Region RW_RAMB (Exec base: 0x20010000, Load base: 0x0800546c, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_RAMB (Exec base: 0x20010000, Load base: 0x08005490, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
@@ -6183,11 +6177,11 @@ Image component sizes
         38          0          0          0          0      10021   tae32g58xx_ll_msp.o
       3506         96        850          0          0      32535   tae32g58xx_ll_rcu.o
        126          0          0          0         96      13751   user_debug.o
-       572         28          0          8         20       5602   utils.o
+       612         28          0          4         40       6616   utils.o
          0          0          0          0       1120       4984   variables_define_app.o
 
     ----------------------------------------------------------------------
-     14268        532       1652         20       2320     272449   Object Totals
+     14308        532       1652         16       2340     273463   Object Totals
        110          0         48          0       1024          0   (incl. Generated)
        148          4          2          0          0          0   (incl. Padding)
 
@@ -6243,15 +6237,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     19940        696       1652         20       2328     281087   Grand Totals
-     19940        696       1652         20       2328     281087   ELF Image Totals
-     19940        696       1652         20          0          0   ROM Totals
+     19980        696       1652         16       2348     282101   Grand Totals
+     19980        696       1652         16       2348     282101   ELF Image Totals
+     19980        696       1652         16          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                21592 (  21.09kB)
-    Total RW  Size (RW Data + ZI Data)              2348 (   2.29kB)
-    Total ROM Size (Code + RO Data + RW Data)      21612 (  21.11kB)
+    Total RO  Size (Code + RO Data)                21632 (  21.12kB)
+    Total RW  Size (RW Data + ZI Data)              2364 (   2.31kB)
+    Total ROM Size (Code + RO Data + RW Data)      21648 (  21.14kB)
 
 ==============================================================================
 
