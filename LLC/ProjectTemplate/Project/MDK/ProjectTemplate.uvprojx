@@ -474,6 +474,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\Src\utils.c</FilePath>
             </File>
+            <File>
+              <FileName>state_machine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\Src\state_machine.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1098,6 +1103,11 @@
               <FileName>utils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\Src\utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>state_machine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\Src\state_machine.c</FilePath>
             </File>
           </Files>
         </Group>

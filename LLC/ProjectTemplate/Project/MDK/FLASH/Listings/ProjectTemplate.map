@@ -213,6 +213,52 @@ Section Cross References
     utils.o(.ARM.exidx.text.open_loop) refers to utils.o(.text.open_loop) for [Anonymous Symbol]
     utils.o(.text.updata_hrpwm) refers to utils.o(.bss..L_MergedGlobals) for .L_MergedGlobals
     utils.o(.ARM.exidx.text.updata_hrpwm) refers to utils.o(.text.updata_hrpwm) for [Anonymous Symbol]
+    state_machine.o(.text.StateMachine_Init) refers to state_machine.o(.bss..L_MergedGlobals) for .L_MergedGlobals
+    state_machine.o(.text.StateMachine_Init) refers to state_machine.o(.rodata.g_state_table) for g_state_table
+    state_machine.o(.ARM.exidx.text.StateMachine_Init) refers to state_machine.o(.text.StateMachine_Init) for [Anonymous Symbol]
+    state_machine.o(.text.StateMachine_Step) refers to state_machine.o(.bss..L_MergedGlobals) for .L_MergedGlobals
+    state_machine.o(.text.StateMachine_Step) refers to state_machine.o(.rodata.g_state_table) for g_state_table
+    state_machine.o(.ARM.exidx.text.StateMachine_Step) refers to state_machine.o(.text.StateMachine_Step) for [Anonymous Symbol]
+    state_machine.o(.text.StateMachine_RequestTransition) refers to state_machine.o(.bss..L_MergedGlobals) for .L_MergedGlobals
+    state_machine.o(.ARM.exidx.text.StateMachine_RequestTransition) refers to state_machine.o(.text.StateMachine_RequestTransition) for [Anonymous Symbol]
+    state_machine.o(.text.StateMachine_GetCurrentState) refers to state_machine.o(.bss..L_MergedGlobals) for .L_MergedGlobals
+    state_machine.o(.ARM.exidx.text.StateMachine_GetCurrentState) refers to state_machine.o(.text.StateMachine_GetCurrentState) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_null_entry) refers to state_machine.o(.text.state_null_entry) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_null_run) refers to state_machine.o(.text.state_null_run) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_null_exit) refers to state_machine.o(.text.state_null_exit) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_standby_entry) refers to state_machine.o(.text.state_standby_entry) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_standby_run) refers to state_machine.o(.text.state_standby_run) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_standby_exit) refers to state_machine.o(.text.state_standby_exit) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_precharge_entry) refers to state_machine.o(.text.state_precharge_entry) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_precharge_run) refers to state_machine.o(.text.state_precharge_run) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_precharge_exit) refers to state_machine.o(.text.state_precharge_exit) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_softstart_entry) refers to state_machine.o(.text.state_softstart_entry) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_softstart_run) refers to state_machine.o(.text.state_softstart_run) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_softstart_exit) refers to state_machine.o(.text.state_softstart_exit) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_normaloperation_entry) refers to state_machine.o(.text.state_normaloperation_entry) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_normaloperation_run) refers to state_machine.o(.text.state_normaloperation_run) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_normaloperation_exit) refers to state_machine.o(.text.state_normaloperation_exit) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_shutdown_entry) refers to state_machine.o(.text.state_shutdown_entry) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_shutdown_run) refers to state_machine.o(.text.state_shutdown_run) for [Anonymous Symbol]
+    state_machine.o(.ARM.exidx.text.state_shutdown_exit) refers to state_machine.o(.text.state_shutdown_exit) for [Anonymous Symbol]
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_null_entry) for state_null_entry
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_null_run) for state_null_run
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_null_exit) for state_null_exit
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_standby_entry) for state_standby_entry
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_standby_run) for state_standby_run
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_standby_exit) for state_standby_exit
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_precharge_entry) for state_precharge_entry
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_precharge_run) for state_precharge_run
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_precharge_exit) for state_precharge_exit
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_softstart_entry) for state_softstart_entry
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_softstart_run) for state_softstart_run
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_softstart_exit) for state_softstart_exit
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_normaloperation_entry) for state_normaloperation_entry
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_normaloperation_run) for state_normaloperation_run
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_normaloperation_exit) for state_normaloperation_exit
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_shutdown_entry) for state_shutdown_entry
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_shutdown_run) for state_shutdown_run
+    state_machine.o(.rodata.g_state_table) refers to state_machine.o(.text.state_shutdown_exit) for state_shutdown_exit
     tae32g58xx_ll.o(.text.LL_Init) refers to tae32g58xx_ll_cortex.o(.text.LL_NVIC_SetPriorityGrouping) for LL_NVIC_SetPriorityGrouping
     tae32g58xx_ll.o(.text.LL_Init) refers to tae32g58xx_ll.o(.text.LL_InitTick) for LL_InitTick
     tae32g58xx_ll.o(.text.LL_Init) refers to tae32g58xx_ll_msp.o(.text.LL_MspInit) for LL_MspInit
@@ -3470,6 +3516,53 @@ Removing Unused input sections from the image.
     Removing utils.o(.ARM.exidx.text.updata_hrpwm), (8 bytes).
     Removing utils.o(.data.open_loop_value), (4 bytes).
     Removing utils.o(.bss.P1_I_Loop), (32 bytes).
+    Removing state_machine.o(.text), (0 bytes).
+    Removing state_machine.o(.text.StateMachine_Init), (62 bytes).
+    Removing state_machine.o(.ARM.exidx.text.StateMachine_Init), (8 bytes).
+    Removing state_machine.o(.text.StateMachine_Step), (162 bytes).
+    Removing state_machine.o(.ARM.exidx.text.StateMachine_Step), (8 bytes).
+    Removing state_machine.o(.text.StateMachine_RequestTransition), (28 bytes).
+    Removing state_machine.o(.ARM.exidx.text.StateMachine_RequestTransition), (8 bytes).
+    Removing state_machine.o(.text.StateMachine_GetCurrentState), (12 bytes).
+    Removing state_machine.o(.ARM.exidx.text.StateMachine_GetCurrentState), (8 bytes).
+    Removing state_machine.o(.text.state_null_entry), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_null_entry), (8 bytes).
+    Removing state_machine.o(.text.state_null_run), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_null_run), (8 bytes).
+    Removing state_machine.o(.text.state_null_exit), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_null_exit), (8 bytes).
+    Removing state_machine.o(.text.state_standby_entry), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_standby_entry), (8 bytes).
+    Removing state_machine.o(.text.state_standby_run), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_standby_run), (8 bytes).
+    Removing state_machine.o(.text.state_standby_exit), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_standby_exit), (8 bytes).
+    Removing state_machine.o(.text.state_precharge_entry), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_precharge_entry), (8 bytes).
+    Removing state_machine.o(.text.state_precharge_run), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_precharge_run), (8 bytes).
+    Removing state_machine.o(.text.state_precharge_exit), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_precharge_exit), (8 bytes).
+    Removing state_machine.o(.text.state_softstart_entry), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_softstart_entry), (8 bytes).
+    Removing state_machine.o(.text.state_softstart_run), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_softstart_run), (8 bytes).
+    Removing state_machine.o(.text.state_softstart_exit), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_softstart_exit), (8 bytes).
+    Removing state_machine.o(.text.state_normaloperation_entry), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_normaloperation_entry), (8 bytes).
+    Removing state_machine.o(.text.state_normaloperation_run), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_normaloperation_run), (8 bytes).
+    Removing state_machine.o(.text.state_normaloperation_exit), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_normaloperation_exit), (8 bytes).
+    Removing state_machine.o(.text.state_shutdown_entry), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_shutdown_entry), (8 bytes).
+    Removing state_machine.o(.text.state_shutdown_run), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_shutdown_run), (8 bytes).
+    Removing state_machine.o(.text.state_shutdown_exit), (2 bytes).
+    Removing state_machine.o(.ARM.exidx.text.state_shutdown_exit), (8 bytes).
+    Removing state_machine.o(.rodata.g_state_table), (72 bytes).
+    Removing state_machine.o(.bss..L_MergedGlobals), (6 bytes).
     Removing tae32g58xx_ll.o(.text), (0 bytes).
     Removing tae32g58xx_ll.o(.ARM.exidx.text.LL_Init), (8 bytes).
     Removing tae32g58xx_ll.o(.ARM.exidx.text.LL_InitTick), (8 bytes).
@@ -5199,7 +5292,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing dfltul.o(.text), (24 bytes).
 
-1845 unused section(s) (total 138977 bytes) removed from the image.
+1892 unused section(s) (total 139531 bytes) removed from the image.
 
 ==============================================================================
 
@@ -5296,6 +5389,7 @@ Image Symbol Table
     pid_app.c                                0x00000000   Number         0  pid_app.o ABSOLUTE
     protection_app.c                         0x00000000   Number         0  protection_app.o ABSOLUTE
     startup_tae32g58xx.c                     0x00000000   Number         0  startup_tae32g58xx.o ABSOLUTE
+    state_machine.c                          0x00000000   Number         0  state_machine.o ABSOLUTE
     system_tae32g58xx.c                      0x00000000   Number         0  system_tae32g58xx.o ABSOLUTE
     tae32g58xx_it.c                          0x00000000   Number         0  tae32g58xx_it.o ABSOLUTE
     tae32g58xx_ll.c                          0x00000000   Number         0  tae32g58xx_ll.o ABSOLUTE
@@ -5873,178 +5967,178 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000001a0   Data   RO         2194    RESET               startup_tae32g58xx.o
-    0x080001a0   0x080001a0   0x00000000   Code   RO         2268  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080001a0   0x080001a0   0x00000004   Code   RO         2554    .ARM.Collect$$$$00000003  mc_w.l(entry4.o)
-    0x080001a4   0x080001a4   0x00000004   Code   RO         2557    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001a8   0x080001a8   0x00000000   Code   RO         2559    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001a8   0x080001a8   0x00000000   Code   RO         2561    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001a8   0x080001a8   0x00000008   Code   RO         2562    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001b0   0x080001b0   0x00000000   Code   RO         2564    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080001b0   0x080001b0   0x00000000   Code   RO         2566    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080001b0   0x080001b0   0x00000004   Code   RO         2555    .ARM.Collect$$$$00002714  mc_w.l(entry4.o)
-    0x080001b4   0x080001b4   0x00000024   Code   RO         2277    .text               mc_w.l(memseta.o)
-    0x080001d8   0x080001d8   0x0000014e   Code   RO         2542    .text               mf_w.l(dadd.o)
-    0x08000326   0x08000326   0x000000e4   Code   RO         2544    .text               mf_w.l(dmul.o)
-    0x0800040a   0x0800040a   0x000000de   Code   RO         2546    .text               mf_w.l(ddiv.o)
-    0x080004e8   0x080004e8   0x0000001a   Code   RO         2548    .text               mf_w.l(dfltui.o)
-    0x08000502   0x08000502   0x0000003e   Code   RO         2550    .text               mf_w.l(dfixi.o)
-    0x08000540   0x08000540   0x00000062   Code   RO         2579    .text               mc_w.l(uldiv.o)
-    0x080005a2   0x080005a2   0x0000001e   Code   RO         2581    .text               mc_w.l(llshl.o)
-    0x080005c0   0x080005c0   0x00000020   Code   RO         2583    .text               mc_w.l(llushr.o)
-    0x080005e0   0x080005e0   0x00000024   Code   RO         2585    .text               mc_w.l(llsshr.o)
-    0x08000604   0x08000604   0x00000000   Code   RO         2596    .text               mc_w.l(iusefp.o)
-    0x08000604   0x08000604   0x000000ba   Code   RO         2599    .text               mf_w.l(depilogue.o)
+    0x08000000   0x08000000   0x000001a0   Data   RO         2248    RESET               startup_tae32g58xx.o
+    0x080001a0   0x080001a0   0x00000000   Code   RO         2322  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001a0   0x080001a0   0x00000004   Code   RO         2608    .ARM.Collect$$$$00000003  mc_w.l(entry4.o)
+    0x080001a4   0x080001a4   0x00000004   Code   RO         2611    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001a8   0x080001a8   0x00000000   Code   RO         2613    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001a8   0x080001a8   0x00000000   Code   RO         2615    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001a8   0x080001a8   0x00000008   Code   RO         2616    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001b0   0x080001b0   0x00000000   Code   RO         2618    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080001b0   0x080001b0   0x00000000   Code   RO         2620    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080001b0   0x080001b0   0x00000004   Code   RO         2609    .ARM.Collect$$$$00002714  mc_w.l(entry4.o)
+    0x080001b4   0x080001b4   0x00000024   Code   RO         2331    .text               mc_w.l(memseta.o)
+    0x080001d8   0x080001d8   0x0000014e   Code   RO         2596    .text               mf_w.l(dadd.o)
+    0x08000326   0x08000326   0x000000e4   Code   RO         2598    .text               mf_w.l(dmul.o)
+    0x0800040a   0x0800040a   0x000000de   Code   RO         2600    .text               mf_w.l(ddiv.o)
+    0x080004e8   0x080004e8   0x0000001a   Code   RO         2602    .text               mf_w.l(dfltui.o)
+    0x08000502   0x08000502   0x0000003e   Code   RO         2604    .text               mf_w.l(dfixi.o)
+    0x08000540   0x08000540   0x00000062   Code   RO         2633    .text               mc_w.l(uldiv.o)
+    0x080005a2   0x080005a2   0x0000001e   Code   RO         2635    .text               mc_w.l(llshl.o)
+    0x080005c0   0x080005c0   0x00000020   Code   RO         2637    .text               mc_w.l(llushr.o)
+    0x080005e0   0x080005e0   0x00000024   Code   RO         2639    .text               mc_w.l(llsshr.o)
+    0x08000604   0x08000604   0x00000000   Code   RO         2650    .text               mc_w.l(iusefp.o)
+    0x08000604   0x08000604   0x000000ba   Code   RO         2653    .text               mf_w.l(depilogue.o)
     0x080006be   0x080006be   0x00000002   PAD
-    0x080006c0   0x080006c0   0x00000030   Code   RO         2605    .text               mc_w.l(init.o)
+    0x080006c0   0x080006c0   0x00000030   Code   RO         2659    .text               mc_w.l(init.o)
     0x080006f0   0x080006f0   0x0000000c   Code   RO          207    .text.ADC1_SAMP_IRQHandler  tae32g58xx_it.o
     0x080006fc   0x080006fc   0x00000002   Code   RO          195    .text.BusFault_Handler  tae32g58xx_it.o
     0x080006fe   0x080006fe   0x00000002   PAD
     0x08000700   0x08000700   0x00000002   Code   RO          201    .text.DebugMon_Handler  tae32g58xx_it.o
     0x08000702   0x08000702   0x00000002   PAD
-    0x08000704   0x08000704   0x00000002   Code   RO         2188    .text.Default_Handler  startup_tae32g58xx.o
+    0x08000704   0x08000704   0x00000002   Code   RO         2242    .text.Default_Handler  startup_tae32g58xx.o
     0x08000706   0x08000706   0x00000002   PAD
     0x08000708   0x08000708   0x00000002   Code   RO          191    .text.HardFault_Handler  tae32g58xx_it.o
     0x0800070a   0x0800070a   0x00000002   PAD
-    0x0800070c   0x0800070c   0x00000150   Code   RO         1698    .text.LL_ADC_Init   tae32g58xx_ll_adc.o
+    0x0800070c   0x0800070c   0x00000150   Code   RO         1752    .text.LL_ADC_Init   tae32g58xx_ll_adc.o
     0x0800085c   0x0800085c   0x000000a0   Code   RO           75    .text.LL_ADC_MspInit  adc_app.o
-    0x080008fc   0x080008fc   0x000000ec   Code   RO         1702    .text.LL_ADC_OverSamp_Cfg  tae32g58xx_ll_adc.o
-    0x080009e8   0x080009e8   0x00000168   Code   RO         1710    .text.LL_ADC_REG_ChCfg  tae32g58xx_ll_adc.o
-    0x08000b50   0x08000b50   0x000000e0   Code   RO         1708    .text.LL_ADC_REG_ComCfg  tae32g58xx_ll_adc.o
-    0x08000c30   0x08000c30   0x00000002   Code   RO         1766    .text.LL_ADC_Samp_Ch0ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x080008fc   0x080008fc   0x000000ec   Code   RO         1756    .text.LL_ADC_OverSamp_Cfg  tae32g58xx_ll_adc.o
+    0x080009e8   0x080009e8   0x00000168   Code   RO         1764    .text.LL_ADC_REG_ChCfg  tae32g58xx_ll_adc.o
+    0x08000b50   0x08000b50   0x000000e0   Code   RO         1762    .text.LL_ADC_REG_ComCfg  tae32g58xx_ll_adc.o
+    0x08000c30   0x08000c30   0x00000002   Code   RO         1820    .text.LL_ADC_Samp_Ch0ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c32   0x08000c32   0x00000002   PAD
-    0x08000c34   0x08000c34   0x00000002   Code   RO         1786    .text.LL_ADC_Samp_Ch10ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c34   0x08000c34   0x00000002   Code   RO         1840    .text.LL_ADC_Samp_Ch10ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c36   0x08000c36   0x00000002   PAD
-    0x08000c38   0x08000c38   0x00000002   Code   RO         1788    .text.LL_ADC_Samp_Ch11ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c38   0x08000c38   0x00000002   Code   RO         1842    .text.LL_ADC_Samp_Ch11ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c3a   0x08000c3a   0x00000002   PAD
-    0x08000c3c   0x08000c3c   0x00000002   Code   RO         1790    .text.LL_ADC_Samp_Ch12ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c3c   0x08000c3c   0x00000002   Code   RO         1844    .text.LL_ADC_Samp_Ch12ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c3e   0x08000c3e   0x00000002   PAD
-    0x08000c40   0x08000c40   0x00000002   Code   RO         1792    .text.LL_ADC_Samp_Ch13ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c40   0x08000c40   0x00000002   Code   RO         1846    .text.LL_ADC_Samp_Ch13ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c42   0x08000c42   0x00000002   PAD
-    0x08000c44   0x08000c44   0x00000002   Code   RO         1794    .text.LL_ADC_Samp_Ch14ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c44   0x08000c44   0x00000002   Code   RO         1848    .text.LL_ADC_Samp_Ch14ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c46   0x08000c46   0x00000002   PAD
-    0x08000c48   0x08000c48   0x00000002   Code   RO         1796    .text.LL_ADC_Samp_Ch15ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c48   0x08000c48   0x00000002   Code   RO         1850    .text.LL_ADC_Samp_Ch15ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c4a   0x08000c4a   0x00000002   PAD
-    0x08000c4c   0x08000c4c   0x00000002   Code   RO         1798    .text.LL_ADC_Samp_Ch16ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c4c   0x08000c4c   0x00000002   Code   RO         1852    .text.LL_ADC_Samp_Ch16ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c4e   0x08000c4e   0x00000002   PAD
-    0x08000c50   0x08000c50   0x00000002   Code   RO         1800    .text.LL_ADC_Samp_Ch17ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c50   0x08000c50   0x00000002   Code   RO         1854    .text.LL_ADC_Samp_Ch17ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c52   0x08000c52   0x00000002   PAD
-    0x08000c54   0x08000c54   0x00000002   Code   RO         1802    .text.LL_ADC_Samp_Ch18ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c54   0x08000c54   0x00000002   Code   RO         1856    .text.LL_ADC_Samp_Ch18ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c56   0x08000c56   0x00000002   PAD
-    0x08000c58   0x08000c58   0x00000002   Code   RO         1804    .text.LL_ADC_Samp_Ch19ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c58   0x08000c58   0x00000002   Code   RO         1858    .text.LL_ADC_Samp_Ch19ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c5a   0x08000c5a   0x00000002   PAD
-    0x08000c5c   0x08000c5c   0x00000002   Code   RO         1768    .text.LL_ADC_Samp_Ch1ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c5c   0x08000c5c   0x00000002   Code   RO         1822    .text.LL_ADC_Samp_Ch1ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c5e   0x08000c5e   0x00000002   PAD
-    0x08000c60   0x08000c60   0x00000002   Code   RO         1770    .text.LL_ADC_Samp_Ch2ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c60   0x08000c60   0x00000002   Code   RO         1824    .text.LL_ADC_Samp_Ch2ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c62   0x08000c62   0x00000002   PAD
-    0x08000c64   0x08000c64   0x00000002   Code   RO         1772    .text.LL_ADC_Samp_Ch3ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c64   0x08000c64   0x00000002   Code   RO         1826    .text.LL_ADC_Samp_Ch3ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c66   0x08000c66   0x00000002   PAD
-    0x08000c68   0x08000c68   0x00000002   Code   RO         1774    .text.LL_ADC_Samp_Ch4ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c68   0x08000c68   0x00000002   Code   RO         1828    .text.LL_ADC_Samp_Ch4ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c6a   0x08000c6a   0x00000002   PAD
-    0x08000c6c   0x08000c6c   0x00000002   Code   RO         1776    .text.LL_ADC_Samp_Ch5ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c6c   0x08000c6c   0x00000002   Code   RO         1830    .text.LL_ADC_Samp_Ch5ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c6e   0x08000c6e   0x00000002   PAD
-    0x08000c70   0x08000c70   0x00000002   Code   RO         1778    .text.LL_ADC_Samp_Ch6ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c70   0x08000c70   0x00000002   Code   RO         1832    .text.LL_ADC_Samp_Ch6ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c72   0x08000c72   0x00000002   PAD
-    0x08000c74   0x08000c74   0x00000002   Code   RO         1780    .text.LL_ADC_Samp_Ch7ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c74   0x08000c74   0x00000002   Code   RO         1834    .text.LL_ADC_Samp_Ch7ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c76   0x08000c76   0x00000002   PAD
-    0x08000c78   0x08000c78   0x00000002   Code   RO         1782    .text.LL_ADC_Samp_Ch8ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c78   0x08000c78   0x00000002   Code   RO         1836    .text.LL_ADC_Samp_Ch8ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c7a   0x08000c7a   0x00000002   PAD
-    0x08000c7c   0x08000c7c   0x00000002   Code   RO         1784    .text.LL_ADC_Samp_Ch9ConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c7c   0x08000c7c   0x00000002   Code   RO         1838    .text.LL_ADC_Samp_Ch9ConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c7e   0x08000c7e   0x00000002   PAD
-    0x08000c80   0x08000c80   0x00000002   Code   RO         1754    .text.LL_ADC_Samp_ChConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08000c80   0x08000c80   0x00000002   Code   RO         1808    .text.LL_ADC_Samp_ChConvDoneCallback  tae32g58xx_ll_adc.o
     0x08000c82   0x08000c82   0x00000002   PAD
-    0x08000c84   0x08000c84   0x0000007a   Code   RO         1764    .text.LL_ADC_Samp_IRQHandler  tae32g58xx_ll_adc.o
+    0x08000c84   0x08000c84   0x0000007a   Code   RO         1818    .text.LL_ADC_Samp_IRQHandler  tae32g58xx_ll_adc.o
     0x08000cfe   0x08000cfe   0x00000002   PAD
-    0x08000d00   0x08000d00   0x00000260   Code   RO          629    .text.LL_GPIO_Init  tae32g58xx_ll_gpio.o
-    0x08000f60   0x08000f60   0x0000005c   Code   RO          635    .text.LL_GPIO_ReadPin  tae32g58xx_ll_gpio.o
-    0x08000fbc   0x08000fbc   0x00000068   Code   RO          639    .text.LL_GPIO_TogglePin  tae32g58xx_ll_gpio.o
-    0x08001024   0x08001024   0x00000064   Code   RO          637    .text.LL_GPIO_WritePin  tae32g58xx_ll_gpio.o
-    0x08001088   0x08001088   0x0000000c   Code   RO          264    .text.LL_GetTick    tae32g58xx_ll.o
-    0x08001094   0x08001094   0x00000266   Code   RO         2057    .text.LL_HRPWM_Comm_ADCTrigCfg  tae32g58xx_ll_hrpwm.o
+    0x08000d00   0x08000d00   0x00000260   Code   RO          683    .text.LL_GPIO_Init  tae32g58xx_ll_gpio.o
+    0x08000f60   0x08000f60   0x0000005c   Code   RO          689    .text.LL_GPIO_ReadPin  tae32g58xx_ll_gpio.o
+    0x08000fbc   0x08000fbc   0x00000068   Code   RO          693    .text.LL_GPIO_TogglePin  tae32g58xx_ll_gpio.o
+    0x08001024   0x08001024   0x00000064   Code   RO          691    .text.LL_GPIO_WritePin  tae32g58xx_ll_gpio.o
+    0x08001088   0x08001088   0x0000000c   Code   RO          318    .text.LL_GetTick    tae32g58xx_ll.o
+    0x08001094   0x08001094   0x00000266   Code   RO         2111    .text.LL_HRPWM_Comm_ADCTrigCfg  tae32g58xx_ll_hrpwm.o
     0x080012fa   0x080012fa   0x00000002   PAD
-    0x080012fc   0x080012fc   0x00000002   Code   RO         2177    .text.LL_HRPWM_Comm_BurstPrdCallback  tae32g58xx_ll_hrpwm.o
+    0x080012fc   0x080012fc   0x00000002   Code   RO         2231    .text.LL_HRPWM_Comm_BurstPrdCallback  tae32g58xx_ll_hrpwm.o
     0x080012fe   0x080012fe   0x00000002   PAD
-    0x08001300   0x08001300   0x00000040   Code   RO         2099    .text.LL_HRPWM_Comm_DLL_Start  tae32g58xx_ll_hrpwm.o
-    0x08001340   0x08001340   0x00000002   Code   RO         2161    .text.LL_HRPWM_Comm_Flt1Callback  tae32g58xx_ll_hrpwm.o
+    0x08001300   0x08001300   0x00000040   Code   RO         2153    .text.LL_HRPWM_Comm_DLL_Start  tae32g58xx_ll_hrpwm.o
+    0x08001340   0x08001340   0x00000002   Code   RO         2215    .text.LL_HRPWM_Comm_Flt1Callback  tae32g58xx_ll_hrpwm.o
     0x08001342   0x08001342   0x00000002   PAD
-    0x08001344   0x08001344   0x00000002   Code   RO         2163    .text.LL_HRPWM_Comm_Flt2Callback  tae32g58xx_ll_hrpwm.o
+    0x08001344   0x08001344   0x00000002   Code   RO         2217    .text.LL_HRPWM_Comm_Flt2Callback  tae32g58xx_ll_hrpwm.o
     0x08001346   0x08001346   0x00000002   PAD
-    0x08001348   0x08001348   0x00000002   Code   RO         2167    .text.LL_HRPWM_Comm_Flt4Callback  tae32g58xx_ll_hrpwm.o
+    0x08001348   0x08001348   0x00000002   Code   RO         2221    .text.LL_HRPWM_Comm_Flt4Callback  tae32g58xx_ll_hrpwm.o
     0x0800134a   0x0800134a   0x00000002   PAD
-    0x0800134c   0x0800134c   0x00000002   Code   RO         2169    .text.LL_HRPWM_Comm_Flt5Callback  tae32g58xx_ll_hrpwm.o
+    0x0800134c   0x0800134c   0x00000002   Code   RO         2223    .text.LL_HRPWM_Comm_Flt5Callback  tae32g58xx_ll_hrpwm.o
     0x0800134e   0x0800134e   0x00000002   PAD
-    0x08001350   0x08001350   0x0000011a   Code   RO         2157    .text.LL_HRPWM_Comm_IRQHandler  tae32g58xx_ll_hrpwm.o
+    0x08001350   0x08001350   0x0000011a   Code   RO         2211    .text.LL_HRPWM_Comm_IRQHandler  tae32g58xx_ll_hrpwm.o
     0x0800146a   0x0800146a   0x00000002   PAD
-    0x0800146c   0x0800146c   0x00000002   Code   RO         2175    .text.LL_HRPWM_Comm_SysFltCallback  tae32g58xx_ll_hrpwm.o
+    0x0800146c   0x0800146c   0x00000002   Code   RO         2229    .text.LL_HRPWM_Comm_SysFltCallback  tae32g58xx_ll_hrpwm.o
     0x0800146e   0x0800146e   0x00000002   PAD
-    0x08001470   0x08001470   0x0000002c   Code   RO         2019    .text.LL_HRPWM_Init  tae32g58xx_ll_hrpwm.o
+    0x08001470   0x08001470   0x0000002c   Code   RO         2073    .text.LL_HRPWM_Init  tae32g58xx_ll_hrpwm.o
     0x0800149c   0x0800149c   0x00000044   Code   RO           25    .text.LL_HRPWM_MspInit  hrpwm_app.o
-    0x080014e0   0x080014e0   0x0000009a   Code   RO         2037    .text.LL_HRPWM_RegUpd_Frc  tae32g58xx_ll_hrpwm.o
+    0x080014e0   0x080014e0   0x0000009a   Code   RO         2091    .text.LL_HRPWM_RegUpd_Frc  tae32g58xx_ll_hrpwm.o
     0x0800157a   0x0800157a   0x00000002   PAD
-    0x0800157c   0x0800157c   0x000001fc   Code   RO         2045    .text.LL_HRPWM_Slv_OutputCfg  tae32g58xx_ll_hrpwm.o
-    0x08001778   0x08001778   0x00000260   Code   RO         2029    .text.LL_HRPWM_TmrBaseCfg  tae32g58xx_ll_hrpwm.o
-    0x080019d8   0x080019d8   0x000001a0   Code   RO         2031    .text.LL_HRPWM_TmrCmpCfg  tae32g58xx_ll_hrpwm.o
-    0x08001b78   0x08001b78   0x0000001a   Code   RO          262    .text.LL_IncTick    tae32g58xx_ll.o
+    0x0800157c   0x0800157c   0x000001fc   Code   RO         2099    .text.LL_HRPWM_Slv_OutputCfg  tae32g58xx_ll_hrpwm.o
+    0x08001778   0x08001778   0x00000260   Code   RO         2083    .text.LL_HRPWM_TmrBaseCfg  tae32g58xx_ll_hrpwm.o
+    0x080019d8   0x080019d8   0x000001a0   Code   RO         2085    .text.LL_HRPWM_TmrCmpCfg  tae32g58xx_ll_hrpwm.o
+    0x08001b78   0x08001b78   0x0000001a   Code   RO          316    .text.LL_IncTick    tae32g58xx_ll.o
     0x08001b92   0x08001b92   0x00000002   PAD
-    0x08001b94   0x08001b94   0x00000030   Code   RO          252    .text.LL_Init       tae32g58xx_ll.o
-    0x08001bc4   0x08001bc4   0x00000046   Code   RO          254    .text.LL_InitTick   tae32g58xx_ll.o
+    0x08001b94   0x08001b94   0x00000030   Code   RO          306    .text.LL_Init       tae32g58xx_ll.o
+    0x08001bc4   0x08001bc4   0x00000046   Code   RO          308    .text.LL_InitTick   tae32g58xx_ll.o
     0x08001c0a   0x08001c0a   0x00000002   PAD
-    0x08001c0c   0x08001c0c   0x00000016   Code   RO          292    .text.LL_IsExtCfgEnGrp  tae32g58xx_ll.o
+    0x08001c0c   0x08001c0c   0x00000016   Code   RO          346    .text.LL_IsExtCfgEnGrp  tae32g58xx_ll.o
     0x08001c22   0x08001c22   0x00000002   PAD
     0x08001c24   0x08001c24   0x00000026   Code   RO          219    .text.LL_MspInit    tae32g58xx_ll_msp.o
     0x08001c4a   0x08001c4a   0x00000002   PAD
-    0x08001c4c   0x08001c4c   0x00000034   Code   RO          314    .text.LL_NVIC_EnableIRQ  tae32g58xx_ll_cortex.o
-    0x08001c80   0x08001c80   0x0000008a   Code   RO          310    .text.LL_NVIC_SetPriority  tae32g58xx_ll_cortex.o
+    0x08001c4c   0x08001c4c   0x00000034   Code   RO          368    .text.LL_NVIC_EnableIRQ  tae32g58xx_ll_cortex.o
+    0x08001c80   0x08001c80   0x0000008a   Code   RO          364    .text.LL_NVIC_SetPriority  tae32g58xx_ll_cortex.o
     0x08001d0a   0x08001d0a   0x00000002   PAD
-    0x08001d0c   0x08001d0c   0x00000036   Code   RO          306    .text.LL_NVIC_SetPriorityGrouping  tae32g58xx_ll_cortex.o
+    0x08001d0c   0x08001d0c   0x00000036   Code   RO          360    .text.LL_NVIC_SetPriorityGrouping  tae32g58xx_ll_cortex.o
     0x08001d42   0x08001d42   0x00000002   PAD
-    0x08001d44   0x08001d44   0x0000002e   Code   RO          539    .text.LL_RCU_ADC0_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001d44   0x08001d44   0x0000002e   Code   RO          593    .text.LL_RCU_ADC0_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001d72   0x08001d72   0x00000002   PAD
-    0x08001d74   0x08001d74   0x0000002e   Code   RO          543    .text.LL_RCU_ADC1_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001d74   0x08001d74   0x0000002e   Code   RO          597    .text.LL_RCU_ADC1_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001da2   0x08001da2   0x00000002   PAD
-    0x08001da4   0x08001da4   0x00000056   Code   RO          351    .text.LL_RCU_ADC_ClkCfg  tae32g58xx_ll_rcu.o
+    0x08001da4   0x08001da4   0x00000056   Code   RO          405    .text.LL_RCU_ADC_ClkCfg  tae32g58xx_ll_rcu.o
     0x08001dfa   0x08001dfa   0x00000002   PAD
-    0x08001dfc   0x08001dfc   0x00000026   Code   RO          375    .text.LL_RCU_DMA_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001dfc   0x08001dfc   0x00000026   Code   RO          429    .text.LL_RCU_DMA_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001e22   0x08001e22   0x00000002   PAD
-    0x08001e24   0x08001e24   0x00000026   Code   RO          371    .text.LL_RCU_EFLASH_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001e24   0x08001e24   0x00000026   Code   RO          425    .text.LL_RCU_EFLASH_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001e4a   0x08001e4a   0x00000002   PAD
-    0x08001e4c   0x08001e4c   0x00000026   Code   RO          459    .text.LL_RCU_GPIOA_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001e4c   0x08001e4c   0x00000026   Code   RO          513    .text.LL_RCU_GPIOA_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001e72   0x08001e72   0x00000002   PAD
-    0x08001e74   0x08001e74   0x00000026   Code   RO          463    .text.LL_RCU_GPIOB_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001e74   0x08001e74   0x00000026   Code   RO          517    .text.LL_RCU_GPIOB_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001e9a   0x08001e9a   0x00000002   PAD
-    0x08001e9c   0x08001e9c   0x00000026   Code   RO          467    .text.LL_RCU_GPIOC_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001e9c   0x08001e9c   0x00000026   Code   RO          521    .text.LL_RCU_GPIOC_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001ec2   0x08001ec2   0x00000002   PAD
-    0x08001ec4   0x08001ec4   0x00000026   Code   RO          471    .text.LL_RCU_GPIOD_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001ec4   0x08001ec4   0x00000026   Code   RO          525    .text.LL_RCU_GPIOD_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001eea   0x08001eea   0x00000002   PAD
-    0x08001eec   0x08001eec   0x00000026   Code   RO          475    .text.LL_RCU_GPIOE_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001eec   0x08001eec   0x00000026   Code   RO          529    .text.LL_RCU_GPIOE_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001f12   0x08001f12   0x00000002   PAD
-    0x08001f14   0x08001f14   0x00000026   Code   RO          479    .text.LL_RCU_GPIOF_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001f14   0x08001f14   0x00000026   Code   RO          533    .text.LL_RCU_GPIOF_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08001f3a   0x08001f3a   0x00000002   PAD
-    0x08001f3c   0x08001f3c   0x00000046   Code   RO          353    .text.LL_RCU_HRPWM_ClkCfg  tae32g58xx_ll_rcu.o
+    0x08001f3c   0x08001f3c   0x00000046   Code   RO          407    .text.LL_RCU_HRPWM_ClkCfg  tae32g58xx_ll_rcu.o
     0x08001f82   0x08001f82   0x00000002   PAD
-    0x08001f84   0x08001f84   0x0000009e   Code   RO          563    .text.LL_RCU_HRPWM_ClkEnRstRelease  tae32g58xx_ll_rcu.o
+    0x08001f84   0x08001f84   0x0000009e   Code   RO          617    .text.LL_RCU_HRPWM_ClkEnRstRelease  tae32g58xx_ll_rcu.o
     0x08002022   0x08002022   0x00000002   PAD
-    0x08002024   0x08002024   0x000003e8   Code   RO          369    .text.LL_RCU_PLL0Cali  tae32g58xx_ll_rcu.o
+    0x08002024   0x08002024   0x000003e8   Code   RO          423    .text.LL_RCU_PLL0Cali  tae32g58xx_ll_rcu.o
     0x0800240c   0x0800240c   0x00000004   PAD
-    0x08002410   0x08002410   0x0000049c   Code   RO          349    .text.LL_RCU_Pll0Cfg  tae32g58xx_ll_rcu.o
-    0x080028ac   0x080028ac   0x0000000c   Code   RO          361    .text.LL_RCU_SysclkGet  tae32g58xx_ll_rcu.o
-    0x080028b8   0x080028b8   0x0000025c   Code   RO          347    .text.LL_RCU_SysclkInit  tae32g58xx_ll_rcu.o
-    0x08002b14   0x08002b14   0x00000010   Code   RO          336    .text.LL_SYSTICK_Callback  tae32g58xx_ll_cortex.o
-    0x08002b24   0x08002b24   0x0000002c   Code   RO          332    .text.LL_SYSTICK_Config  tae32g58xx_ll_cortex.o
-    0x08002b50   0x08002b50   0x00000004   Code   RO          334    .text.LL_SYSTICK_IRQHandler  tae32g58xx_ll_cortex.o
+    0x08002410   0x08002410   0x0000049c   Code   RO          403    .text.LL_RCU_Pll0Cfg  tae32g58xx_ll_rcu.o
+    0x080028ac   0x080028ac   0x0000000c   Code   RO          415    .text.LL_RCU_SysclkGet  tae32g58xx_ll_rcu.o
+    0x080028b8   0x080028b8   0x0000025c   Code   RO          401    .text.LL_RCU_SysclkInit  tae32g58xx_ll_rcu.o
+    0x08002b14   0x08002b14   0x00000010   Code   RO          390    .text.LL_SYSTICK_Callback  tae32g58xx_ll_cortex.o
+    0x08002b24   0x08002b24   0x0000002c   Code   RO          386    .text.LL_SYSTICK_Config  tae32g58xx_ll_cortex.o
+    0x08002b50   0x08002b50   0x00000004   Code   RO          388    .text.LL_SYSTICK_IRQHandler  tae32g58xx_ll_cortex.o
     0x08002b54   0x08002b54   0x00000002   Code   RO          193    .text.MemManage_Handler  tae32g58xx_it.o
     0x08002b56   0x08002b56   0x00000002   PAD
     0x08002b58   0x08002b58   0x00000002   Code   RO          189    .text.NMI_Handler   tae32g58xx_it.o
     0x08002b5a   0x08002b5a   0x00000002   PAD
     0x08002b5c   0x08002b5c   0x00000002   Code   RO          203    .text.PendSV_Handler  tae32g58xx_it.o
     0x08002b5e   0x08002b5e   0x00000002   PAD
-    0x08002b60   0x08002b60   0x00000008   Code   RO         2190    .text.Reset_Handler  startup_tae32g58xx.o
+    0x08002b60   0x08002b60   0x00000008   Code   RO         2244    .text.Reset_Handler  startup_tae32g58xx.o
     0x08002b68   0x08002b68   0x00000002   Code   RO          199    .text.SVC_Handler   tae32g58xx_it.o
     0x08002b6a   0x08002b6a   0x00000002   PAD
     0x08002b6c   0x08002b6c   0x0000000e   Code   RO          209    .text.SysTick_Handler  tae32g58xx_it.o
     0x08002b7a   0x08002b7a   0x00000002   PAD
-    0x08002b7c   0x08002b7c   0x00000010   Code   RO         2204    .text.SystemCoreClockUpdate  system_tae32g58xx.o
-    0x08002b8c   0x08002b8c   0x0000003a   Code   RO         2202    .text.SystemInit    system_tae32g58xx.o
+    0x08002b7c   0x08002b7c   0x00000010   Code   RO         2258    .text.SystemCoreClockUpdate  system_tae32g58xx.o
+    0x08002b8c   0x08002b8c   0x0000003a   Code   RO         2256    .text.SystemInit    system_tae32g58xx.o
     0x08002bc6   0x08002bc6   0x00000002   PAD
     0x08002bc8   0x08002bc8   0x00000002   Code   RO          197    .text.UsageFault_Handler  tae32g58xx_it.o
     0x08002bca   0x08002bca   0x00000002   PAD
@@ -6054,7 +6148,7 @@ Memory Map of the image
     0x08002cb0   0x08002cb0   0x00000026   Code   RO           71    .text.adc_converter_start  adc_app.o
     0x08002cd6   0x08002cd6   0x00000002   PAD
     0x08002cd8   0x08002cd8   0x0000004c   Code   RO          178    .text.assert_failed  main.o
-    0x08002d24   0x08002d24   0x0000007e   Code   RO         2224    .text.fputc         user_debug.o
+    0x08002d24   0x08002d24   0x0000007e   Code   RO         2278    .text.fputc         user_debug.o
     0x08002da2   0x08002da2   0x00000002   PAD
     0x08002da4   0x08002da4   0x00000070   Code   RO           86    .text.gpio_init_app  gpio_app.o
     0x08002e14   0x08002e14   0x00000154   Code   RO            5    .text.hrpwm_app_config  hrpwm_app.o
@@ -6068,31 +6162,31 @@ Memory Map of the image
     0x08003088   0x08003088   0x000000a2   Code   RO          172    .text.main          main.o
     0x0800312a   0x0800312a   0x00000002   PAD
     0x0800312c   0x0800312c   0x00000274   Code   RO          236    .text.open_loop     utils.o
-    0x080033a0   0x080033a0   0x00000378   Code   RO         2251    .text.pwm_data_calc  llc_app.lib(llc_app.o)
-    0x08003718   0x08003718   0x0000000a   Ven    RO         2629    Veneer$$Code        anon$$obj.o
-    0x08003722   0x08003722   0x0000000a   Ven    RO         2630    Veneer$$Code        anon$$obj.o
-    0x0800372c   0x0800372c   0x0000000a   Ven    RO         2631    Veneer$$Code        anon$$obj.o
-    0x08003736   0x08003736   0x0000000a   Ven    RO         2632    Veneer$$Code        anon$$obj.o
-    0x08003740   0x08003740   0x00000020   Code   RO         2488    i.__0printf$8       mc_w.l(printf8.o)
-    0x08003760   0x08003760   0x0000000e   Code   RO         2623    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800376e   0x0800376e   0x00000002   Code   RO         2624    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08003770   0x08003770   0x0000000e   Code   RO         2625    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080033a0   0x080033a0   0x00000378   Code   RO         2305    .text.pwm_data_calc  llc_app.lib(llc_app.o)
+    0x08003718   0x08003718   0x0000000a   Ven    RO         2683    Veneer$$Code        anon$$obj.o
+    0x08003722   0x08003722   0x0000000a   Ven    RO         2684    Veneer$$Code        anon$$obj.o
+    0x0800372c   0x0800372c   0x0000000a   Ven    RO         2685    Veneer$$Code        anon$$obj.o
+    0x08003736   0x08003736   0x0000000a   Ven    RO         2686    Veneer$$Code        anon$$obj.o
+    0x08003740   0x08003740   0x00000020   Code   RO         2542    i.__0printf$8       mc_w.l(printf8.o)
+    0x08003760   0x08003760   0x0000000e   Code   RO         2677    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800376e   0x0800376e   0x00000002   Code   RO         2678    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08003770   0x08003770   0x0000000e   Code   RO         2679    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0800377e   0x0800377e   0x00000002   PAD
-    0x08003780   0x08003780   0x00000410   Code   RO         2495    i._printf_core      mc_w.l(printf8.o)
-    0x08003b90   0x08003b90   0x00000024   Code   RO         2496    i._printf_post_padding  mc_w.l(printf8.o)
-    0x08003bb4   0x08003bb4   0x0000002e   Code   RO         2497    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x08003780   0x08003780   0x00000410   Code   RO         2549    i._printf_core      mc_w.l(printf8.o)
+    0x08003b90   0x08003b90   0x00000024   Code   RO         2550    i._printf_post_padding  mc_w.l(printf8.o)
+    0x08003bb4   0x08003bb4   0x0000002e   Code   RO         2551    i._printf_pre_padding  mc_w.l(printf8.o)
     0x08003be2   0x08003be2   0x00000002   PAD
-    0x08003be4   0x08003be4   0x00000024   Code   RO         2271    i.puts              mc_w.l(puts.o)
-    0x08003c08   0x08003c08   0x00000050   Data   RO         1893    .rodata.ADC_Samp_ChxConvDoneCallback  tae32g58xx_ll_adc.o
-    0x08003c58   0x08003c58   0x00000002   Data   RO         1892    .rodata.adc_ll_cfg_def  tae32g58xx_ll_adc.o
+    0x08003be4   0x08003be4   0x00000024   Code   RO         2325    i.puts              mc_w.l(puts.o)
+    0x08003c08   0x08003c08   0x00000050   Data   RO         1947    .rodata.ADC_Samp_ChxConvDoneCallback  tae32g58xx_ll_adc.o
+    0x08003c58   0x08003c58   0x00000002   Data   RO         1946    .rodata.adc_ll_cfg_def  tae32g58xx_ll_adc.o
     0x08003c5a   0x08003c5a   0x00000002   PAD
-    0x08003c5c   0x08003c5c   0x000002a0   Data   RO          620    .rodata.rcu_pll_cfg  tae32g58xx_ll_rcu.o
-    0x08003efc   0x08003efc   0x0000003e   Data   RO          338    .rodata.str1.1      tae32g58xx_ll_cortex.o
-    0x08003f3a   0x08003f3a   0x000000b2   Data   RO          619    .rodata.str1.1      tae32g58xx_ll_rcu.o
-    0x08003fec   0x08003fec   0x0000003c   Data   RO          649    .rodata.str1.1      tae32g58xx_ll_gpio.o
-    0x08004028   0x08004028   0x00000047   Data   RO         1891    .rodata.str1.1      tae32g58xx_ll_adc.o
-    0x0800406f   0x0800406f   0x0000003d   Data   RO         2179    .rodata.str1.1      tae32g58xx_ll_hrpwm.o
-    0x080040ac   0x080040ac   0x00000030   Data   RO         2622    Region$$Table       anon$$obj.o
+    0x08003c5c   0x08003c5c   0x000002a0   Data   RO          674    .rodata.rcu_pll_cfg  tae32g58xx_ll_rcu.o
+    0x08003efc   0x08003efc   0x0000003e   Data   RO          392    .rodata.str1.1      tae32g58xx_ll_cortex.o
+    0x08003f3a   0x08003f3a   0x000000b2   Data   RO          673    .rodata.str1.1      tae32g58xx_ll_rcu.o
+    0x08003fec   0x08003fec   0x0000003c   Data   RO          703    .rodata.str1.1      tae32g58xx_ll_gpio.o
+    0x08004028   0x08004028   0x00000047   Data   RO         1945    .rodata.str1.1      tae32g58xx_ll_adc.o
+    0x0800406f   0x0800406f   0x0000003d   Data   RO         2233    .rodata.str1.1      tae32g58xx_ll_hrpwm.o
+    0x080040ac   0x080040ac   0x00000030   Data   RO         2676    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_CODE (Exec base: 0x10000000, Load base: 0x080040dc, Size: 0x000013c0, Max: 0x00008000, ABSOLUTE)
@@ -6105,30 +6199,30 @@ Memory Map of the image
     0x10000586   0x08004662   0x00000002   PAD
     0x10000588   0x08004664   0x000004dc   Code   RO          154    RAMCODE             protection_app.o
     0x10000a64   0x08004b40   0x0000007c   Code   RO          205    RAMCODE             tae32g58xx_it.o
-    0x10000ae0   0x08004bbc   0x00000898   Code   RO         2249    RAMCODE             llc_app.lib(llc_app.o)
-    0x10001378   0x08005454   0x0000000a   Ven    RO         2633    Veneer$$Code        anon$$obj.o
-    0x10001382   0x0800545e   0x0000000a   Ven    RO         2634    Veneer$$Code        anon$$obj.o
-    0x1000138c   0x08005468   0x0000000a   Ven    RO         2635    Veneer$$Code        anon$$obj.o
-    0x10001396   0x08005472   0x0000000a   Ven    RO         2636    Veneer$$Code        anon$$obj.o
-    0x100013a0   0x0800547c   0x0000000a   Ven    RO         2637    Veneer$$Code        anon$$obj.o
-    0x100013aa   0x08005486   0x0000000a   Ven    RO         2638    Veneer$$Code        anon$$obj.o
-    0x100013b4   0x08005490   0x0000000a   Ven    RO         2639    Veneer$$Code        anon$$obj.o
+    0x10000ae0   0x08004bbc   0x00000898   Code   RO         2303    RAMCODE             llc_app.lib(llc_app.o)
+    0x10001378   0x08005454   0x0000000a   Ven    RO         2687    Veneer$$Code        anon$$obj.o
+    0x10001382   0x0800545e   0x0000000a   Ven    RO         2688    Veneer$$Code        anon$$obj.o
+    0x1000138c   0x08005468   0x0000000a   Ven    RO         2689    Veneer$$Code        anon$$obj.o
+    0x10001396   0x08005472   0x0000000a   Ven    RO         2690    Veneer$$Code        anon$$obj.o
+    0x100013a0   0x0800547c   0x0000000a   Ven    RO         2691    Veneer$$Code        anon$$obj.o
+    0x100013aa   0x08005486   0x0000000a   Ven    RO         2692    Veneer$$Code        anon$$obj.o
+    0x100013b4   0x08005490   0x0000000a   Ven    RO         2693    Veneer$$Code        anon$$obj.o
 
 
     Execution Region RW_RAMA (Exec base: 0x20008000, Load base: 0x0800549c, Size: 0x0000053c, Max: 0x00007c00, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20008000   0x0800549c   0x00000008   Data   RW          297    .data..L_MergedGlobals  tae32g58xx_ll.o
+    0x20008000   0x0800549c   0x00000008   Data   RW          351    .data..L_MergedGlobals  tae32g58xx_ll.o
     0x20008008   0x080054a4   0x00000004   Data   RW          242    .data.LLC_SlewValue.current  utils.o
-    0x2000800c   0x080054a8   0x00000004   Data   RW         2206    .data.SystemCoreClock  system_tae32g58xx.o
+    0x2000800c   0x080054a8   0x00000004   Data   RW         2260    .data.SystemCoreClock  system_tae32g58xx.o
     0x20008010        -       0x00000010   Zero   RW           27    .bss..L_MergedGlobals  hrpwm_app.o
     0x20008020        -       0x00000008   Zero   RW          156    .bss..L_MergedGlobals  protection_app.o
     0x20008028        -       0x00000028   Zero   RW          243    .bss..L_MergedGlobals  utils.o
-    0x20008050        -       0x0000000c   Zero   RW         2236    .bss..L_MergedGlobals  user_debug.o
-    0x2000805c        -       0x00000008   Zero   RW         2255    .bss..L_MergedGlobals  llc_app.lib(llc_app.o)
-    0x20008064        -       0x00000054   Zero   RW         2234    .bss.__stdout       user_debug.o
-    0x200080b8        -       0x00000020   Zero   RW          294    .bss.extCfgEnMask   tae32g58xx_ll.o
+    0x20008050        -       0x0000000c   Zero   RW         2290    .bss..L_MergedGlobals  user_debug.o
+    0x2000805c        -       0x00000008   Zero   RW         2309    .bss..L_MergedGlobals  llc_app.lib(llc_app.o)
+    0x20008064        -       0x00000054   Zero   RW         2288    .bss.__stdout       user_debug.o
+    0x200080b8        -       0x00000020   Zero   RW          348    .bss.extCfgEnMask   tae32g58xx_ll.o
     0x200080d8        -       0x000003d4   Zero   RW           38    .bss.llc            variables_define_app.o
     0x200084ac        -       0x00000014   Zero   RW           51    .bss.mpwm           variables_define_app.o
     0x200084c0        -       0x00000014   Zero   RW           39    .bss.phase1_pwm0    variables_define_app.o
@@ -6137,7 +6231,7 @@ Memory Map of the image
     0x200084fc        -       0x00000014   Zero   RW           41    .bss.phase2_pwm2    variables_define_app.o
     0x20008510        -       0x00000014   Zero   RW           56    .bss.phase2_pwm4    variables_define_app.o
     0x20008524        -       0x00000014   Zero   RW           54    .bss.phase2_sr_pwm2  variables_define_app.o
-    0x20008538        -       0x00000004   Zero   RW          295    .bss.uwTick         tae32g58xx_ll.o
+    0x20008538        -       0x00000004   Zero   RW          349    .bss.uwTick         tae32g58xx_ll.o
 
 
     Execution Region ARM_LIB_STACK (Exec base: 0x2000fc00, Load base: 0x080054ac, Size: 0x00000400, Max: 0x00000400, ABSOLUTE)
