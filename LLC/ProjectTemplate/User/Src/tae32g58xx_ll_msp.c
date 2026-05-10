@@ -271,6 +271,7 @@ void LL_UART_MspDeInit(UART_TypeDef *Instance)
     }
 }
 
+
 /**
   * @}
   */

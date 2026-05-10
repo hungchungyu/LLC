@@ -31,7 +31,6 @@ static void state_shutdown_entry(void);
 static void state_shutdown_run(void);
 static void state_shutdown_exit(void);
 
-static void StateMachine_CommonTasks(void);
 
 static uint16_t transition_req        = 0U;
 static uint16_t transition_wait_ticks = 0U;
@@ -59,17 +58,26 @@ static void state_null_exit(void){}
 
 /* STANDBY */
 static void state_standby_entry(void){}
-static void state_standby_run(void){}
+static void state_standby_run(void)
+{
+	StateMachine_RequestTransition(STATE_PRECHARGE);
+}
 static void state_standby_exit(void){}
 
 /* PRECHARGE */
 static void state_precharge_entry(void){}
-static void state_precharge_run(void){}
+static void state_precharge_run(void)
+{
+	StateMachine_RequestTransition(STATE_SOFTSTART);
+}
 static void state_precharge_exit(void){}
 
 /* SOFTSTART */
 static void state_softstart_entry(void){}
-static void state_softstart_run(void){}
+static void state_softstart_run(void)
+{
+	StateMachine_RequestTransition(STATE_NORMALOPERATION);
+}
 static void state_softstart_exit(void){}
 
 /* NORMAL */
@@ -82,7 +90,6 @@ static void state_shutdown_entry(void){}
 static void state_shutdown_run(void){}
 static void state_shutdown_exit(void){}
 
-static void StateMachine_CommonTasks(void){}
 
 
 static inline bool StateMachine_IsValidState(state_t s)
@@ -125,7 +132,6 @@ void StateMachine_Step(void)
     if(!StateMachine_IsValidState(g_cur_state))
         g_cur_state = STATE_NULL;
 
-    StateMachine_CommonTasks();
 
     if(transition_req)
     {

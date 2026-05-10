@@ -22,4 +22,8 @@ typedef enum
 } state_t;
 
 
+void StateMachine_Init(state_t init_state);
+void StateMachine_Step(void);
+void StateMachine_RequestTransition(state_t next);
+
 #endif

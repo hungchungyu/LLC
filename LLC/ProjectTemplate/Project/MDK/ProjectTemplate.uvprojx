@@ -449,6 +449,16 @@
               <FileType>4</FileType>
               <FilePath>..\..\..\APP\llc_app.lib</FilePath>
             </File>
+            <File>
+              <FileName>tmr_app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tmr_app.c</FilePath>
+            </File>
+            <File>
+              <FileName>tmr_app.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\APP\tmr_app.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1078,6 +1088,16 @@
               <FileName>llc_app.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\..\..\APP\llc_app.lib</FilePath>
+            </File>
+            <File>
+              <FileName>tmr_app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tmr_app.c</FilePath>
+            </File>
+            <File>
+              <FileName>tmr_app.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\APP\tmr_app.h</FilePath>
             </File>
           </Files>
         </Group>

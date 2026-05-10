@@ -42,6 +42,7 @@ extern "C" {
 #include "user_vofa.h"
 #include "pid_app.h"
 #include "iwdg_app.h"
+#include "tmr_app.h"
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Exported types ------------------------------------------------------------*/

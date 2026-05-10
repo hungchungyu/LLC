@@ -1,48 +1,41 @@
-/**
-  ******************************************************************************
-  * @file    tmf5xxx_ll_gpio_app.h
-  * @author  Degital Power Application Team
-  * @brief   Header file of ADC_APP config.h.
-  *
-  * <h2><center>&copy; Copyright (c) 2020 Tai-Action.
-  * All rights reserved.</center></h2>
-  *
-  * This software is licensed by Tai-Action under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
-
-/* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef _GPIO_APP_H_
 #define _GPIO_APP_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif /* __cplusplus */
-
-/* Includes ------------------------------------------------------------------*/
 #include "tae32g58xx_ll.h"
 #include <stdio.h>
 
-/* Exported constants --------------------------------------------------------*/
-/* Exported macro ------------------------------------------------------------*/
-/* Exported types ------------------------------------------------------------*/
-/* Exported functions --------------------------------------------------------*/
-/* Private variables ---------------------------------------------------------*/
-/* Private constants ---------------------------------------------------------*/
-/* Private macros ------------------------------------------------------------*/
-/* Private types -------------------------------------------------------------*/
-/* Private functions ---------------------------------------------------------*/
- void gpio_init_app(void);
-#ifdef __cplusplus
-}
-#endif /* __cplusplus */
+/***************** ON/OFF Input Define ******************/
+#define ONOFF_VALUE()       LL_GPIO_ReadPin(ONOFF_PORT, ONOFF_PIN)
+/* PA4~PA7 : TP1~TP4 */
+#define TP1_HIGH()    LL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET)
+#define TP1_LOW()     LL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET)
+#define TP1_TOGGLE()  LL_GPIO_TogglePin(GPIOA, GPIO_PIN_4)
 
-#endif /* _MAIN_H_ */
+#define TP2_HIGH()    LL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET)
+#define TP2_LOW()     LL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET)
+#define TP2_TOGGLE()  LL_GPIO_TogglePin(GPIOA, GPIO_PIN_5)
 
-/************************* (C) COPYRIGHT Tai-Action *****END OF FILE***********/
+#define TP3_HIGH()    LL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET)
+#define TP3_LOW()     LL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET)
+#define TP3_TOGGLE()  LL_GPIO_TogglePin(GPIOA, GPIO_PIN_6)
+
+#define TP4_HIGH()    LL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET)
+#define TP4_LOW()     LL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET)
+#define TP4_TOGGLE()  LL_GPIO_TogglePin(GPIOA, GPIO_PIN_7)
+
+/* PA10, PA11 : original test GPIO */
+#define TEST1_HIGH()    LL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_SET)
+#define TEST1_LOW()     LL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_RESET)
+#define TEST1_TOGGLE()  LL_GPIO_TogglePin(GPIOA, GPIO_PIN_10)
+
+#define TEST2_HIGH()    LL_GPIO_WritePin(GPIOA, GPIO_PIN_11, GPIO_PIN_SET)
+#define TEST2_LOW()     LL_GPIO_WritePin(GPIOA, GPIO_PIN_11, GPIO_PIN_RESET)
+#define TEST2_TOGGLE()  LL_GPIO_TogglePin(GPIOA, GPIO_PIN_11)
+
+
+void gpio_init_app(void);
+ 
+#endif
+
 
 

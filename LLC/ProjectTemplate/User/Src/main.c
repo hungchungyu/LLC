@@ -1,78 +1,19 @@
-/**
-  ******************************************************************************
-  * @file    main.c
-  * @author  MCD Application Team
-  * @brief   main source file for template project
-  *
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2020 Tai-Action.
-  * All rights reserved.</center></h2>
-  *
-  * This software is licensed by Tai-Action under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
-
-#define DBG_TAG     "APP"
-#define DBG_LVL     DBG_LOG
 #include "dbg/tae_dbg.h"
+#include "state_machine.h"
 
-
-/** @defgroup TAE32G58xx_Examples TAE32G58xx Examples
-  * @brief    TAE32G58xx Examples
-  * @{
-  */
-
-/** @defgroup TAE32G58xx_Template TAE32G58xx Template
-  * @brief    TAE32G58xx Template
-  * @{
-  */
-
-
-/* Private Constants ---------------------------------------------------------*/
-/* Private Macros ------------------------------------------------------------*/
-/* Private Types -------------------------------------------------------------*/
-/* Private Variables ---------------------------------------------------------*/
-/* Private Function Prototypes -----------------------------------------------*/
-/** @addtogroup MAIN_Private_Functions MAIN Private Functions
-  * @{
-  */
 static void SystemClock_Config(void);
-/**
-  * @}
-  */
 
-
-/* Exported Variables --------------------------------------------------------*/
-/* Exported Functions --------------------------------------------------------*/
-/* Private Functions ---------------------------------------------------------*/
+void AppTimer_1msTask(void);
 void cmpss_initial_app(void);
 void NVIC_initial(void);
-/** @defgroup MAIN_Private_Functions MAIN Private Functions
-  * @brief    MAIN Private Functions
-  * @{
-  */
 
-/**
-  * @brief  main entry
-  * @param  None
-  * @return status
-  */
-  
-
+uint32_t cnt_test = 0;
 int main(void)
 {
 	SystemClock_Config();
-	
 	
 	LL_Init();
 	NVIC_initial();				// Nested vectored interrupt controller
@@ -83,6 +24,7 @@ int main(void)
 	adc_all_init(); 
 	hrpwm_app_start();
 	
+	tmr_init_app(TMR7);
 	
 	//cmpss_initial_app();
 	//iwdg_init();
@@ -98,11 +40,25 @@ int main(void)
 	adc_converter_start();
 	//__LL_HRPWM_Mst_CmpA_INT_En(HRPWM);
 	
-	
-    while (1) 
-			{
-				
-    }
+	StateMachine_Init(STATE_STANDBY);
+	while (1) 
+	{
+		
+		cnt_test = __LL_TMR_CounterVal_Get(TMR7);
+		if (__LL_TMR_AllIntPnd_Get(TMR7) & TMR9_SR_OVIF_Msk)
+		{
+			__LL_TMR_OverflowIntPnd_Clr(TMR7);
+
+    /* 1ms task */
+			AppTimer_1msTask();
+		}	
+	}
+}
+void AppTimer_1msTask(void)
+{
+		TEST1_HIGH();
+		StateMachine_Step();
+		TEST1_LOW();
 }
 void cmpss_initial_app(void)
 {
@@ -119,11 +75,7 @@ void NVIC_initial(void)
 	LL_NVIC_SetPriority(ADC1_NORM_IRQn,2,1);
 	//LL_NVIC_SetPriority(HRPWM_MST_IRQn,1,0);
 }
-/**
-  * @brief  SYSCLK Config
-  * @param  None
-  * @return None
-  */
+
 static void SystemClock_Config(void)
 {
     LL_StatusETypeDef ret;
@@ -150,13 +102,7 @@ static void SystemClock_Config(void)
 }
 
 #ifdef USE_FULL_ASSERT
-/**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+
 void assert_failed(uint8_t *file, uint32_t line)
 {
     /* User can add his own implementation to report the file name and line number,
@@ -171,20 +117,3 @@ void assert_failed(uint8_t *file, uint32_t line)
     }
 }
 #endif
-
-/**
-  * @}
-  */
-
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-
-/************************* (C) COPYRIGHT Tai-Action *****END OF FILE***********/
-

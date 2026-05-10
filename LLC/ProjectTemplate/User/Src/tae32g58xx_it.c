@@ -144,8 +144,7 @@ void ADC0_NORM_IRQHandler(void)
 {
 	uint32_t int_en, int_pending;
 
-	//LL_GPIO_TogglePin(GPIOA, GPIO_PIN_10);
-	LL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_SET);
+	TEST2_HIGH();
 	
     //ADC Normal All Interrupt Enalbe and Pending Get
     int_en = __LL_ADC_NormAllIntEn_Get(ADC0);
@@ -158,7 +157,7 @@ void ADC0_NORM_IRQHandler(void)
 		//LL_ADC_Norm_REG_SeqEndCallback(ADC0);
 			open_loop();
 	}
-		LL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_RESET);
+		TEST2_LOW();
 }
 
 /**
