@@ -19,10 +19,7 @@
 #include "variables_define_app.h"
 
 
-volatile TW_HRPWM_TypeDef phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
-
-
-
+LLC_PWM_CmpTypeDef mpwm,phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
 
 
 
@@ -42,9 +39,6 @@ int16_t llc_voltage_samp			[BUF_LEN1] ;
 int16_t llc_current_ref_samp		[BUF_LEN1] ;
                                                                               
 
-
-volatile ADJUST_TYPE feedback_data;
-volatile TW_HRPWM_TypeDef mpwm,pwm0,pwm1,phase2_sr_pwm2,phase1_sr_pwm3,phase2_pwm4,phase1_pwm5;
 volatile uint16_t pwm_test_value;
 void llc_factors_initial(void)
 {

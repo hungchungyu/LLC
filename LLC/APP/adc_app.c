@@ -256,9 +256,9 @@ __SECTION(RAMCODE)
 void get_adc_data(void)
 {                                                                                        
 	llc.vout_raw	=	((float)llc_voltage_samp[0]		)/ADC_FULL_NUM*VOUT_FULL_RANGE;
-	llc.vout_raw = llc.vout_raw*feedback_data.f[1];//校准更新
+	//llc.vout_raw = llc.vout_raw*feedback_data.f[1];//校准更新
 	llc.iout_raw 	=	((float)llc_current_samp[0]-llc_current_ref_samp[0]+55)/ADC_FULL_NUM*IOUT_FULL_RANGE;
-	llc.iout_raw=llc.iout_raw*feedback_data.f[0];//校准更新
+	//.iout_raw=llc.iout_raw*feedback_data.f[0];//校准更新
 	llc.iin_phase1_temp  =	((float)primary_current1_samp[0])/ADC_FULL_NUM*I_PRIMARRY_SIDE_FULL;
 	llc.iin_phase2_temp  =	((float)primary_current2_samp[0])/ADC_FULL_NUM*I_PRIMARRY_SIDE_FULL;
 	llc.temperature_raw  = (temperature_samp[0]<<2);

@@ -45,8 +45,7 @@ void hrpwm_llc_output(void);
 void hrpwm_llc_output_dis(void);
 void hrpwm_sr_output(void);
 void hrpwm_sr_output_dis(void);
-void hrpwm_upmos_charge(void);
-void hrpwm_upmos_charge_dis(void);
+
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */

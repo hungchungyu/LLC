@@ -10,7 +10,7 @@ void AppTimer_1msTask(void);
 void cmpss_initial_app(void);
 void NVIC_initial(void);
 
-uint32_t cnt_test = 0;
+uint32_t gpio_test = 0;
 int main(void)
 {
 	SystemClock_Config();
@@ -32,7 +32,6 @@ int main(void)
 	
 #if	PWM_TEST_FLAG
 	llc.state = State_on;
-	hrpwm_llc_output();
 	//hrpwm_sr_output();
 #endif	
 	
@@ -43,8 +42,6 @@ int main(void)
 	StateMachine_Init(STATE_STANDBY);
 	while (1) 
 	{
-		
-		cnt_test = __LL_TMR_CounterVal_Get(TMR7);
 		if (__LL_TMR_AllIntPnd_Get(TMR7) & TMR9_SR_OVIF_Msk)
 		{
 			__LL_TMR_OverflowIntPnd_Clr(TMR7);

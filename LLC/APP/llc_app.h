@@ -55,10 +55,9 @@ void voltage_loop_caculation_app(void);
 void current_loop_caculation_app(void);    
 void upper_mos_charge (void);
 void llc_state_enable(void);
-void pwm_data_calc(void);
 void dc_voltage_slope_calc(void) ;
 int32_t abs_user (int32_t data_in);
-void phase2phase_current_balance_func(void);
+
 void llc_ok_s_func(void);
 #ifdef __cplusplus
 }

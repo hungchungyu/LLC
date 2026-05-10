@@ -9,7 +9,6 @@
 ".\flash\objects\pid_app.o"
 ".\flash\objects\protection_app.o"
 ".\flash\objects\iwdg_app.o"
-"..\..\..\APP\llc_app.lib"
 ".\flash\objects\tmr_app.o"
 ".\flash\objects\main.o"
 ".\flash\objects\tae32g58xx_it.o"

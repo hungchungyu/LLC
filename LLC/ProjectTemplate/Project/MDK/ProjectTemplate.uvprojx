@@ -445,11 +445,6 @@
               <FilePath>..\..\..\APP\iwdg_app.c</FilePath>
             </File>
             <File>
-              <FileName>llc_app.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\..\APP\llc_app.lib</FilePath>
-            </File>
-            <File>
               <FileName>tmr_app.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\tmr_app.c</FilePath>
@@ -1083,11 +1078,6 @@
               <FileName>iwdg_app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\APP\iwdg_app.c</FilePath>
-            </File>
-            <File>
-              <FileName>llc_app.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\..\APP\llc_app.lib</FilePath>
             </File>
             <File>
               <FileName>tmr_app.c</FileName>

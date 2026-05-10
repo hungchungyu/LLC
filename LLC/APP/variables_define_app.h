@@ -7,6 +7,20 @@
 /*============================ Include =======================================*/
 #include "main.h"
 
+#define HRPWM_LLC_OUTPUT_EN             	1   // Enable LLC output
+
+#define LLC_PHASE1_ENABLE                 1   // Enable phase 1 primary-side PWM
+
+#if LLC_PHASE1_ENABLE
+    #define HRPWM_SR1_OUTPUT_EN           0   // Enable phase 1 secondary-side SR output
+#endif
+
+#define LLC_PHASE2_ENABLE                 1   // Enable phase 2 primary-side PWM
+
+#if LLC_PHASE2_ENABLE
+    #define HRPWM_SR2_OUTPUT_EN           0   // Enable phase 2 secondary-side SR output
+#endif
+
 
 #define	LLC_PHASE1_PWM0       			(HRPWM_SLV_PWM_0)			// PA8, PA9
 #define LLC_PHASE1_SR_PWM4       		(HRPWM_SLV_PWM_4)			// PC8, PC9
@@ -32,16 +46,16 @@
 
 #define USER_ADC_TRIG_PWM1				(HRPWM_SLV_PWM_1)
 
-typedef struct 
+typedef struct
 {
-    int32_t period;
-    int32_t compa;
-    int32_t compb;
-    int32_t compc;
-    int32_t compd;
-}TW_HRPWM_TypeDef; 
+    uint32_t period;
+    uint32_t compa;
+    uint32_t compb;
+    uint32_t compc;
+    uint32_t compd;
+} LLC_PWM_CmpTypeDef;
 
-extern volatile TW_HRPWM_TypeDef phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
+extern LLC_PWM_CmpTypeDef mpwm,phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
 
 
 
@@ -52,19 +66,8 @@ extern volatile TW_HRPWM_TypeDef phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase
 
 /*============================ Defines (Constant) ============================*/
 #define PWM_TEST_FLAG						1//PWM 测试开关
-#define HRPWM_LLC_OUTPUT_EN 				1//使能LLC输出
 #define USE_SWITCH_ENABLE_LLC				1//使能物理开关
 #define CURRENT_BALANCE_EN					1//均流功能使能开关
-
-#define LLC_PHASE1_ENABLE	 				1//第一相的原边PWM
-#if LLC_PHASE1_ENABLE
-	#define HRPWM_SR1_OUTPUT_EN				1//第一相的副边SR
-#endif	 
-	 
-#define LLC_PHASE2_ENABLE	 				1//第二相的原边PWM
-#if LLC_PHASE2_ENABLE
-	#define HRPWM_SR2_OUTPUT_EN				1//第二相的副边SR
-#endif
 
 #define ILOOP_LIMIT							1//0:关闭LLC限流 1：开启LLC限流
 
@@ -414,7 +417,7 @@ typedef union
 }ADJUST_TYPE;  
   
 
-extern volatile ADJUST_TYPE feedback_data;
+
 extern	int16_t current_share_samp			[BUF_LEN1] ;
 extern	int16_t primary_current1_samp  		[BUF_LEN1] ;
 extern	int16_t primary_current2_samp		[BUF_LEN1] ;
@@ -424,7 +427,7 @@ extern	int16_t llc_voltage_samp			[BUF_LEN1] ;
 extern	 int16_t llc_current_ref_samp		[BUF_LEN1] ;
  
 extern TW_LLC_TypeDef llc;	
-extern volatile TW_HRPWM_TypeDef mpwm,pwm0,pwm1,phase2_sr_pwm2,phase1_sr_pwm3,phase2_pwm4,phase1_pwm5;
+
 
 void pfc_hrpwm_outdis_app(void);
 void data_init_app(void);

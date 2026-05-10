@@ -1,4 +1,5 @@
 #include "main.h"
+#include "include_app.h"
 #include "state_machine.h"
 
 /* NULL */
@@ -65,7 +66,10 @@ static void state_standby_run(void)
 static void state_standby_exit(void){}
 
 /* PRECHARGE */
-static void state_precharge_entry(void){}
+static void state_precharge_entry(void)
+{
+	hrpwm_llc_output();
+}
 static void state_precharge_run(void)
 {
 	StateMachine_RequestTransition(STATE_SOFTSTART);
@@ -83,10 +87,16 @@ static void state_softstart_exit(void){}
 /* NORMAL */
 static void state_normaloperation_entry(void){}
 static void state_normaloperation_run(void){}
-static void state_normaloperation_exit(void){}
+static void state_normaloperation_exit(void)
+{
+	hrpwm_app_outdis();
+}
 
 /* SHUTDOWN */
-static void state_shutdown_entry(void){}
+static void state_shutdown_entry(void)
+{
+	hrpwm_app_outdis();
+}
 static void state_shutdown_run(void){}
 static void state_shutdown_exit(void){}
 

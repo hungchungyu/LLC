@@ -18,6 +18,6 @@ extern digitctrl_PI P1_I_Loop;
 
 
 void open_loop(void);
-void updata_hrpwm();
+
 
 #endif

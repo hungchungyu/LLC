@@ -18,16 +18,7 @@
 digitctrl_PI P1_I_Loop;
 float open_loop_value = -500.0f;
 
-typedef struct
-{
-    uint32_t period;
-    uint32_t compa;
-    uint32_t compb;
-    uint32_t compc;
-    uint32_t compd;
-} LLC_PWM_CmpTypeDef;
 
-LLC_PWM_CmpTypeDef phase1_pwm, phase2_pwm;
 
 /* Clamp value within range */
 static inline float ClampFloat(float x, float min, float max)
@@ -166,9 +157,9 @@ void open_loop(void)
 	static float ctrl_value = 1.0;
 	float pwm_value = LLC_SlewValue(ctrl_value);
 
-	CtrlToPwm(pwm_value, &phase1_pwm);
-	CtrlToPwm(pwm_value, &phase2_pwm);
-	updata_hrpwm();
+	CtrlToPwm(pwm_value, &phase1_pwm0);
+	CtrlToPwm(pwm_value, &phase2_pwm2);
+	hrpwm_updata_app();
 }
 
 
@@ -189,28 +180,3 @@ static inline void V_Loop_PI(void)
 }
 */
 
-
-void updata_hrpwm()
-{
-	HRPWM->Common.CR0 |= 0x81FF;							//PWM0~7 & Burst mode
-	__NOP();__NOP();__NOP();__NOP();__NOP();
-	
-	
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPAR = phase1_pwm.compa;
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPBR = phase1_pwm.compb;
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPCR = phase1_pwm.compc;
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPDR = phase1_pwm.compd;
-		HRPWM->PWM[LLC_PHASE1_PWM0].REG.PERR  = phase1_pwm.period;
-	
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPAR = phase2_pwm.compa;
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPBR = phase2_pwm.compb;
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPCR = phase2_pwm.compc;
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPDR = phase2_pwm.compd;
-		HRPWM->PWM[LLC_PHASE2_PWM2].REG.PERR  = phase2_pwm.period;
-
-		HRPWM->Master.MPER       = phase1_pwm.period;
-		HRPWM->Master.MCMPBR     = phase1_pwm.period >> 2;
-	
-	__NOP();__NOP();__NOP();__NOP();__NOP();
-	HRPWM->Common.CR0 &= ~(0x81FF);
-}

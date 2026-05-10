@@ -1,40 +1,6 @@
-/**
-  ******************************************************************************
-  * @file    APP/Adc_app.c
-  * @author 004 
-  * @version V1.0.0
-  * @date    17-04-2020
-  * @brief   Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; COPYRIGHT 2020 Tai-Micro</center></h2>
-  *
-  *
-  *
-  ******************************************************************************
-  */ 
-
-/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "include_app.h"
-/** @addtogroup Template_Project
-  * @{
-  */
-/* Private typedef -----------------------------------------------------------*/
-/* Private define ------------------------------------------------------------*/
-/* Private macro -------------------------------------------------------------*/
-/* Private variables ---------------------------------------------------------*/
-//TYPE_ADC_CTL_INIT  adc_ctl_cfg;
-//TYPE_ADC_IRQ_CFG   adc_irq_cfg;
-//TYPE_ADC_CFG       adc_cfg;
-/* Private function prototypes -----------------------------------------------*/
-/* Private functions ---------------------------------------------------------*/
-/**
-* @function void adc_init_app(void)
-* @brief    Description: app adc init
-* @return   None return.
-*/
+
 
 
 void hrpwm_init(void)
@@ -236,23 +202,31 @@ void hrpwm_app_inital(void)
 
 void hrpwm_llc_output(void)
 {	
-	HRPWM->Common.OENR |=
-							HRPWM_PWM0_OEN_A_BIT|
-							HRPWM_PWM0_OEN_B_BIT|
-							HRPWM_PWM2_OEN_A_BIT|
-							HRPWM_PWM2_OEN_B_BIT|
-							0;
+    HRPWM->Common.OENR |=
+#if HRPWM_LLC_OUTPUT_EN
+    #if LLC_PHASE1_ENABLE
+                        HRPWM_PWM0_OEN_A_BIT |
+                        HRPWM_PWM0_OEN_B_BIT |
+    #endif
+
+    #if LLC_PHASE2_ENABLE
+                        HRPWM_PWM2_OEN_A_BIT |
+                        HRPWM_PWM2_OEN_B_BIT |
+    #endif
+#endif
+                        0;
+	
 }
 void hrpwm_sr_output(void)
 {
 	HRPWM->Common.OENR |=
 #if	 HRPWM_SR1_OUTPUT_EN
-						LLC_PHASE1_SR_PWM3_OEN_A_BIT|
-	                    LLC_PHASE1_SR_PWM3_OEN_B_BIT|
+						HRPWM_PWM4_OEN_A_BIT|
+						HRPWM_PWM4_OEN_B_BIT|
 #endif	
 #if	 HRPWM_SR2_OUTPUT_EN
-						LLC_PHASE2_SR_PWM2_OEN_A_BIT|
-	                    LLC_PHASE2_SR_PWM2_OEN_B_BIT|
+						HRPWM_PWM5_OEN_A_BIT|
+						HRPWM_PWM5_OEN_B_BIT|
 #endif	
 						0;
 }
@@ -262,12 +236,12 @@ void hrpwm_sr_output_dis(void)
 {
 	HRPWM->Common.ODISR |=
 #if HRPWM_SR1_OUTPUT_EN
-						LLC_PHASE1_SR_PWM3_ODIS_A_BIT |
-						LLC_PHASE1_SR_PWM3_ODIS_B_BIT |
+						HRPWM_PWM4_OEN_A_BIT |
+						HRPWM_PWM4_OEN_B_BIT |
 #endif
 #if HRPWM_SR2_OUTPUT_EN
-						LLC_PHASE2_SR_PWM2_ODIS_A_BIT |
-						LLC_PHASE2_SR_PWM2_ODIS_B_BIT |
+						HRPWM_PWM5_OEN_A_BIT |
+						HRPWM_PWM5_OEN_B_BIT |
 #endif
 							0;
 }
@@ -275,14 +249,14 @@ void hrpwm_llc_output_dis(void)
 {
 	HRPWM->Common.ODISR |=
 #if HRPWM_LLC_OUTPUT_EN
-#if LLC_PHASE1_ENABLE	
-						LLC_PHASE1_PWM5_ODIS_A_BIT|  
-						LLC_PHASE1_PWM5_ODIS_B_BIT|
-#endif
-#if LLC_PHASE2_ENABLE
-						LLC_PHASE2_PWM4_ODIS_A_BIT |
-						LLC_PHASE2_PWM4_ODIS_B_BIT |
-#endif
+	#if LLC_PHASE1_ENABLE	
+						HRPWM_PWM0_OEN_A_BIT|  
+						HRPWM_PWM0_OEN_B_BIT|
+	#endif
+	#if LLC_PHASE2_ENABLE
+						HRPWM_PWM2_OEN_A_BIT |
+						HRPWM_PWM2_OEN_B_BIT |
+	#endif
 #endif
 							0;
 }
@@ -291,23 +265,23 @@ void hrpwm_app_outdis(void)
 {
 	HRPWM->Common.ODISR |=
 #if HRPWM_LLC_OUTPUT_EN
-#if LLC_PHASE1_ENABLE	
-						LLC_PHASE1_PWM5_ODIS_A_BIT|  
-						LLC_PHASE1_PWM5_ODIS_B_BIT|
-#endif
-#if LLC_PHASE2_ENABLE
-						LLC_PHASE2_PWM4_ODIS_A_BIT|
-						LLC_PHASE2_PWM4_ODIS_A_BIT|
-#endif
+	#if LLC_PHASE1_ENABLE	
+						HRPWM_PWM0_OEN_A_BIT|  
+						HRPWM_PWM0_OEN_B_BIT|
+	#endif
+	#if LLC_PHASE2_ENABLE
+						HRPWM_PWM2_OEN_A_BIT|
+						HRPWM_PWM2_OEN_B_BIT|
+	#endif
 #endif
 
 #if	HRPWM_SR1_OUTPUT_EN
-						LLC_PHASE1_SR_PWM3_ODIS_A_BIT|
-						LLC_PHASE1_SR_PWM3_ODIS_B_BIT|
+						HRPWM_PWM4_OEN_A_BIT|
+						HRPWM_PWM4_OEN_B_BIT|
 #endif
 #if	HRPWM_SR2_OUTPUT_EN
-						LLC_PHASE2_SR_PWM2_ODIS_A_BIT|
-						LLC_PHASE2_SR_PWM2_ODIS_B_BIT|
+						HRPWM_PWM5_OEN_A_BIT|
+						HRPWM_PWM5_OEN_B_BIT|
 #endif
 						0;
 }
@@ -315,31 +289,12 @@ void hrpwm_app_outdis(void)
 __SECTION(RAMCODE)
 void hrpwm_upmos_charge(void)
 {
-	HRPWM->Common.OENR |=
-#if HRPWM_LLC_OUTPUT_EN
-#if	LLC_PHASE1_ENABLE
-						LLC_PHASE1_PWM5_OEN_A_BIT|
-#endif
-#if	LLC_PHASE2_ENABLE
-						LLC_PHASE2_PWM4_OEN_A_BIT|
-#endif
-#endif
-						0;
+
 }
 __SECTION(RAMCODE)
 void hrpwm_upmos_charge_dis(void)
 {
-	HRPWM->Common.ODISR |=
-#if HRPWM_LLC_OUTPUT_EN
-#if LLC_PHASE1_ENABLE
-						LLC_PHASE1_PWM5_ODIS_A_BIT|
-#endif
-	
-#if	LLC_PHASE2_ENABLE
-						LLC_PHASE2_PWM4_ODIS_A_BIT|
-#endif
-#endif
-						0;
+
 }
 __SECTION(RAMCODE)
 void LL_HRPWM_Mst_CmpACallback(HRPWM_TypeDef *Instance)
@@ -375,7 +330,7 @@ void LL_HRPWM_Mst_CmpACallback(HRPWM_TypeDef *Instance)
 	
 	if(llc.current_sharing_flag == true && llc.iout_raw>20.0f)
 	{
-		phase2phase_current_balance_func();
+
 	}
 	else{
 		llc.leadphase_balance_loop.output =0;
@@ -387,7 +342,7 @@ void LL_HRPWM_Mst_CmpACallback(HRPWM_TypeDef *Instance)
 		llc.lagphase_balance_loop.i_part =0;
 	}
 #endif
-	pwm_data_calc();
+
 	if(llc.state==State_on||llc.state == State_rampup){
 		//hrpwm_updata_app();  // Test
 	}
@@ -395,53 +350,30 @@ void LL_HRPWM_Mst_CmpACallback(HRPWM_TypeDef *Instance)
 	GPIOA->BSR = GPIO_PIN_11<<16;
 }
 
-int32_t TEST_COMPA = 0;
-int32_t TEST_COMPB = 0;
-int32_t TEST_COMPC = 0;
-int32_t TEST_COMPD = 0;
 __SECTION(RAMCODE)
 void hrpwm_updata_app()
 {
-	int32_t master_cmpa,master_cmpb;
-    //¼ÓËø(½ûÖ¹¸üÐÂ)
-	HRPWM->Common.CR0 |= 0x81FF;		//PWM2~5 & Burst mode
+	HRPWM->Common.CR0 |= 0x81FF;							//PWM0~7 & Burst mode
 	__NOP();__NOP();__NOP();__NOP();__NOP();
-	if(llc.state == State_charge){
-		HRPWM->PWM[LLC_PHASE1_PWM5].REG.CMPCR = LLC_DEADTIME_COUNT-1;
-		HRPWM->PWM[LLC_PHASE1_PWM5].REG.CMPDR = LLC_SW_PERIOD_MIN>>1;
-		HRPWM->PWM[LLC_PHASE1_PWM5].REG.PERR  = LLC_SW_PERIOD_MIN-1;
-	}else{
-		HRPWM->PWM[LLC_PHASE1_PWM5].REG.CMPAR = TEST_COMPA;
-		HRPWM->PWM[LLC_PHASE1_PWM5].REG.CMPBR = TEST_COMPB;
-		HRPWM->PWM[LLC_PHASE1_PWM5].REG.CMPCR = TEST_COMPC;
-		HRPWM->PWM[LLC_PHASE1_PWM5].REG.CMPDR = TEST_COMPD;
-		HRPWM->PWM[LLC_PHASE1_PWM5].REG.PERR  = phase1_pwm5.period;
-		
-		HRPWM->PWM[LLC_PHASE1_SR_PWM3].REG.CMPAR = phase1_sr_pwm3.compa;
-		HRPWM->PWM[LLC_PHASE1_SR_PWM3].REG.CMPBR = phase1_sr_pwm3.compb;
-		HRPWM->PWM[LLC_PHASE1_SR_PWM3].REG.CMPCR = phase1_sr_pwm3.compc;
-		HRPWM->PWM[LLC_PHASE1_SR_PWM3].REG.CMPDR = phase1_sr_pwm3.compd;
-		HRPWM->PWM[LLC_PHASE1_SR_PWM3].REG.PERR  = phase1_sr_pwm3.period;
-#if		LLC_PHASE2_ENABLE 
-		HRPWM->PWM[LLC_PHASE2_PWM4].REG.CMPAR = phase2_pwm4.compa;
-		HRPWM->PWM[LLC_PHASE2_PWM4].REG.CMPBR = phase2_pwm4.compb;
-		HRPWM->PWM[LLC_PHASE2_PWM4].REG.CMPCR = phase2_pwm4.compc;
-		HRPWM->PWM[LLC_PHASE2_PWM4].REG.CMPDR = phase2_pwm4.compd;
-		HRPWM->PWM[LLC_PHASE2_PWM4].REG.PERR  = phase2_pwm4.period;
-		
-		HRPWM->PWM[LLC_PHASE2_SR_PWM2].REG.CMPAR = phase2_sr_pwm2.compa;
-		HRPWM->PWM[LLC_PHASE2_SR_PWM2].REG.CMPBR = phase2_sr_pwm2.compb;
-		HRPWM->PWM[LLC_PHASE2_SR_PWM2].REG.CMPCR = phase2_sr_pwm2.compc;
-		HRPWM->PWM[LLC_PHASE2_SR_PWM2].REG.CMPDR = phase2_sr_pwm2.compd; 
-		HRPWM->PWM[LLC_PHASE2_SR_PWM2].REG.PERR  = phase2_sr_pwm2.period;
-#endif		
-	}
-	HRPWM->Master.MPER       = phase1_pwm5.period;
-	master_cmpb 			 = phase1_pwm5.period/4;
-	HRPWM->Master.MCMPBR     = master_cmpb;//
-	HRPWM->Master.MCMPAR     = (phase1_pwm5.period>>2)-1000;//
+	
+	
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPAR = phase1_pwm0.compa;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPBR = phase1_pwm0.compb;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPCR = phase1_pwm0.compc;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.CMPDR = phase1_pwm0.compd;
+		HRPWM->PWM[LLC_PHASE1_PWM0].REG.PERR  = phase1_pwm0.period;
+	
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPAR = phase2_pwm2.compa;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPBR = phase2_pwm2.compb;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPCR = phase2_pwm2.compc;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.CMPDR = phase2_pwm2.compd;
+		HRPWM->PWM[LLC_PHASE2_PWM2].REG.PERR  = phase2_pwm2.period;
+
+		HRPWM->Master.MPER       = phase1_pwm0.period;
+		HRPWM->Master.MCMPBR     = phase1_pwm0.period >> 2;
+	
 	__NOP();__NOP();__NOP();__NOP();__NOP();
-	HRPWM->Common.CR0 &= ~(0x81FF);	//PWM2~5 & Burst mdoe
+	HRPWM->Common.CR0 &= ~(0x81FF);
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
 /**
