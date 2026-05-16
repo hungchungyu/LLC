@@ -299,55 +299,7 @@ void hrpwm_upmos_charge_dis(void)
 __SECTION(RAMCODE)
 void LL_HRPWM_Mst_CmpACallback(HRPWM_TypeDef *Instance)
 {
-	IWDG->KEYR = 0xAAAA;//reload watch dog
-	GPIOA->BSR = GPIO_PIN_11;
-#if CURRENT_BALANCE_EN
-	if(llc.iout_raw>20.0f&&llc.state == State_on && llc.current_sharing_flag == false){
-		if(llc.iin_phase1>llc.iin_phase2)
-		{
-			llc.phase1_sharing_count++;
-			llc.phase2_sharing_count=0;
-		}else if(llc.iin_phase1<=llc.iin_phase2)
-		{
-			llc.phase1_sharing_count=0;
-			llc.phase2_sharing_count++;
-		}
-		if(llc.phase2_sharing_count>=10000)
-		{
-			llc.phase2_sharing_count = 0;
-			llc.current2_s_en_flag = true;
-			llc.current1_s_en_flag = false;
-			llc.current_sharing_flag = true;
-		}
-		if(llc.phase1_sharing_count>=10000)
-		{
-			llc.phase1_sharing_count = 0;
-			llc.current1_s_en_flag = true;
-			llc.current2_s_en_flag = false;
-			llc.current_sharing_flag = true;
-		}
-	}
 	
-	if(llc.current_sharing_flag == true && llc.iout_raw>20.0f)
-	{
-
-	}
-	else{
-		llc.leadphase_balance_loop.output =0;
-		llc.leadphase_balance_loop.i_part =0;
-		llc.lag_phase_balance_duty = 0;
-		
-		llc.lead_phase_balance_duty = 0;
-		llc.lagphase_balance_loop.output =0;
-		llc.lagphase_balance_loop.i_part =0;
-	}
-#endif
-
-	if(llc.state==State_on||llc.state == State_rampup){
-		//hrpwm_updata_app();  // Test
-	}
-//	__LL_HRPWM_Mst_CmpA_INT_Dis(HRPWM);
-	GPIOA->BSR = GPIO_PIN_11<<16;
 }
 
 __SECTION(RAMCODE)

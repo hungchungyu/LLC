@@ -122,86 +122,7 @@ void LL_MspDeInit(void)
   */
 void LL_UART_MspInit(UART_TypeDef *Instance)
 {
-    GPIO_InitTypeDef UART_GPIO_Init;
 
-    //Assert param
-    assert_param(IS_UART_ALL_INSTANCE(Instance));
-
-    //UART GPIO Common Config
-    UART_GPIO_Init.IntMode = GPIO_INT_MODE_CLOSE;
-    UART_GPIO_Init.OType   = GPIO_OTYPE_PP;
-    UART_GPIO_Init.Pull    = GPIO_NOPULL;
-    UART_GPIO_Init.Speed   = GPIO_SPEED_FREQ_LOW;
-
-    if (Instance == UART0) {
-        //UART0 Pinmux Config: PC4 & PC5
-        UART_GPIO_Init.Pin = GPIO_PIN_4 | GPIO_PIN_5;
-        UART_GPIO_Init.Alternate = GPIO_AF8_UART0;
-        LL_GPIO_Init(GPIOC, &UART_GPIO_Init);
-
-        //UART0 Bus Clock Enable and Soft Reset Release
-        LL_RCU_UART0_ClkEnRstRelease();
-
-        //NVIC UART0 Interrupt Enable
-        LL_NVIC_EnableIRQ(UART0_IRQn);
-
-    } else if (Instance == UART1) {
-
-        //UART1 Pinmux Config: PA2 & PA3
-        UART_GPIO_Init.Pin = GPIO_PIN_2 | GPIO_PIN_3;
-        UART_GPIO_Init.Alternate = GPIO_AF8_UART1;
-        LL_GPIO_Init(GPIOA, &UART_GPIO_Init);
-
-        //UART1 Bus Clock Enable and Soft Reset Release
-        LL_RCU_UART1_ClkEnRstRelease();
-
-        //NVIC UART1 Interrupt Enable
-        LL_NVIC_EnableIRQ(UART1_IRQn);
-
-    } else if (Instance == UART2) {
-
-        //UART2 Pinmux Config: PC10 & PC11
-        UART_GPIO_Init.Pin = GPIO_PIN_10 | GPIO_PIN_11;
-        UART_GPIO_Init.Alternate = GPIO_AF6_UART2;
-        LL_GPIO_Init(GPIOC, &UART_GPIO_Init);
-
-        //UART2 Bus Clock Enable and Soft Reset Release
-        LL_RCU_UART2_ClkEnRstRelease();
-
-        //NVIC UART2 Interrupt Enable
-        LL_NVIC_EnableIRQ(UART2_IRQn);
-
-    } else if (Instance == UART3) {
-
-        //UART3 Pinmux Config: PC10 & PC11
-        UART_GPIO_Init.Pin = GPIO_PIN_10 | GPIO_PIN_11;
-        UART_GPIO_Init.Alternate = GPIO_AF8_UART3;
-        LL_GPIO_Init(GPIOC, &UART_GPIO_Init);
-
-        //UART3 Bus Clock Enable and Soft Reset Release
-        LL_RCU_UART3_ClkEnRstRelease();
-
-        //NVIC UART3 Interrupt Enable
-        LL_NVIC_EnableIRQ(UART3_IRQn);
-
-    } else if (Instance == UART4) {
-
-        //UART4 Pinmux Config: PC12
-        UART_GPIO_Init.Pin = GPIO_PIN_12;
-        UART_GPIO_Init.Alternate = GPIO_AF6_UART4;
-        LL_GPIO_Init(GPIOC, &UART_GPIO_Init);
-
-        //UART4 Pinmux Config: PD2
-        UART_GPIO_Init.Pin = GPIO_PIN_2;
-        UART_GPIO_Init.Alternate = GPIO_AF6_UART4;
-        LL_GPIO_Init(GPIOD, &UART_GPIO_Init);
-
-        //UART4 Bus Clock Enable and Soft Reset Release
-        LL_RCU_UART4_ClkEnRstRelease();
-
-        //NVIC UART4 Interrupt Enable
-        LL_NVIC_EnableIRQ(UART4_IRQn);
-    }
 }
 
 /**
@@ -211,64 +132,7 @@ void LL_UART_MspInit(UART_TypeDef *Instance)
   */
 void LL_UART_MspDeInit(UART_TypeDef *Instance)
 {
-    //Assert param
-    assert_param(IS_UART_ALL_INSTANCE(Instance));
 
-    if (Instance == UART0) {
-        //NVIC UART0 Interrupt Disable
-        LL_NVIC_DisableIRQ(UART0_IRQn);
-
-        //UART0 Bus Clock Disable and Soft Reset Assert
-        LL_RCU_UART0_ClkDisRstAssert();
-
-        //UART0 Pinmux DeInit
-        LL_GPIO_DeInit(GPIOC, GPIO_PIN_4 | GPIO_PIN_5);
-
-    } else if (Instance == UART1) {
-
-        //NVIC UART1 Interrupt Disable
-        LL_NVIC_DisableIRQ(UART1_IRQn);
-
-        //UART1 Bus Clock Disable and Soft Reset Assert
-        LL_RCU_UART1_ClkDisRstAssert();
-
-        //UART1 Pinmux DeInit
-        LL_GPIO_DeInit(GPIOA, GPIO_PIN_2 | GPIO_PIN_3);
-
-    } else if (Instance == UART2) {
-
-        //NVIC UART2 Interrupt Disable
-        LL_NVIC_DisableIRQ(UART2_IRQn);
-
-        //UART2 Bus Clock Disable and Soft Reset Assert
-        LL_RCU_UART2_ClkDisRstAssert();
-
-        //UART2 Pinmux DeInit
-        LL_GPIO_DeInit(GPIOC, GPIO_PIN_10 | GPIO_PIN_11);
-
-    } else if (Instance == UART3) {
-
-        //NVIC UART3 Interrupt Disable
-        LL_NVIC_DisableIRQ(UART3_IRQn);
-
-        //UART3 Bus Clock Disable and Soft Reset Assert
-        LL_RCU_UART3_ClkDisRstAssert();
-
-        //UART3 Pinmux DeInit
-        LL_GPIO_DeInit(GPIOC, GPIO_PIN_10 | GPIO_PIN_11);
-
-    } else if (Instance == UART4) {
-
-        //NVIC UART4 Interrupt Disable
-        LL_NVIC_DisableIRQ(UART4_IRQn);
-
-        //UART4 Bus Clock Disable and Soft Reset Assert
-        LL_RCU_UART4_ClkDisRstAssert();
-
-        //UART4 Pinmux DeInit
-        LL_GPIO_DeInit(GPIOC, GPIO_PIN_12);
-        LL_GPIO_DeInit(GPIOD, GPIO_PIN_2);
-    }
 }
 
 

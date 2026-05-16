@@ -71,56 +71,30 @@ void ADC0_NORM_IRQHandler(void)
         __LL_ADC_REG_SeqEndIntPnd_Clr(ADC0);
 
         LL_ADC_Norm_REG_SeqEndCallback(ADC0);
-        //open_loop();
+        open_loop();
     }
 
     TEST2_LOW();
 }
 
-/**
-  * @brief  This function handles HRPWM Common  interrupt request.
-  * @param  None
-  * @retval None
-  */
+
 __SECTION(RAMCODE)
 void HRPWM_COMM_IRQHandler(void)
 {
-	IWDG->KEYR = 0xAAAA;//∂¿¡¢ø¥√≈π∑Œππ∑
-	LL_HRPWM_Comm_IRQHandler(HRPWM);
+
 }
-/**
-  * @}
-  */
+
 __SECTION(RAMCODE)
 void HRPWM_MST_IRQHandler(void)
 {
-	uint32_t int_en, int_pending;
-    int_en = __LL_HRPWM_Mst_AllIntEn_Get(HRPWM);
-    int_pending = __LL_HRPWM_Mst_AllIntPnd_Get(HRPWM);
-    //Compare A Interrupt Handler
-    if ((int_en & HRPWM_MST_MDIER_MCMPAIE_Msk) && (int_pending & HRPWM_MST_MISR_MCMPA_Msk)) {
-        //Clear Interrupt Pending
-        __LL_HRPWM_Mst_CmpAIntPnd_Clr(HRPWM);
-        //Callback
-        LL_HRPWM_Mst_CmpACallback(HRPWM);
-    }
+
 }
-/**
-  * @brief  This function handles ADC1 Sample interrupt request.
-  * @param  None
-  * @retval None
-  */
+
 void ADC1_SAMP_IRQHandler(void)		// Not used?
 {
-#ifdef LL_ADC_MODULE_ENABLED
-    LL_ADC_Samp_IRQHandler(ADC1);
-#endif
+
 }
-/**
-  * @brief  This function handles SysTick Handler.
-  * @param  None
-  * @retval None
-  */
+
 void SysTick_Handler(void)
 {
 #ifdef LL_MODULE_ENABLED
