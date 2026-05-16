@@ -152,9 +152,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>199</LineNumber>
+          <LineNumber>116</LineNumber>
           <EnabledFlag>0</EnabledFlag>
-          <Address>134219716</Address>
+          <Address>134219512</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -163,14 +163,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\..\User\Src\tae32g58xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\199</Expression>
+          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\116</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>181</LineNumber>
+          <LineNumber>98</LineNumber>
           <EnabledFlag>0</EnabledFlag>
-          <Address>268437864</Address>
+          <Address>268436204</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -179,14 +179,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\..\User\Src\tae32g58xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\181</Expression>
+          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\98</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>171</LineNumber>
+          <LineNumber>89</LineNumber>
           <EnabledFlag>0</EnabledFlag>
-          <Address>268437848</Address>
+          <Address>268436184</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -195,14 +195,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\..\User\Src\tae32g58xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\171</Expression>
+          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\89</Expression>
         </Bp>
         <Bp>
           <Number>3</Number>
           <Type>0</Type>
-          <LineNumber>151</LineNumber>
+          <LineNumber>88</LineNumber>
           <EnabledFlag>0</EnabledFlag>
-          <Address>268437796</Address>
+          <Address>268436188</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -211,14 +211,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\..\User\Src\tae32g58xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\151</Expression>
+          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\88</Expression>
         </Bp>
         <Bp>
           <Number>4</Number>
           <Type>0</Type>
-          <LineNumber>172</LineNumber>
+          <LineNumber>77</LineNumber>
           <EnabledFlag>0</EnabledFlag>
-          <Address>268437844</Address>
+          <Address>268436156</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -227,7 +227,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\..\User\Src\tae32g58xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\172</Expression>
+          <Expression>\\ProjectTemplate\../../User/Src/tae32g58xx_it.c\77</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -239,12 +239,7 @@
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>cnt_test</ItemText>
-        </Ww>
-        <Ww>
-          <count>2</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>gpio_test</ItemText>
+          <ItemText>PhyValue</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
@@ -528,7 +523,7 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>4</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\APP\gpio_app.c</PathWithFileName>

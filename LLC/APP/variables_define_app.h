@@ -57,6 +57,27 @@ typedef struct
     uint32_t compd;
 } LLC_PWM_CmpTypeDef;
 
+typedef struct
+{
+    uint16_t raw;           /* ADC raw data */
+    uint16_t raw_avg;       /* ADC averaged raw data */
+
+    float actual;           /* Converted physical value */
+    float actual_avg;       /* Averaged physical value */
+    float actual_LPF;       /* Low-pass filtered physical value */
+
+} ADC_PHY_TYPE;
+
+typedef struct
+{
+    ADC_PHY_TYPE vout;
+    ADC_PHY_TYPE rsense1;
+    ADC_PHY_TYPE vp;
+    ADC_PHY_TYPE vn;
+
+} PHY_VALUE_TYPE;
+
+extern PHY_VALUE_TYPE PhyValue;
 extern LLC_PWM_CmpTypeDef mpwm,phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
 
 

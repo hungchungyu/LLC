@@ -38,8 +38,7 @@ int main(void)
 	
 	
 	adc_converter_start();
-	//__LL_HRPWM_Mst_CmpA_INT_En(HRPWM);
-	
+
 	StateMachine_Init(STATE_STANDBY);
 	while (1) 
 	{

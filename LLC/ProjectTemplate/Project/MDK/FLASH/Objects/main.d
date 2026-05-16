@@ -37,4 +37,5 @@
   ..\..\..\APP\dac_app.h ..\..\..\APP\cmp_app.h ..\..\..\APP\user_vofa.h \
   ..\..\..\APP\pid_app.h ..\..\..\APP\iwdg_app.h ..\..\..\APP\tmr_app.h \
   ..\..\..\Utilities\dbg\tae_dbg.h ..\..\User\Inc\tae_dbg_conf.h \
-  ..\..\User\Inc\state_machine.h
+  ..\..\User\Inc\state_machine.h ..\..\User\Inc\event_debounce.h \
+  ..\..\User\Inc\utils.h

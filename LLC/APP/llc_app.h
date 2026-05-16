@@ -50,7 +50,7 @@ void llc_state_idle(void);
 void llc_state_rampup(void);
 void llc_state_on(void);
 void llc_state_fault(void);
-void llc_handle(void);
+
 void voltage_loop_caculation_app(void);
 void current_loop_caculation_app(void);    
 void upper_mos_charge (void);
@@ -58,7 +58,7 @@ void llc_state_enable(void);
 void dc_voltage_slope_calc(void) ;
 int32_t abs_user (int32_t data_in);
 
-void llc_ok_s_func(void);
+
 #ifdef __cplusplus
 }
 #endif

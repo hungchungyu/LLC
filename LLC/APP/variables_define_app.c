@@ -1,26 +1,9 @@
-/**
-  ******************************************************************************
-  * @file    APP/variables_define.c
-  * @author  004 
-  * @version V1.0.0
-  * @date    15-01-2021
-  * @brief   Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; COPYRIGHT 2021 Tai-Action</center></h2>
-  *
-  *
-  *
-  ******************************************************************************
-  */ 
-
 /* Includes ------------------------------------------------------------------*/
 #include "variables_define_app.h"
 
 
 LLC_PWM_CmpTypeDef mpwm,phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
-
+PHY_VALUE_TYPE PhyValue;
 
 
 
