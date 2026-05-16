@@ -3,6 +3,7 @@
 #include "variables_define_app.h"
 
 
+
 #define LLC_MAX_PWM_SWITCHING_FREQUENCY_HZ   	((float)(200.0f * 1000.0f))   // 200kHz
 #define LLC_MIN_PWM_SWITCHING_FREQUENCY_HZ   	((float)(100.0f * 1000.0f))   // 100kHz
 

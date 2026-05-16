@@ -484,6 +484,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\Src\state_machine.c</FilePath>
             </File>
+            <File>
+              <FileName>event_debounce.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\event_debounce.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1118,6 +1123,11 @@
               <FileName>state_machine.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\Src\state_machine.c</FilePath>
+            </File>
+            <File>
+              <FileName>event_debounce.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\event_debounce.c</FilePath>
             </File>
           </Files>
         </Group>

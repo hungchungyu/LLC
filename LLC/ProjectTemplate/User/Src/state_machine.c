@@ -1,6 +1,11 @@
 #include "main.h"
 #include "include_app.h"
 #include "state_machine.h"
+#include "event_debounce.h"
+
+#define DEBOUNCE_CNT_1MS     (1U)
+#define DEBOUNCE_CNT_10MS    (10U)
+
 
 /* NULL */
 static void state_null_entry(void);
@@ -58,9 +63,17 @@ static void state_null_run(void){}
 static void state_null_exit(void){}
 
 /* STANDBY */
-static void state_standby_entry(void){}
+static void state_standby_entry(void)
+{
+	PSONOFF_InputStableCount.val = 0;
+}
 static void state_standby_run(void)
 {
+	if(PSONOFF_InputStableCount.bits.b15 != 1)
+	{
+		PSONOFF_MonitorEvents(DEBOUNCE_CNT_10MS, DEBOUNCE_CNT_1MS);
+		return;
+	}
 	StateMachine_RequestTransition(STATE_PRECHARGE);
 }
 static void state_standby_exit(void){}

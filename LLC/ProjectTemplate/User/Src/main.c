@@ -3,6 +3,7 @@
 #include "main.h"
 #include "dbg/tae_dbg.h"
 #include "state_machine.h"
+#include "event_debounce.h"
 
 static void SystemClock_Config(void);
 
@@ -51,12 +52,23 @@ int main(void)
 		}	
 	}
 }
+
+#define DEBOUNCE_CNT_1MS     (1U)
+#define DEBOUNCE_CNT_10MS    (10U)
+
 void AppTimer_1msTask(void)
 {
 		TEST1_HIGH();
+		
+		PSONOFF_MonitorEvents(DEBOUNCE_CNT_10MS, DEBOUNCE_CNT_1MS);
+	
+		if(PSONOFF_InputStableCount.bits.b15 == 0)
+			StateMachine_RequestTransition(STATE_STANDBY);
+		
 		StateMachine_Step();
 		TEST1_LOW();
 }
+
 void cmpss_initial_app(void)
 {
 	dac_app_init();

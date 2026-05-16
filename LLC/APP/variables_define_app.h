@@ -7,6 +7,8 @@
 /*============================ Include =======================================*/
 #include "main.h"
 
+//#define SCENARIO_DISABLE_PSONOFF_MONITOR  		
+
 #define HRPWM_LLC_OUTPUT_EN             	1   // Enable LLC output
 
 #define LLC_PHASE1_ENABLE                 1   // Enable phase 1 primary-side PWM
