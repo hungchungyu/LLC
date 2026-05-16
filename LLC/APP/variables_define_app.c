@@ -21,8 +21,6 @@ int16_t temperature_samp			[BUF_LEN1] ;
 int16_t llc_voltage_samp			[BUF_LEN1] ;
 int16_t llc_current_ref_samp		[BUF_LEN1] ;
                                                                               
-
-volatile uint16_t pwm_test_value;
 void llc_factors_initial(void)
 {
 	llc.dead_time = LLC_DEADTIME_COUNT;

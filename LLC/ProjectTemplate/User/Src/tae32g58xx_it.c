@@ -71,7 +71,7 @@ void ADC0_NORM_IRQHandler(void)
         __LL_ADC_REG_SeqEndIntPnd_Clr(ADC0);
 
         LL_ADC_Norm_REG_SeqEndCallback(ADC0);
-        open_loop();
+        //open_loop();
     }
 
     TEST2_LOW();

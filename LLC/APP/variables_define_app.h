@@ -4,49 +4,56 @@
 #ifdef __cplusplus
  extern "C" {
 #endif
-/*============================ Include =======================================*/
+
 #include "main.h"
 
-//#define SCENARIO_DISABLE_PSONOFF_MONITOR  		
 
-#define HRPWM_LLC_OUTPUT_EN             	1   // Enable LLC output
+#define SCENARIO_DISABLE_PSONOFF_MONITOR
 
-#define LLC_PHASE1_ENABLE                 1   // Enable phase 1 primary-side PWM
+#define HRPWM_LLC_OUTPUT_EN              1   // Enable LLC output
+
+#define LLC_PHASE1_ENABLE                1   // Enable phase 1 primary-side PWM
 
 #if LLC_PHASE1_ENABLE
-    #define HRPWM_SR1_OUTPUT_EN           0   // Enable phase 1 secondary-side SR output
+#define HRPWM_SR1_OUTPUT_EN              0   // Enable phase 1 secondary-side SR output
 #endif
 
-#define LLC_PHASE2_ENABLE                 1   // Enable phase 2 primary-side PWM
+#define LLC_PHASE2_ENABLE                1   // Enable phase 2 primary-side PWM
 
 #if LLC_PHASE2_ENABLE
-    #define HRPWM_SR2_OUTPUT_EN           0   // Enable phase 2 secondary-side SR output
+#define HRPWM_SR2_OUTPUT_EN              0   // Enable phase 2 secondary-side SR output
 #endif
 
 
-#define	LLC_PHASE1_PWM0       			(HRPWM_SLV_PWM_0)			// PA8, PA9
-#define LLC_PHASE1_SR_PWM4       		(HRPWM_SLV_PWM_4)			// PC8, PC9
+#define LLC_PHASE1_PWM0                  (HRPWM_SLV_PWM_0)   // PA8, PA9
+#define LLC_PHASE1_SR_PWM4               (HRPWM_SLV_PWM_4)   // PC8, PC9
 
-#define	LLC_PHASE2_PWM2       			(HRPWM_SLV_PWM_2)			// PB12, PB13
-#define LLC_PHASE2_SR_PWM5       		(HRPWM_SLV_PWM_5)			// PC6, PC7
+#define LLC_PHASE2_PWM2                  (HRPWM_SLV_PWM_2)   // PB12, PB13
+#define LLC_PHASE2_SR_PWM5               (HRPWM_SLV_PWM_5)   // PC6, PC7
 
 
-#define HRPWM_BASIC_FREQ    		(float)200000			// 200000KHZ = 200MHz
-#define HRPWM_DIV_X         		(float)16
-#define HRPWM_FINAL_FREQ    		(float)HRPWM_BASIC_FREQ * HRPWM_DIV_X
-#define HRPWM_ONE_STEP_TIME			((float)(1000000/(HRPWM_BASIC_FREQ*HRPWM_DIV_X)))  	// 0.3125ns
-																																										
-#define LLC_SW_FREQ_MAX				(200.0)//kHz
-#define LLC_SW_PERIOD_MIN			((uint32_t)(HRPWM_FINAL_FREQ/LLC_SW_FREQ_MAX))//register value
-#define LLC_SW_FREQ_MIN				(100.0)//kHz
+#define HRPWM_BASIC_FREQ                 (float)200000       // 200000KHZ = 200MHz
+#define HRPWM_DIV_X                      (float)16
+#define HRPWM_FINAL_FREQ                 (float)HRPWM_BASIC_FREQ * HRPWM_DIV_X
+#define HRPWM_ONE_STEP_TIME              ((float)(1000000 / (HRPWM_BASIC_FREQ * HRPWM_DIV_X)))   // 0.3125ns
 
-#define LLC_DEADTIME					(float)(150)//ns
-#define LLC_DEADTIME_COUNT		((int32_t)(LLC_DEADTIME/HRPWM_ONE_STEP_TIME))//register value : 480
+#define LLC_SW_FREQ_MAX                  (200.0)             // kHz
+#define LLC_SW_PERIOD_MIN                ((uint32_t)(HRPWM_FINAL_FREQ / LLC_SW_FREQ_MAX)) // register value
+#define LLC_SW_FREQ_MIN                  (100.0)             // kHz
 
-#define LLC_SAMPLE_FREQ             50	//khz
-#define LLC_SAMPLE_PERIOD           ((int32_t)(HRPWM_FINAL_FREQ/LLC_SAMPLE_FREQ))-1//register value 
+#define LLC_DEADTIME                     (float)(150)        // ns
+#define LLC_DEADTIME_COUNT               ((int32_t)(LLC_DEADTIME / HRPWM_ONE_STEP_TIME)) // register value : 480
 
-#define USER_ADC_TRIG_PWM1				(HRPWM_SLV_PWM_1)
+#define LLC_SAMPLE_FREQ                  50                  // khz
+#define LLC_SAMPLE_PERIOD                ((int32_t)(HRPWM_FINAL_FREQ / LLC_SAMPLE_FREQ)) - 1 // register value
+
+#define USER_ADC_TRIG_PWM1               (HRPWM_SLV_PWM_1)
+
+#define VOUT_SAMPLE_FACTOR               (1.0f)
+#define RSENSE1_SAMPLE_FACTOR            (1.0f)
+#define VP_SAMPLE_FACTOR                 (1.0f)
+#define VN_SAMPLE_FACTOR                 (1.0f)
+
 
 typedef struct
 {
@@ -55,7 +62,9 @@ typedef struct
     uint32_t compb;
     uint32_t compc;
     uint32_t compd;
+
 } LLC_PWM_CmpTypeDef;
+
 
 typedef struct
 {
@@ -68,6 +77,7 @@ typedef struct
 
 } ADC_PHY_TYPE;
 
+
 typedef struct
 {
     ADC_PHY_TYPE vout;
@@ -77,8 +87,9 @@ typedef struct
 
 } PHY_VALUE_TYPE;
 
+
 extern PHY_VALUE_TYPE PhyValue;
-extern LLC_PWM_CmpTypeDef mpwm,phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
+extern LLC_PWM_CmpTypeDef mpwm, phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
 
 
 

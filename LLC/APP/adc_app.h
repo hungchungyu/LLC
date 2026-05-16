@@ -33,6 +33,4 @@ void adc_converter_start(void);
 
 #endif /* _MAIN_H_ */
 
-/************************* (C) COPYRIGHT Tai-Action *****END OF FILE***********/
-
 

@@ -2,9 +2,6 @@
 #include "include_app.h"
 #include "tae32g58xx_ll_gpio.h"
 
-
-void dc_voltage_slope_calc(void);
-
  void adc0_initial_app(ADC_TypeDef *Instance)
  {
     ADC_InitTypeDef       user_adc_init;
@@ -110,13 +107,45 @@ void dc_voltage_slope_calc(void);
 	__LL_ADC_REG_Conv_Start(ADC0);
 	__LL_ADC_REG_SeqEnd_INT_En(ADC0);
  }
+ 
+ /*
+ * First-order LPF coefficient:
+ *
+ * K = 1 - exp(-2 * PI * Fc / Fs)
+ *
+ * Fs = 50 kHz
+ * Fc = 5 kHz
+ * K  = 1 - exp(-2 * PI * 5000 / 50000)
+ * K  ~= 0.466
+ */
+#define LLC_ADC_LPF_K                   (0.466f)
 __SECTION(RAMCODE)
 void get_adc_data(void)
 {                                                                                        
-	PhyValue.vout.raw    = ADC_VOUT_RAW_VALUE();
-	PhyValue.rsense1.raw = ADC_RSENSE1_RAW_VALUE();
-	PhyValue.vp.raw      = ADC_VP_RAW_VALUE();
-	PhyValue.vn.raw      = ADC_VN_RAW_VALUE();
+/**************************** ADC Physical Value Update ****************************/
+
+    uint16_t raw;
+
+    raw = ADC_VOUT_RAW_VALUE();
+    PhyValue.vout.raw = raw;
+    PhyValue.vout.actual = (float)raw * VOUT_SAMPLE_FACTOR;
+    PhyValue.vout.actual_LPF += (PhyValue.vout.actual - PhyValue.vout.actual_LPF) * LLC_ADC_LPF_K;
+
+    raw = ADC_RSENSE1_RAW_VALUE();
+    PhyValue.rsense1.raw = raw;
+    PhyValue.rsense1.actual = (float)raw * RSENSE1_SAMPLE_FACTOR;
+    PhyValue.rsense1.actual_LPF += (PhyValue.rsense1.actual - PhyValue.rsense1.actual_LPF) * LLC_ADC_LPF_K;
+
+    raw = ADC_VP_RAW_VALUE();
+    PhyValue.vp.raw = raw;
+    PhyValue.vp.actual = (float)raw * VP_SAMPLE_FACTOR;
+    PhyValue.vp.actual_LPF += (PhyValue.vp.actual - PhyValue.vp.actual_LPF) * LLC_ADC_LPF_K;
+
+    raw = ADC_VN_RAW_VALUE();
+    PhyValue.vn.raw = raw;
+    PhyValue.vn.actual = (float)raw * VN_SAMPLE_FACTOR;
+    PhyValue.vn.actual_LPF += (PhyValue.vn.actual - PhyValue.vn.actual_LPF) * LLC_ADC_LPF_K;
+
 }
 
 __SECTION(RAMCODE)
