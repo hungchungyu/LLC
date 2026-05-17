@@ -11,7 +11,6 @@ void AppTimer_1msTask(void);
 void cmpss_initial_app(void);
 void NVIC_initial(void);
 
-uint32_t gpio_test = 0;
 int main(void)
 {
 	SystemClock_Config();
@@ -27,7 +26,7 @@ int main(void)
 	
 	tmr_init_app(TMR7);
 	
-	//cmpss_initial_app();
+	cmpss_initial_app();
 	//iwdg_init();
 	
 	
@@ -72,8 +71,8 @@ void cmpss_initial_app(void)
 {
 	dac_app_init();
 	dac_app_start();
-	cmp_app_init();
-	cmp_app_start();
+	//cmp_app_init();
+	//cmp_app_start();
 }
 void NVIC_initial(void)
 {

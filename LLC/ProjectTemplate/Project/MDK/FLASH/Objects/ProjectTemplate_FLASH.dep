@@ -41,7 +41,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -90,7 +90,7 @@ I (..\..\..\APP\hrpwm_app.h)(0x6A006C6D)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -139,7 +139,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -147,7 +147,7 @@ I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
 I (..\..\..\APP\tmr_app.h)(0x69FF7227)
 I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
 I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
-F (..\..\..\APP\gpio_app.c)(0x6A005C23)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/gpio_app.o -MMD)
+F (..\..\..\APP\gpio_app.c)(0x6A09D4A9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/gpio_app.o -MMD)
 I (..\..\User\Inc\main.h)(0x68CA23EC)
 I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x69B4CEBC)
 I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
@@ -188,7 +188,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -237,7 +237,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -245,7 +245,7 @@ I (..\..\..\APP\iwdg_app.h)(0x68CA23EA)
 I (..\..\..\APP\tmr_app.h)(0x69FF7227)
 I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
 I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
-F (..\..\..\APP\dac_app.c)(0x68CA23EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/dac_app.o -MMD)
+F (..\..\..\APP\dac_app.c)(0x6A09D9E4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/dac_app.o -MMD)
 I (..\..\User\Inc\main.h)(0x68CA23EC)
 I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x69B4CEBC)
 I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
@@ -286,7 +286,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -368,7 +368,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -418,7 +418,7 @@ I (..\..\..\APP\hrpwm_app.h)(0x6A006C6D)
 I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -469,7 +469,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -518,7 +518,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -527,7 +527,7 @@ I (..\..\..\APP\tmr_app.h)(0x69FF7227)
 I (..\..\..\Utilities\dbg\tae_dbg.h)(0x68CA23E8)
 I (..\..\User\Inc\tae_dbg_conf.h)(0x68CA23EC)
 F (..\..\..\APP\tmr_app.h)(0x69FF7227)()
-F (..\..\User\Src\main.c)(0x6A080BBC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/main.o -MMD)
+F (..\..\User\Src\main.c)(0x6A09D62D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../Drivers/TAE32G58xx_Device/Inc -I ../../../Drivers/TAE32G58xx_Driver/Inc -I ../../../Utilities -I ../../User/Inc -I ../../../APP-I./RTE/_FLASH-IC:/Users/YU/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include-D__UVISION_VERSION="543" -D_RTE_-o ./flash/objects/main.o -MMD)
 I (..\..\User\Inc\main.h)(0x68CA23EC)
 I (..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll.h)(0x69B4CEBC)
 I (..\..\User\Inc\tae32g58xx_ll_conf.h)(0x68CA23EC)
@@ -568,7 +568,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -620,7 +620,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -671,7 +671,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -721,7 +721,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -770,7 +770,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
@@ -824,7 +824,7 @@ I (..\..\..\APP\variables_define_app.h)(0x6A081489)
 I (..\..\..\APP\gpio_app.h)(0x6A00614F)
 I (..\..\..\APP\llc_app.h)(0x6A081169)
 I (..\..\..\APP\protection_app.h)(0x68CA23EA)
-I (..\..\..\APP\dac_app.h)(0x68CA23EA)
+I (..\..\..\APP\dac_app.h)(0x6A09D9FF)
 I (..\..\..\APP\cmp_app.h)(0x68CA23EA)
 I (..\..\..\APP\user_vofa.h)(0x68CA23EA)
 I (..\..\..\APP\pid_app.h)(0x68CA23EA)
