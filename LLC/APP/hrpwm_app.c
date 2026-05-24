@@ -336,9 +336,7 @@ void hrpwm_updata_app()
 __SECTION(RAMCODE)
 void LL_HRPWM_Comm_Flt0Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 { 
-	llc.fault_num |=BIT(0);
-	llc.state = State_fault; 
-	llc.hard_fault = true;	
+
 }
 /**
   * @brief  HRPWM Common Fault 3 Interrupt Callback
@@ -348,9 +346,7 @@ void LL_HRPWM_Comm_Flt0Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 __SECTION(RAMCODE)
 void LL_HRPWM_Comm_Flt3Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 {
-	llc.fault_num |=BIT(1);
-	llc.state = State_fault;  
-	llc.hard_fault = true;
+
 }
 /**
   * @brief  HRPWM Common Fault 3 Interrupt Callback
@@ -360,9 +356,7 @@ void LL_HRPWM_Comm_Flt3Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 __SECTION(RAMCODE)
 void LL_HRPWM_Comm_Flt7Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 {
-	llc.fault_num |=BIT(2);
-	llc.state = State_fault;
-	llc.hard_fault = true;	
+
 }
 /**
   * @brief  HRPWM Common Fault 3 Interrupt Callback
@@ -372,9 +366,7 @@ void LL_HRPWM_Comm_Flt7Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 __SECTION(RAMCODE)
 void LL_HRPWM_Comm_Flt6Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 {
-	llc.fault_num |=BIT(3);
-	llc.state = State_fault; 
-	llc.hard_fault = true;
+
 }
 /**
   * @brief  Initializes the HRPWM MSP

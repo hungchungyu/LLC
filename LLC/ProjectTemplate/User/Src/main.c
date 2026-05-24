@@ -30,10 +30,9 @@ int main(void)
 	//iwdg_init();
 	
 	
-#if	PWM_TEST_FLAG
-	llc.state = State_on;
+
 	//hrpwm_sr_output();
-#endif	
+
 	
 	
 	adc_converter_start();
