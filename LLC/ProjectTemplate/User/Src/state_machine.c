@@ -2,7 +2,7 @@
 #include "include_app.h"
 #include "state_machine.h"
 #include "event_debounce.h"
-
+#include "utils.h"
 
 
 
@@ -64,11 +64,17 @@ static void state_null_exit(void){}
 /* STANDBY */
 static void state_standby_entry(void)
 {
-	PSONOFF_InputStableCount.val = 0;
+	
+	hrpwm_app_outdis();
+	digitctrl_PI_ClearAllKeepKpKi(&V_Loop);
+	
+	ProtectFlag.QWord = 0;
+	StateFlag.QWord = 0;
+
 }
 static void state_standby_run(void)
 {
-	if(PSONOFF_InputStableCount.bits.b15 != 1)
+	if(StateFlag.bits.ps_on != 1)
 		return;
 	
 	StateMachine_RequestTransition(STATE_PRECHARGE);
@@ -87,7 +93,14 @@ static void state_precharge_run(void)
 static void state_precharge_exit(void){}
 
 /* SOFTSTART */
-static void state_softstart_entry(void){}
+static void state_softstart_entry(void)
+{
+	#ifdef OPEN_LOOP_TEST
+	V_Loop.TargetOut = 1.0f;
+	#endif
+	
+	StateFlag.bits.controller_enable = 1;
+}
 static void state_softstart_run(void)
 {
 	StateMachine_RequestTransition(STATE_NORMALOPERATION);
@@ -96,16 +109,22 @@ static void state_softstart_exit(void){}
 
 /* NORMAL */
 static void state_normaloperation_entry(void){}
-static void state_normaloperation_run(void){}
+static void state_normaloperation_run(void)
+{
+
+}
 static void state_normaloperation_exit(void)
 {
-	hrpwm_app_outdis();
+
 }
 
 /* SHUTDOWN */
 static void state_shutdown_entry(void)
 {
 	hrpwm_app_outdis();
+	digitctrl_PI_ClearAllKeepKpKi(&V_Loop);
+	
+	StateFlag.bits.controller_enable = 0;
 }
 static void state_shutdown_run(void){}
 static void state_shutdown_exit(void){}

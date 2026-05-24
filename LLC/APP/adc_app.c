@@ -152,6 +152,7 @@ __SECTION(RAMCODE)
  void LL_ADC_Norm_REG_SeqEndCallback(ADC_TypeDef *Instance)            
 { 
 	get_adc_data();
+	fault_check_app();
 }
 
 void LL_ADC_MspInit(ADC_TypeDef *Instance)

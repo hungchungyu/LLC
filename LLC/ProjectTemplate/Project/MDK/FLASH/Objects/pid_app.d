@@ -32,9 +32,10 @@
   ..\..\..\Drivers\TAE32G58xx_Driver\Inc\tae32g58xx_ll_pdm.h \
   ..\..\..\Utilities\dbg\user_debug.h ..\..\..\APP\include_app.h \
   ..\..\..\APP\adc_app.h ..\..\..\APP\hrpwm_app.h \
-  ..\..\..\APP\variables_define_app.h ..\..\..\APP\gpio_app.h \
-  ..\..\..\APP\llc_app.h ..\..\..\APP\protection_app.h \
-  ..\..\..\APP\dac_app.h ..\..\..\APP\cmp_app.h ..\..\..\APP\user_vofa.h \
-  ..\..\..\APP\pid_app.h ..\..\..\APP\iwdg_app.h ..\..\..\APP\tmr_app.h \
+  ..\..\..\APP\variables_define_app.h ..\..\..\APP\pid_app.h \
+  ..\..\..\APP\gpio_app.h ..\..\..\APP\llc_app.h \
+  ..\..\..\APP\protection_app.h ..\..\..\APP\dac_app.h \
+  ..\..\..\APP\cmp_app.h ..\..\..\APP\user_vofa.h \
+  ..\..\..\APP\iwdg_app.h ..\..\..\APP\tmr_app.h \
   ..\..\..\Utilities\dbg\tae_dbg.h ..\..\User\Inc\tae_dbg_conf.h \
   ..\..\User\Inc\utils.h

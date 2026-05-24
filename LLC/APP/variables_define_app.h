@@ -6,53 +6,64 @@
 #endif
 
 #include "main.h"
+#include "pid_app.h"
 
+#define OPEN_LOOP_TEST                  1U
 
-#define SCENARIO_DISABLE_PSONOFF_MONITOR
+//#define SCENARIO_DISABLE_PSONOFF_MONITOR
+//#define SCENARIO_DISABLE_VOUT_OVP_MONITOR
+//#define SCENARIO_DISABLE_RSENSE1_OCP_MONITOR
 
-#define HRPWM_LLC_OUTPUT_EN              1   // Enable LLC output
+#define HRPWM_LLC_OUTPUT_EN             1U      /* Enable LLC output */
 
-#define LLC_PHASE1_ENABLE                1   // Enable phase 1 primary-side PWM
+#define LLC_PHASE1_ENABLE               1U      /* Enable phase 1 primary-side PWM */
+#define LLC_PHASE2_ENABLE               1U      /* Enable phase 2 primary-side PWM */
 
 #if LLC_PHASE1_ENABLE
-#define HRPWM_SR1_OUTPUT_EN              0   // Enable phase 1 secondary-side SR output
+#define HRPWM_SR1_OUTPUT_EN             0U      /* Enable phase 1 secondary-side SR output */
 #endif
-
-#define LLC_PHASE2_ENABLE                1   // Enable phase 2 primary-side PWM
 
 #if LLC_PHASE2_ENABLE
-#define HRPWM_SR2_OUTPUT_EN              0   // Enable phase 2 secondary-side SR output
+#define HRPWM_SR2_OUTPUT_EN             0U      /* Enable phase 2 secondary-side SR output */
 #endif
 
 
-#define LLC_PHASE1_PWM0                  (HRPWM_SLV_PWM_0)   // PA8, PA9
-#define LLC_PHASE1_SR_PWM4               (HRPWM_SLV_PWM_4)   // PC8, PC9
+#define VOUT_TARGET_LEVEL        				48.0f
 
-#define LLC_PHASE2_PWM2                  (HRPWM_SLV_PWM_2)   // PB12, PB13
-#define LLC_PHASE2_SR_PWM5               (HRPWM_SLV_PWM_5)   // PC6, PC7
+#define VOUT_OVP_LEVEL                  60.0f
+#define RSENSE1_OCP_LEVEL               10.0f
 
 
-#define HRPWM_BASIC_FREQ                 (float)200000       // 200000KHZ = 200MHz
-#define HRPWM_DIV_X                      (float)16
-#define HRPWM_FINAL_FREQ                 (float)HRPWM_BASIC_FREQ * HRPWM_DIV_X
-#define HRPWM_ONE_STEP_TIME              ((float)(1000000 / (HRPWM_BASIC_FREQ * HRPWM_DIV_X)))   // 0.3125ns
+#define LLC_PHASE1_PWM0                 (HRPWM_SLV_PWM_0)    /* PA8, PA9 */
+#define LLC_PHASE1_SR_PWM4              (HRPWM_SLV_PWM_4)    /* PC8, PC9 */
 
-#define LLC_SW_FREQ_MAX                  (200.0)             // kHz
-#define LLC_SW_PERIOD_MIN                ((uint32_t)(HRPWM_FINAL_FREQ / LLC_SW_FREQ_MAX)) // register value
-#define LLC_SW_FREQ_MIN                  (100.0)             // kHz
+#define LLC_PHASE2_PWM2                 (HRPWM_SLV_PWM_2)    /* PB12, PB13 */
+#define LLC_PHASE2_SR_PWM5              (HRPWM_SLV_PWM_5)    /* PC6, PC7 */
 
-#define LLC_DEADTIME                     (float)(150)        // ns
-#define LLC_DEADTIME_COUNT               ((int32_t)(LLC_DEADTIME / HRPWM_ONE_STEP_TIME)) // register value : 480
 
-#define LLC_SAMPLE_FREQ                  50                  // khz
-#define LLC_SAMPLE_PERIOD                ((int32_t)(HRPWM_FINAL_FREQ / LLC_SAMPLE_FREQ)) - 1 // register value
+#define HRPWM_BASIC_FREQ                ((float)200000.0f)   /* 200000kHz = 200MHz */
+#define HRPWM_DIV_X                     ((float)16.0f)
+#define HRPWM_FINAL_FREQ                (HRPWM_BASIC_FREQ * HRPWM_DIV_X)
+#define HRPWM_ONE_STEP_TIME             ((float)(1000000.0f / (HRPWM_BASIC_FREQ * HRPWM_DIV_X)))   /* 0.3125ns */
 
-#define USER_ADC_TRIG_PWM1               (HRPWM_SLV_PWM_1)
+#define LLC_SW_FREQ_MAX                 (200.0f)             /* kHz */
+#define LLC_SW_FREQ_MIN                 (100.0f)             /* kHz */
 
-#define VOUT_SAMPLE_FACTOR               (1.0f)
-#define RSENSE1_SAMPLE_FACTOR            (1.0f)
-#define VP_SAMPLE_FACTOR                 (1.0f)
-#define VN_SAMPLE_FACTOR                 (1.0f)
+#define LLC_SW_PERIOD_MIN               ((uint32_t)(HRPWM_FINAL_FREQ / LLC_SW_FREQ_MAX))           /* register value */
+
+#define LLC_DEADTIME                    ((float)150.0f)      /* ns */
+#define LLC_DEADTIME_COUNT              ((int32_t)(LLC_DEADTIME / HRPWM_ONE_STEP_TIME))             /* register value: 480 */
+
+#define LLC_SAMPLE_FREQ                 (50.0f)              /* kHz */
+#define LLC_SAMPLE_PERIOD               (((int32_t)(HRPWM_FINAL_FREQ / LLC_SAMPLE_FREQ)) - 1)       /* register value */
+
+#define USER_ADC_TRIG_PWM1              (HRPWM_SLV_PWM_1)
+
+
+#define VOUT_SAMPLE_FACTOR              (1.0f)
+#define RSENSE1_SAMPLE_FACTOR           (1.0f)
+#define VP_SAMPLE_FACTOR                (1.0f)
+#define VN_SAMPLE_FACTOR                (1.0f)
 
 
 typedef struct
@@ -68,12 +79,12 @@ typedef struct
 
 typedef struct
 {
-    uint16_t raw;           /* ADC raw data */
-    uint16_t raw_avg;       /* ADC averaged raw data */
+    uint16_t raw;                       /* ADC raw data */
+    uint16_t raw_avg;                   /* ADC averaged raw data */
 
-    float actual;           /* Converted physical value */
-    float actual_avg;       /* Averaged physical value */
-    float actual_LPF;       /* Low-pass filtered physical value */
+    float actual;                       /* Converted physical value */
+    float actual_avg;                   /* Averaged physical value */
+    float actual_LPF;                   /* Low-pass filtered physical value */
 
 } ADC_PHY_TYPE;
 
@@ -88,9 +99,47 @@ typedef struct
 } PHY_VALUE_TYPE;
 
 
-extern PHY_VALUE_TYPE PhyValue;
-extern LLC_PWM_CmpTypeDef mpwm, phase1_pwm0, phase1_sr_pwm4, phase2_pwm2, phase2_sr_pwm5;
+typedef union
+{
+    uint64_t QWord;
 
+    struct
+    {
+        unsigned int ps_on              : 1;
+        unsigned int controller_enable  : 1;
+
+    } bits;
+
+} StateFlag_t;
+
+
+
+
+
+typedef union
+{
+    uint64_t QWord;
+
+    struct
+    {
+        unsigned int vout_ovp           : 1;
+        unsigned int rsense1_ocp        : 1;
+
+    } bits;
+
+} ProtectFlag_t;
+
+
+extern ProtectFlag_t ProtectFlag;
+extern StateFlag_t StateFlag;
+extern digitctrl_PI V_Loop;
+extern PHY_VALUE_TYPE PhyValue;
+
+extern LLC_PWM_CmpTypeDef mpwm;
+extern LLC_PWM_CmpTypeDef phase1_pwm0;
+extern LLC_PWM_CmpTypeDef phase1_sr_pwm4;
+extern LLC_PWM_CmpTypeDef phase2_pwm2;
+extern LLC_PWM_CmpTypeDef phase2_sr_pwm5;
 
 
 

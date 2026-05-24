@@ -11,6 +11,8 @@ void AppTimer_1msTask(void);
 void cmpss_initial_app(void);
 void NVIC_initial(void);
 
+
+
 int main(void)
 {
 	SystemClock_Config();
@@ -59,9 +61,9 @@ void AppTimer_1msTask(void)
 		
 		PSONOFF_MonitorEvents(DEBOUNCE_CNT_10MS, DEBOUNCE_CNT_1MS);
 	
-		if(PSONOFF_InputStableCount.bits.b15 == 0)
+		if(StateFlag.bits.ps_on == 0)
 			StateMachine_RequestTransition(STATE_STANDBY);
-		
+
 		StateMachine_Step();
 		TEST1_LOW();
 }

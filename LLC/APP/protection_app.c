@@ -1,61 +1,22 @@
 #include "Protection_App.h"
+#include "event_debounce.h"
+#include "state_machine.h"
 
-__SECTION(RAMCODE)
-void switch_state_check_app(void)
-{
+#define LLC_PROTECT_ISR_PERIOD_US        (20U)
 
-}
-
-/**
-* @function void over_output_voltage_check_app (void)
-* @brief    Description: output voltage over check
-* @return   
-*/
-__SECTION(RAMCODE)
-void over_output_voltage_check_app(void)
-{
-
-}                                                                                 
-/**
-* @function void over_dc_voltage_check_app (void)
-* @brief    Description: app over dcbus voltage check
-* @return   
-*/
-__SECTION(RAMCODE)
-void input_dcbus_voltage_check_app (void)
-{
-
-}
-
-__SECTION(RAMCODE)
-void over_output_current_check_app (void)
-{
-
-}
-
-__SECTION(RAMCODE)
-void over_temp_check(void)
-{
-
-}
-
-
-
-__SECTION(RAMCODE)
-void openloop_check(void)
-{
-
-}
+#define TIME_US_TO_COUNT(us)             ((uint16_t)((us) / LLC_PROTECT_ISR_PERIOD_US))
 
 
 __SECTION(RAMCODE)
 void fault_check_app (void)
 {
-	over_output_voltage_check_app();  //LLC output voltage 
-	input_dcbus_voltage_check_app();
-	over_output_current_check_app();
-	switch_state_check_app();
-	over_temp_check();
+	if(StateMachine_GetCurrentState() > STATE_STANDBY)
+	{
+		VOUT_OVP_MonitorEvents(TIME_US_TO_COUNT(100U), TIME_US_TO_COUNT(20U));
+		RSENSE1_OCP_MonitorEvents(TIME_US_TO_COUNT(100U), TIME_US_TO_COUNT(20U));
+	}
+
+
 }
 /**@*/
 

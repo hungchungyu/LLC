@@ -1,6 +1,7 @@
 #include "main.h"
 #include "tae32g58xx_it.h"
 #include "utils.h"
+#include "variables_define_app.h"
 
 void NMI_Handler(void)
 {
@@ -71,7 +72,21 @@ void ADC0_NORM_IRQHandler(void)
         __LL_ADC_REG_SeqEndIntPnd_Clr(ADC0);
 
         LL_ADC_Norm_REG_SeqEndCallback(ADC0);
-        open_loop();
+			
+			if(StateFlag.bits.controller_enable == 1)
+			{
+					#ifndef OPEN_LOOP_TEST
+					V_Loop.Ref = VOUT_TARGET_LEVEL;				
+					V_Loop.Fb = PhyValue.vout.actual_LPF;
+					calc_PI(&V_Loop);
+					#endif
+					float pwm_value = LLC_SlewValue(&V_Loop.ActualOut, &V_Loop.TargetOut);
+
+					CtrlToPwm(pwm_value, &phase1_pwm0);
+					CtrlToPwm(pwm_value, &phase2_pwm2);
+					hrpwm_updata_app();
+			}
+
     }
 
     TEST2_LOW();

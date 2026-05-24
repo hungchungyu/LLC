@@ -1,5 +1,6 @@
 #include "main.h"
 #include "utils.h"
+#include "pid_app.h"
 
 __SECTION(RAMCODE)
 void calc_PI(digitctrl_PI* pi)
@@ -17,10 +18,10 @@ void calc_PI(digitctrl_PI* pi)
 
     pi->Integral_sum = integral;
 
-    pi ->Out = pi->Kp * err + integral;
-    pi ->Out = (pi ->Out > u_max) ? u_max: pi ->Out;
-    pi ->Out = (pi ->Out < u_min) ? u_min : pi ->Out;
-    pi ->Out = (pi ->Out) * 0.001;
+    pi ->TargetOut = pi->Kp * err + integral;
+    pi ->TargetOut = (pi ->TargetOut > u_max) ? u_max: pi ->TargetOut;
+    pi ->TargetOut = (pi ->TargetOut < u_min) ? u_min : pi ->TargetOut;
+    pi ->TargetOut = (pi ->TargetOut) * 0.001;
 }
 
 
