@@ -43,6 +43,7 @@ extern WORDTYPE PSONOFF_InputStableCount;
 void PSONOFF_MonitorEvents(uint16_t HpnCnt, uint16_t RvyCnt);
 void VOUT_OVP_MonitorEvents(uint16_t HpnCnt, uint16_t RvyCnt);
 void RSENSE1_OCP_MonitorEvents(uint16_t HpnCnt, uint16_t RvyCnt);
+void EventDebounce_ResetProtectionEvents(void);
 
 void event_EventIsMatch(unsigned int* StaAndTmr, unsigned int HpnMchPnt, unsigned int RvyMchPnt, unsigned short EvtIsHpn, unsigned short EvtIsRvy);
 

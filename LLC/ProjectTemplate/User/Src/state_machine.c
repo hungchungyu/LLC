@@ -37,10 +37,10 @@ static void state_shutdown_run(void);
 static void state_shutdown_exit(void);
 
 
-static uint16_t transition_req        = 0U;
-static uint16_t transition_wait_ticks = 0U;
-static uint16_t transition_delay_cfg  = 1U;
-static state_t  transition_target     = STATE_NULL;
+static volatile uint16_t transition_req        = 0U;
+static volatile uint16_t transition_wait_ticks = 0U;
+static const uint16_t    transition_delay_cfg  = 1U;
+static volatile state_t  transition_target     = STATE_NULL;
 
 static const state_handler_t g_state_table[NUMBER_OF_STATE] =
 {
@@ -56,6 +56,20 @@ static const state_handler_t g_state_table[NUMBER_OF_STATE] =
 static volatile state_t g_cur_state  = STATE_NULL;
 static volatile state_t g_next_state = STATE_NULL;
 
+static void PowerControl_ResetRunValues(void)
+{
+	hrpwm_app_outdis();
+	hrpwm_fault_reset_app();
+	StateFlag.bits.controller_enable = 0U;
+	digitctrl_PI_ClearAllKeepKpKi(&V_Loop);
+}
+
+static void PowerControl_ResetForStandby(void)
+{
+	PowerControl_ResetRunValues();
+	EventDebounce_ResetProtectionEvents();
+}
+
 
 static void state_null_entry(void){}
 static void state_null_run(void){}
@@ -64,11 +78,7 @@ static void state_null_exit(void){}
 /* STANDBY */
 static void state_standby_entry(void)
 {
-	
-	hrpwm_app_outdis();
-	digitctrl_PI_ClearAllKeepKpKi(&V_Loop);
-	
-	ProtectFlag.QWord = 0;
+	PowerControl_ResetForStandby();
 	StateFlag.QWord = 0;
 
 }
@@ -84,6 +94,7 @@ static void state_standby_exit(void){}
 /* PRECHARGE */
 static void state_precharge_entry(void)
 {
+	hrpwm_fault_reset_app();
 	hrpwm_llc_output();
 }
 static void state_precharge_run(void)
@@ -95,9 +106,9 @@ static void state_precharge_exit(void){}
 /* SOFTSTART */
 static void state_softstart_entry(void)
 {
-	#ifdef OPEN_LOOP_TEST
-	V_Loop.TargetOut = 1.0f;
-	#endif
+	V_Loop.Ref       = VOUT_TARGET_LEVEL;
+	V_Loop.TargetOut = V_LOOP_START_CMD;
+	V_Loop.ActualOut = V_LOOP_START_CMD;
 	
 	StateFlag.bits.controller_enable = 1;
 }
@@ -121,10 +132,7 @@ static void state_normaloperation_exit(void)
 /* SHUTDOWN */
 static void state_shutdown_entry(void)
 {
-	hrpwm_app_outdis();
-	digitctrl_PI_ClearAllKeepKpKi(&V_Loop);
-	
-	StateFlag.bits.controller_enable = 0;
+	PowerControl_ResetRunValues();
 }
 static void state_shutdown_run(void){}
 static void state_shutdown_exit(void){}
@@ -208,6 +216,19 @@ void StateMachine_RequestTransition(state_t next)
         if(!transition_req)
             transition_req = 1U;
     }
+}
+
+void StateMachine_RequestStandbyReset(void)
+{
+	PowerControl_ResetForStandby();
+	StateFlag.bits.ps_on = 0U;
+	StateMachine_RequestTransition(STATE_STANDBY);
+}
+
+void StateMachine_RequestShutdownReset(void)
+{
+	PowerControl_ResetRunValues();
+	StateMachine_RequestTransition(STATE_SHUTDOWN);
 }
 
 state_t StateMachine_GetCurrentState(void)

@@ -38,4 +38,5 @@
   ..\..\..\APP\protection_app.h ..\..\..\APP\dac_app.h \
   ..\..\..\APP\cmp_app.h ..\..\..\APP\user_vofa.h \
   ..\..\..\APP\iwdg_app.h ..\..\..\APP\tmr_app.h \
-  ..\..\..\Utilities\dbg\tae_dbg.h ..\..\User\Inc\tae_dbg_conf.h
+  ..\..\..\Utilities\dbg\tae_dbg.h ..\..\User\Inc\tae_dbg_conf.h \
+  ..\..\User\Inc\state_machine.h

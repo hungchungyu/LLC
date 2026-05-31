@@ -58,6 +58,7 @@ void ADC0_NORM_IRQHandler(void)
 {
     uint32_t int_en;
     uint32_t int_pending;
+    float pwm_value;
 
     TEST2_HIGH();
 
@@ -80,7 +81,7 @@ void ADC0_NORM_IRQHandler(void)
 					V_Loop.Fb = PhyValue.vout.actual_LPF;
 					calc_PI(&V_Loop);
 					#endif
-					float pwm_value = LLC_SlewValue(&V_Loop.ActualOut, &V_Loop.TargetOut);
+					pwm_value = LLC_SlewValue(&V_Loop.ActualOut, &V_Loop.TargetOut);
 
 					CtrlToPwm(pwm_value, &phase1_pwm0);
 					CtrlToPwm(pwm_value, &phase2_pwm2);
@@ -96,7 +97,7 @@ void ADC0_NORM_IRQHandler(void)
 __SECTION(RAMCODE)
 void HRPWM_COMM_IRQHandler(void)
 {
-
+    LL_HRPWM_Comm_IRQHandler(HRPWM);
 }
 
 __SECTION(RAMCODE)

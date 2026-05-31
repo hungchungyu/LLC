@@ -41,6 +41,7 @@ void LL_HRPWM_MspInit(HRPWM_TypeDef *Instance);
 void hrpwm_updata_app(void);
 void hrpwm_app_start(void);
 void hrpwm_app_outdis(void);
+void hrpwm_fault_reset_app(void);
 void hrpwm_llc_output(void);
 void hrpwm_llc_output_dis(void);
 void hrpwm_sr_output(void);

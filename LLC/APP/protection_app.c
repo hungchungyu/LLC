@@ -10,10 +10,21 @@
 __SECTION(RAMCODE)
 void fault_check_app (void)
 {
-	if(StateMachine_GetCurrentState() > STATE_STANDBY)
+	state_t cur_state;
+
+	cur_state = StateMachine_GetCurrentState();
+
+	if((cur_state > STATE_STANDBY) && (cur_state < STATE_SHUTDOWN))
 	{
 		VOUT_OVP_MonitorEvents(TIME_US_TO_COUNT(100U), TIME_US_TO_COUNT(20U));
 		RSENSE1_OCP_MonitorEvents(TIME_US_TO_COUNT(100U), TIME_US_TO_COUNT(20U));
+
+			if((ProtectFlag.bits.vout_ovp != 0U) ||
+			   (ProtectFlag.bits.rsense1_ocp != 0U) ||
+			   (ProtectFlag.bits.cmpss_fault != 0U))
+			{
+				StateMachine_RequestShutdownReset();
+			}
 	}
 
 

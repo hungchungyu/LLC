@@ -107,6 +107,16 @@ void RSENSE1_OCP_MonitorEvents(uint16_t HpnCnt, uint16_t RvyCnt)
 
 }
 
+void EventDebounce_ResetProtectionEvents(void)
+{
+    VOUT_OVP_Count.val = 0U;
+    RSENSE1_OCP_Count.val = 0U;
+
+	ProtectFlag.bits.vout_ovp = 0U;
+	ProtectFlag.bits.rsense1_ocp = 0U;
+	ProtectFlag.bits.cmpss_fault = 0U;
+}
+
 void event_EventIsMatch(unsigned int* StaAndTmr, unsigned int HpnMchPnt, unsigned int RvyMchPnt, unsigned short EvtIsHpn, unsigned short EvtIsRvy)
 {
     if(EvtSta(*StaAndTmr))

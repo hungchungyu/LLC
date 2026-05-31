@@ -8,7 +8,8 @@
 #include "main.h"
 #include "pid_app.h"
 
-#define OPEN_LOOP_TEST                  1U
+/* Leave OPEN_LOOP_TEST undefined to run voltage closed-loop control. */
+//#define OPEN_LOOP_TEST                  1U
 
 //#define SCENARIO_DISABLE_PSONOFF_MONITOR
 //#define SCENARIO_DISABLE_VOUT_OVP_MONITOR
@@ -29,6 +30,12 @@
 
 
 #define VOUT_TARGET_LEVEL        				48.0f
+
+#define V_LOOP_KP                       2.0f
+#define V_LOOP_KI                       0.02f
+#define V_LOOP_OUTPUT_MAX               1.0f
+#define V_LOOP_OUTPUT_MIN               (-0.5f)
+#define V_LOOP_START_CMD                (-0.5f)
 
 #define VOUT_OVP_LEVEL                  60.0f
 #define RSENSE1_OCP_LEVEL               10.0f
@@ -59,6 +66,8 @@
 
 #define USER_ADC_TRIG_PWM1              (HRPWM_SLV_PWM_1)
 
+#define LLC_HRPWM_FAULT_FILTER_LEN      (2U)
+#define LLC_HRPWM_FAULT_THRESHOLD       (2U)
 
 #define VOUT_SAMPLE_FACTOR              (1.0f)
 #define RSENSE1_SAMPLE_FACTOR           (1.0f)
@@ -124,14 +133,15 @@ typedef union
     {
         unsigned int vout_ovp           : 1;
         unsigned int rsense1_ocp        : 1;
+        unsigned int cmpss_fault        : 1;
 
     } bits;
 
 } ProtectFlag_t;
 
 
-extern ProtectFlag_t ProtectFlag;
-extern StateFlag_t StateFlag;
+extern volatile ProtectFlag_t ProtectFlag;
+extern volatile StateFlag_t StateFlag;
 extern digitctrl_PI V_Loop;
 extern PHY_VALUE_TYPE PhyValue;
 

@@ -12,10 +12,12 @@ void dac_app_init(void)
 	user_dac_init.bypass_buf_out_en = false;
 
 	LL_DAC_Init(DAC0, &user_dac_init);
+	LL_DAC_Init(DAC1, &user_dac_init);
 	LL_DAC_Init(DAC2, &user_dac_init);
 
 
 	LL_DAC_ValueSet(DAC0, DAC0_INIT_VALUE);
+	LL_DAC_ValueSet(DAC1, DAC1_INIT_VALUE);
 	LL_DAC_ValueSet(DAC2, DAC2_INIT_VALUE);
 
 }
@@ -23,6 +25,7 @@ void dac_app_init(void)
 void dac_app_start(void)
 {
 	LL_DAC_Start(DAC0);
+	LL_DAC_Start(DAC1);
 	LL_DAC_Start(DAC2);
 }	
 

@@ -27,19 +27,12 @@ int main(void)
 	hrpwm_app_start();
 	
 	tmr_init_app(TMR7);
-	
-	cmpss_initial_app();
-	//iwdg_init();
-	
-	
-
-	//hrpwm_sr_output();
-
-	
-	
-	adc_converter_start();
 
 	StateMachine_Init(STATE_STANDBY);
+	
+	cmpss_initial_app();
+
+	adc_converter_start();
 	while (1) 
 	{
 		if (__LL_TMR_AllIntPnd_Get(TMR7) & TMR9_SR_OVIF_Msk)
@@ -62,7 +55,7 @@ void AppTimer_1msTask(void)
 		PSONOFF_MonitorEvents(DEBOUNCE_CNT_10MS, DEBOUNCE_CNT_1MS);
 	
 		if(StateFlag.bits.ps_on == 0)
-			StateMachine_RequestTransition(STATE_STANDBY);
+			StateMachine_RequestStandbyReset();
 
 		StateMachine_Step();
 		TEST1_LOW();
@@ -72,15 +65,16 @@ void cmpss_initial_app(void)
 {
 	dac_app_init();
 	dac_app_start();
-	//cmp_app_init();
-	//cmp_app_start();
+	cmp_app_init();
+	cmp_app_start();
 }
 void NVIC_initial(void)
 {
 	LL_NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_3);
 	
-	//LL_NVIC_SetPriority(HRPWM_COM_IRQn,0,0);
-	LL_NVIC_SetPriority(ADC1_NORM_IRQn,2,1);
+	LL_NVIC_SetPriority(HRPWM_COM_IRQn,0,0);
+	LL_NVIC_EnableIRQ(HRPWM_COM_IRQn);
+	LL_NVIC_SetPriority(ADC0_NORM_IRQn,2,1);
 	//LL_NVIC_SetPriority(HRPWM_MST_IRQn,1,0);
 }
 

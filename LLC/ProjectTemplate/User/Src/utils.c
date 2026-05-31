@@ -11,20 +11,24 @@ void digitctrl_PI_ClearAllKeepKpKi(digitctrl_PI* pi)
 {
     float kp;
     float ki;
+    float umax;
+    float umin;
 
     kp = pi->Kp;
     ki = pi->Ki;
+    umax = pi->Umax;
+    umin = pi->Umin;
 
     pi->Ref          = 0.0f;
     pi->Fb           = 0.0f;
     pi->Integral_sum = 0.0f;
-    pi->TargetOut    = 0.0f;
-    pi->ActualOut    = 0.0f;
-    pi->Umax         = 0.0f;
-    pi->Umin         = 0.0f;
+    pi->TargetOut    = V_LOOP_START_CMD;
+    pi->ActualOut    = V_LOOP_START_CMD;
 
     pi->Kp = kp;
     pi->Ki = ki;
+    pi->Umax = umax;
+    pi->Umin = umin;
 }
 /*
 static inline void V_Loop_PI(void)

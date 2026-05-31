@@ -25,5 +25,7 @@ typedef enum
 void StateMachine_Init(state_t init_state);
 void StateMachine_Step(void);
 void StateMachine_RequestTransition(state_t next);
+void StateMachine_RequestStandbyReset(void);
+void StateMachine_RequestShutdownReset(void);
 state_t StateMachine_GetCurrentState(void);
 #endif

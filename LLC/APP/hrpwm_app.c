@@ -1,7 +1,10 @@
 #include "main.h"
 #include "include_app.h"
+#include "state_machine.h"
 
 
+static void hrpwm_cmp_fault_shutdown(void);
+static void hrpwm_fault_config_app(HRPWM_TypeDef *Instance);
 
 void hrpwm_init(void)
 {
@@ -35,13 +38,11 @@ void hrpwm_app_config(HRPWM_TypeDef *Instance)
     HRPWM_TmrCmpCfgTypeDef     user_hrpwm_tmr_cmp_cfg;
     HRPWM_Slv_OutputCfgTypeDef user_hrpwm_slv_output_cfg;
 		HRPWM_Comm_ADCTrigCfgTypeDef user_hrpwm_comm_adctrig_cfg;
-		HRPWM_Comm_FltCfgTypeDef   user_hrpwm_comm_flt_cfg;
 
     memset((void *)&user_hrpwm_tmr_base_cfg,   0x00, sizeof(user_hrpwm_tmr_base_cfg));
     memset((void *)&user_hrpwm_tmr_cmp_cfg,    0x00, sizeof(user_hrpwm_tmr_cmp_cfg));
     memset((void *)&user_hrpwm_slv_output_cfg, 0x00, sizeof(user_hrpwm_slv_output_cfg));
 		memset((void *)&user_hrpwm_comm_adctrig_cfg, 0x00, sizeof(user_hrpwm_comm_adctrig_cfg));
-		memset((void *)&user_hrpwm_comm_flt_cfg,   0x00, sizeof(user_hrpwm_comm_flt_cfg));
 	
     //HRPWM LL Init
     LL_HRPWM_Init(Instance);
@@ -85,7 +86,7 @@ void hrpwm_app_config(HRPWM_TypeDef *Instance)
 		user_hrpwm_tmr_base_cfg.cntr_rst_evt     			= HRPWM_SLV0_CNTR_RST_EVT_MST_PWM_PRD;
     LL_HRPWM_TmrBaseCfg(Instance, LLC_PHASE1_PWM0, &user_hrpwm_tmr_base_cfg);		
 		
-		user_hrpwm_tmr_base_cfg.resync_mode						= HRPWM_SLV_RESYNC_IMDT;
+		user_hrpwm_tmr_base_cfg.resync_mode						= HRPWM_SLV_RESYNC_NEXT_RST_ROLLOVER;
 		user_hrpwm_tmr_base_cfg.cntr_rst_evt     			= HRPWM_SLV2_CNTR_RST_EVT_MST_PWM_CMPB;
     LL_HRPWM_TmrBaseCfg(Instance, LLC_PHASE2_PWM2, &user_hrpwm_tmr_base_cfg);	
 
@@ -119,22 +120,23 @@ void hrpwm_app_config(HRPWM_TypeDef *Instance)
     user_hrpwm_slv_output_cfg.Aout_clr_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPB;
 		user_hrpwm_slv_output_cfg.Aout_pol         		= HRPWM_SLV_OUT_POL_ACT_HITH;
 		user_hrpwm_slv_output_cfg.Aout_idle_lvl    		= HRPWM_SLV_OUT_IDLE_LVL_INVLD; 	
-    user_hrpwm_slv_output_cfg.Aout_flt_lvl     		= HRPWM_SLV_OUT_FAULT_LVL_INVLD;	// Actions following FLT0, 3, and 6
+    user_hrpwm_slv_output_cfg.Aout_flt_lvl     		= HRPWM_SLV_OUT_FAULT_LVL_INVLD;	// CMPSS fault forces inactive level
 
     user_hrpwm_slv_output_cfg.Bout_set_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPC;
     user_hrpwm_slv_output_cfg.Bout_clr_evt_msk 		= HRPWM_SLV_OUT_CTRL_EVT_PWMx_CMPD;
 		user_hrpwm_slv_output_cfg.Bout_pol         		= HRPWM_SLV_OUT_POL_ACT_HITH;
 		user_hrpwm_slv_output_cfg.Bout_idle_lvl    		= HRPWM_SLV_OUT_IDLE_LVL_INVLD;
-    user_hrpwm_slv_output_cfg.Bout_flt_lvl     		= HRPWM_SLV_OUT_FAULT_LVL_INVLD;	// Actions following FLT0, 3, and 6
+    user_hrpwm_slv_output_cfg.Bout_flt_lvl     		= HRPWM_SLV_OUT_FAULT_LVL_INVLD;	// CMPSS fault forces inactive level
 
 		
 
-		user_hrpwm_slv_output_cfg.flt_en[0]             = false;
-		user_hrpwm_slv_output_cfg.flt_en[2]             = false;
+		user_hrpwm_slv_output_cfg.flt_en[HRPWM_FLT_NUM_0] = true;  // CMP1 -> FLT0
+		user_hrpwm_slv_output_cfg.flt_en[HRPWM_FLT_NUM_3] = true;  // CMP0 -> FLT3
 
     LL_HRPWM_Slv_OutputCfg(Instance, LLC_PHASE1_PWM0, &user_hrpwm_slv_output_cfg);	
 		LL_HRPWM_Slv_OutputCfg(Instance, LLC_PHASE2_PWM2, &user_hrpwm_slv_output_cfg);
 	
+		hrpwm_fault_config_app(Instance);
 	
     //Preload Enable, software need to generate a update event to update the shadow register to the working register
     //If Preload Disable or has other update source, don't need this action.
@@ -198,6 +200,39 @@ void hrpwm_app_inital(void)
 	
     hrpwm_app_config(HRPWM);
 		adc_triger_pwm0_config(HRPWM);
+}
+
+static void hrpwm_fault_config_app(HRPWM_TypeDef *Instance)
+{
+	HRPWM_Comm_FltCfgTypeDef user_hrpwm_comm_flt_cfg;
+
+	memset((void *)&user_hrpwm_comm_flt_cfg, 0x00, sizeof(user_hrpwm_comm_flt_cfg));
+
+	user_hrpwm_comm_flt_cfg.input_en     = true;
+	user_hrpwm_comm_flt_cfg.int_en       = true;
+	user_hrpwm_comm_flt_cfg.samp_clk_div = HRPWM_COMM_FLT_SAMP_CLK_DIV_1;
+	user_hrpwm_comm_flt_cfg.fil_len      = LLC_HRPWM_FAULT_FILTER_LEN;
+	user_hrpwm_comm_flt_cfg.thres        = LLC_HRPWM_FAULT_THRESHOLD;
+	user_hrpwm_comm_flt_cfg.pol          = HRPWM_COMM_FLT_INPUT_POL_ACT_HIGH;
+	user_hrpwm_comm_flt_cfg.rst_mode     = HRPWM_COMM_FLT_CNTR_RST_RSTRO_ALWAYS;
+	user_hrpwm_comm_flt_cfg.blk_en       = false;
+	user_hrpwm_comm_flt_cfg.blk_src      = HRPWM_COMM_FLT_BLK_SRC_FIXED_WIN;
+
+	user_hrpwm_comm_flt_cfg.src = HRPWM_COMM_FLT0_INPUT_SRC_CMP1_OUT;
+	LL_HRPWM_Comm_FltCfg(Instance, HRPWM_FLT_NUM_0, &user_hrpwm_comm_flt_cfg);
+
+	user_hrpwm_comm_flt_cfg.src = HRPWM_COMM_FLT3_INPUT_SRC_CMP0_OUT;
+	LL_HRPWM_Comm_FltCfg(Instance, HRPWM_FLT_NUM_3, &user_hrpwm_comm_flt_cfg);
+
+}
+
+void hrpwm_fault_reset_app(void)
+{
+	LL_HRPWM_Comm_FltCntrRst(HRPWM, HRPWM_FLT_NUM_0);
+	LL_HRPWM_Comm_FltCntrRst(HRPWM, HRPWM_FLT_NUM_3);
+
+	__LL_HRPWM_Comm_FltXIntPnd_Clr(HRPWM, HRPWM_FLT_NUM_0);
+	__LL_HRPWM_Comm_FltXIntPnd_Clr(HRPWM, HRPWM_FLT_NUM_3);
 }
 
 void hrpwm_llc_output(void)
@@ -336,7 +371,7 @@ void hrpwm_updata_app()
 __SECTION(RAMCODE)
 void LL_HRPWM_Comm_Flt0Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 { 
-
+	hrpwm_cmp_fault_shutdown();
 }
 /**
   * @brief  HRPWM Common Fault 3 Interrupt Callback
@@ -346,7 +381,7 @@ void LL_HRPWM_Comm_Flt0Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 __SECTION(RAMCODE)
 void LL_HRPWM_Comm_Flt3Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 {
-
+	hrpwm_cmp_fault_shutdown();
 }
 /**
   * @brief  HRPWM Common Fault 3 Interrupt Callback
@@ -356,7 +391,7 @@ void LL_HRPWM_Comm_Flt3Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 __SECTION(RAMCODE)
 void LL_HRPWM_Comm_Flt7Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 {
-
+	hrpwm_cmp_fault_shutdown();
 }
 /**
   * @brief  HRPWM Common Fault 3 Interrupt Callback
@@ -366,7 +401,13 @@ void LL_HRPWM_Comm_Flt7Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 __SECTION(RAMCODE)
 void LL_HRPWM_Comm_Flt6Callback(HRPWM_TypeDef *Instance) //LLC I_primarry oc
 {
+	hrpwm_cmp_fault_shutdown();
+}
 
+static void hrpwm_cmp_fault_shutdown(void)
+{
+	ProtectFlag.bits.cmpss_fault = 1U;
+	StateMachine_RequestShutdownReset();
 }
 /**
   * @brief  Initializes the HRPWM MSP

@@ -12,6 +12,7 @@ extern "C" {
 
 
 #define DAC0_INIT_VALUE                 (2048U)
+#define DAC1_INIT_VALUE                 (2048U)
 #define DAC2_INIT_VALUE                 (4095U)
 
 void dac_app_init(void);
